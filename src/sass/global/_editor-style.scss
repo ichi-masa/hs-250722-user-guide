@@ -1,0 +1,145 @@
+@use "color" as *;
+@use "size" as *;
+@use "mixin" as *;
+@use "typography" as *;
+@use "function" as *;
+
+
+@mixin post_single_style {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: $fw-bold;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: rem(32);
+  }
+
+  h2 {
+    font-size: rem(26);
+    background-color: $black;
+    color: $white;
+    padding: 0.3em 0.4em;
+  }
+
+  h3 {
+    font-size: rem(24);
+    padding-left: 0.5em;
+    border-left: 5px solid $black;
+  }
+
+  h4 {
+    font-size: rem(20);
+  }
+
+  h5 {
+    font-size: rem(18);
+  }
+
+  .c-beforeBar {
+    padding-left: 1.5em;
+    position: relative;
+
+    &::before {
+      content: 'ー';
+      color: $black;
+      position: absolute;
+      top: 1em;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    // padding-left: calc(0.66666667em + #{rem(7)});
+    // --lh: 1.5;
+    // line-height: var(--lh, 1.5);
+    // position: relative;
+    padding-left: 1em;
+    position: relative;
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   width: 0.66666667em;
+    //   height: 0.66666667em;
+    //   background-color: $black;
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   left: 0;
+    //   top: calc(var(--lh, 1.5) / 2 * 1em);
+    //   transform: translateY(-50%);
+    // }
+
+    &::before {
+      content: '・';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  table {
+    border: none;
+    width: 100%;
+
+    th,
+    td {
+      padding: rem(20);
+      border: none;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+      vertical-align: middle;
+
+      @include mq(md) {
+        padding: rem(20) rem(30);
+      }
+    }
+
+    th {
+      font-size: rem(17);
+      font-weight: $fw-bold;
+      text-align: justify;
+      text-align-last: justify;
+      text-justify: inter-ideograph;
+      // background-color: $color-secondary;
+      border-right: 1px solid $black;
+      width: rem(130);
+
+      @include mq(md) {
+        width: rem(153);
+      }
+    }
+  }
+}
+
+
+// $colors: (
+//   'dark-green' : #0A4D17,
+//   'bright-green' : #3DBF38,
+//   'very-light-gray' : #eee,
+//   'very-dark-gray' : #444,
+// );
+
+// :root {
+//   @each $name, $color in $colors {
+//     .has-#{$name}-color {
+//       color: $color;
+//     }
+
+//     .has-#{$name}-background-color {
+//       background-color: $color;
+//     }
+//   }
+// }

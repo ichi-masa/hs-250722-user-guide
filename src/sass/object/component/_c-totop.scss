@@ -1,0 +1,39 @@
+@use "global" as *;
+@use "sass:map";
+
+.c-totop {
+  display: block;
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  width: rem(50);
+  height: rem(50);
+  background-color: $color-secondary;
+  z-index: map.get($map: $layer, $key: 'floating');
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%) rotate(-45deg);
+    width: rem(20);
+    height: rem(20);
+    border-top: 3px solid $white;
+    border-right: 3px solid $white;
+  }
+
+  &.is-active {
+    visibility: visible;
+    opacity: $opacity;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

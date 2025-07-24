@@ -1,0 +1,59 @@
+<% 
+const navItems = [
+  { href: './index.html', text: json.nav.home },
+  { href: './about.html', text: json.nav.about },
+  { href: './tutorial.html', text: json.nav.tutorial }
+];
+%>
+
+<header class="l-header js-header" id="header">
+  <div class="p-header">
+    <div class="l-container">
+      <div class="p-header__inner">
+      <% if (pageKey === 'top') { %>
+        <h1 class="p-header__logo">
+          <a href="./index.html">
+            <img src="./assets/img/header-logo.svg" alt="ロゴ">
+          </a>
+        </h1>
+        <% } else { %>
+          <div class="p-header__logo">
+            <a href="./index.html">
+              <img src="./assets/img/header-logo.svg" alt="ロゴ">
+            </a>
+          </div>
+        <% } %>
+        <nav class="p-header__nav">
+          <ul class="p-header__navList">
+            <% navItems.forEach(function(item) { %>
+            <li class="p-header__navItem">
+              <a class="p-header__navLink" href="<%= item.href %>"><%= item.text %></a>
+            </li>
+            <% }); %>
+          </ul>
+        </nav>
+        <div class="p-header__drawer p-drawer">
+          <button class="p-drawer__icon js-drawer for-drawer" type="button" data-target="for-drawer" aria-controls="drawer-content1" aria-expanded="false">
+            <span class="p-drawer__bars">
+              <span class="p-drawer__bar"></span>
+              <span class="p-drawer__bar"></span>
+              <span class="p-drawer__bar"></span>
+            </span>
+          </button>
+          <div class="p-drawer__bg for-drawer js-drawer" data-target="for-drawer" aria-controls="drawer-content1" role="button"></div>
+          <div class="p-drawer__content for-drawer" id="drawer-content1" aria-hidden="true">
+            <div class="p-drawer__inner">
+              <ul class="p-drawer__nav">
+                <% navItems.forEach(function(item) { %>
+                <li class="p-drawer__navItem">
+                  <a class="p-drawer__navLink" href="<%= item.href %>"><%= item.text %></a>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

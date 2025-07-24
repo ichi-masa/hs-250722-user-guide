@@ -1,0 +1,58 @@
+{
+  // "editor.formatOnSave": false,  // 保存時にフォーマットを無効化
+  "[html]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+    "editor.wrappingIndent": "none"
+  },
+  "[liquid]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+    "editor.wrappingIndent": "none"
+  },
+  // "[pug]": {
+  "[jade]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+  },
+  "[css]": {},
+  "[scss]": {
+    "editor.wordSeparators": "`~!$%^&*()=+[{]}|;:'\",.<>/?",
+  },
+  "[javascript]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+  },
+  "[json]": {},
+  "[php]": {
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  },
+  "phpcbf.onsave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
+  // "files.exclude": {
+  //   "**/.git": false // .gitフォルダの非表示を解除 (.git/info/exclude に自分だけのこのワークスペースでのgitignoreを作成可能)
+  // }
+  // "liveSassCompile.settings.formats": [
+  //   {
+  //     "format": "expanded",
+  //     "extensionName": ".css",
+  //     "savePath": "/src/css",
+  //     "savePathReplacementPairs": null
+  //   }
+  // ],
+  // "liveSassCompile.settings.generateMap": false,
+  // "liveSassCompile.settings.autoprefix": [
+  //   "> 0.5%",
+  //   "last 2 versions",
+  //   "ie >= 11",
+  //   "ios >= 8",
+  //   "and_chr >= 5",
+  //   "Android >= 5",
+  // ],
+  // "liveSassCompile.settings.rootIsWorkspace": true,
+  // "liveSassCompile.settings.forceBaseDirectory": "/src/sass",
+  // // "liveSassCompile.settings.partialsList": [
+  // //   "/src/existing/assets/sass/**/*.s[ac]ss"
+  // // ]
+  // "liveSassCompile.settings.includeItems": [
+  //   "/**/*.scss"
+  // ]
+}

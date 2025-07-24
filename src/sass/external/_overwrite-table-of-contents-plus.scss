@@ -1,0 +1,50 @@
+@use "global" as *;
+
+/************************************************************************
+* Table of Contents Plus
+************************************************************************/
+#toc_container {
+  width: 100% !important;
+  padding: rem(30) rem(20);
+
+  @include mq(md) {
+    padding: rem(30) rem(60);
+  }
+
+  .toc_number {
+    font-weight: $fw-bold;
+    color: $color-main;
+    margin-right: 0.5em;
+  }
+
+  & .toc_list {
+    & li {
+      // counter-increment: num;
+      // padding-left: 2em;
+      // position: relative;
+      color: $color-text;
+
+      &::before {
+        // display: inline;
+        // position: absolute;
+        // left: 0;
+        // content: counter(num);
+        color: $color-main;
+        // font-weight: $fw-bold;
+        // background-color: transparent;
+        // width: auto;
+        // height: auto;
+
+        display: none;
+      }
+
+      & + li {
+        margin-top: 0.5em;
+      }
+    }
+
+    a {
+      color: $color-text;
+    }
+  }
+}

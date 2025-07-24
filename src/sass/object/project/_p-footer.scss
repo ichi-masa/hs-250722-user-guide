@@ -1,0 +1,33 @@
+@use 'global' as *;
+
+.p-footer {
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  background-color: $color-footer-bg;
+  text-align: center;
+}
+
+.p-footer__inner {}
+
+.p-footer__logo {
+  line-height: 1;
+  font-size: rem(30);
+  font-weight: $fw-bold;
+
+  @include mq(md) {
+    font-size: rem(40);
+  }
+
+  a {}
+
+  img,
+  svg {
+    width: rem(200);
+    object-fit: contain;
+  }
+}
+
+.p-footer__copy {
+  padding: rem(10) 0;
+  color: $color-subText;
+}

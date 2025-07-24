@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.editor-styles-wrapper {
+  font-size: $fz-root;
+
+  * {
+    font-family: $ff-base;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+
+  @include post_single_style;
+}

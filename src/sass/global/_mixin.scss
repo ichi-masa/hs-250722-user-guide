@@ -1,0 +1,210 @@
+@use "color" as *;
+@use "size" as *;
+@use "sass:map";
+
+@mixin nav {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 0;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    background: $yellow;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// メディアクエリー -------------------------------------------------------------------
+@mixin mq($mediaquery: md) {
+  @media #{map.get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+@mixin mq-min($width) {
+  @media only screen and (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin mq-max($width) {
+  @media only screen and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+// フレックスボックス -------------------------------------------------------------------
+@mixin l-flex-wrap($num: 4, $mr: 40px, $mt: 40px, $tab_num: 4, $sp_num: 1) {
+  & > * {
+    box-sizing: border-box;
+  }
+
+  @include mq(lg) {
+    $margin-num: $num - 1;
+    $row-num: $num + 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      width: calc((100% - #{$mr} * #{$margin-num}) / #{$num} - 1px);
+
+      &:not(:nth-child(#{$num}n)) {
+        margin-right: $mr;
+      }
+
+      &:nth-child(n + #{$row-num}) {
+        margin-top: $mt;
+      }
+    }
+  }
+
+  @include mq(md-only) {
+    $margin-num: $tab_num - 1;
+    $row-num: $tab_num + 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      width: calc((100% - #{$mr} * #{$margin-num}) / #{$tab_num} - 1px);
+
+      &:not(:nth-child(#{$tab_num}n)) {
+        margin-right: $mr;
+      }
+
+      &:nth-child(n + #{$row-num}) {
+        margin-top: $mt;
+      }
+    }
+  }
+
+  @include mq(sm) {
+    @if $sp_num ==1 {
+      & > * + * {
+        margin-top: $mt;
+      }
+    }
+
+    @else {
+      $margin-num: $sp_num - 1;
+      $row-num: $sp_num + 1;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      & > * {
+        width: calc((100% - #{$mr} * #{$margin-num}) / #{$sp_num} - 1px);
+
+        &:not(:nth-child(#{$sp_num}n)) {
+          margin-right: $mr;
+        }
+
+        &:nth-child(n + #{$row-num}) {
+          margin-top: $mt;
+        }
+      }
+    }
+  }
+}
+
+// 縦横比固定画像 -------------------------------------------------------------------
+@mixin fixedAspectRatioImage($ratio: 50%, $ratio_sp: 50%) {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: $ratio;
+
+    @include mq(sm) {
+      padding-top: $ratio_sp;
+    }
+  }
+
+  & > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// グラデーション -------------------------------------------------------------------
+@mixin gradation($direction: to right, $start: #009DCC, $end: #00AECE) {
+  background: linear-gradient($direction, $start, $end);
+
+}
+
+// グラデーションフィルター -------------------------------------------------------------------
+@mixin gradationFilter($direction: to right, $start: #009DCC, $end: #00AECE) {
+  @include gradation($direction, $start, $end);
+  mix-blend-mode: multiply;
+}
+
+// position -------------------------------------------------------------------
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// full width -------------------------------------------------------------------
+@mixin fullWidth {
+  margin-left: $pd-sp*-1;
+  margin-right: $pd-sp*-1;
+
+  @include mq(md) {
+    margin-left: min($pd-tab*-1, (#{$layout-width-container} - var(--vw, 100vw))/2);
+    margin-right: min($pd-tab*-1, (#{$layout-width-container} - var(--vw, 100vw))/2);
+  }
+}
+
+// font -------------------------------------------------------------------
+@mixin font($color: false, $family: false, $style: false, $size: false, $weight: false, $line-height: false, $letter-spacing: false) {
+  @if $color {
+    color: $color;
+  }
+
+  @if $family {
+    font-family: $family;
+  }
+
+  @if $style {
+    font-style: $style;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
+}

@@ -1,0 +1,245 @@
+@use 'global' as *;
+
+/************************************************************************
+* reset
+************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // scroll-margin-top: var(--header-height, $header-height-sp);
+
+  @include mq(md) {
+    // scroll-margin-top: var(--header-height, $header-height);
+  }
+}
+
+html {}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+  // font-feature-settings: 'palt';
+  font-family: $ff-base;
+  font-size: $fz-base;
+  text-size-adjust: 100%;
+  font-weight: $fw-base;
+  color: $color-text;
+  line-height: $lh-base;
+  letter-spacing: $ls-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-bg;
+  // overflow-wrap: break-word; // word-wrap が overflow-wrap になった
+  // word-break: break-word;
+  // line-break: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  text-underline-offset: 0.2em;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+a {
+  color: inherit;
+  // outline: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s ease 0s;
+}
+
+a[href="*"] {
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    opacity: $opacity;
+  }
+}
+
+img,
+svg {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: top;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: '';
+  content: none;
+}
+
+address {
+  font-style: italic;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+abbr,
+acronym {
+  text-decoration: underline dotted;
+}
+
+cite {
+  font-style: italic;
+}
+
+code,
+kbd {
+  background-color: $light-gray;
+  padding: 0.25em 0.5em;
+}
+
+em {
+  font-style: italic;
+  font-weight: $fw-bold;
+}
+
+pre {
+  background-color: $light-gray;
+  padding: 1em 2em;
+  display: block;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+var {
+  background-color: $light-gray;
+  padding: 0.25em 0.5em;
+  font-style: italic;
+}
+
+/************************************************************************
+* end reset
+************************************************************************/

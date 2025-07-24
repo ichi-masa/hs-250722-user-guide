@@ -1,0 +1,9 @@
+node_modules/
+dist
+
+*.zip
+server*.json*
+.ftppass
+sftp.json
+.VSCodeCounter
+.DS_Store

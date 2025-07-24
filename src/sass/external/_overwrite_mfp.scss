@@ -1,0 +1,55 @@
+/************************************************************************
+* overwrite mfp
+************************************************************************/
+@use "global" as *;
+
+.mfp-bg {
+  background-color: #AFA688;
+  opacity: 0;
+  transition: opacity .5s;
+
+  &.mfp-ready {
+    opacity: 0.8;
+  }
+
+  &.mfp-removing {
+    opacity: 0;
+  }
+}
+
+.mfp-wrap {
+  .mfp-content {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .mfp-arrow {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  &.mfp-ready {
+    .mfp-content {
+      opacity: 1;
+    }
+
+    .mfp-arrow {
+      opacity: 1;
+    }
+  }
+
+  &.mfp-removing {
+    .mfp-content {
+      opacity: 0;
+    }
+
+    .mfp-arrow {
+      opacity: 0;
+    }
+  }
+}
+
+
+/************************************************************************
+* overwrite mfp end
+************************************************************************/

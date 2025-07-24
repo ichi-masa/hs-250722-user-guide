@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.l-container {
+  margin: 0 auto;
+  padding: 0 $pd-sp;
+  width: 100%;
+
+  @include mq(md) {
+    max-width: $layout-width-container + $pd-tab*2;
+    padding-right: $pd-tab;
+    padding-left: $pd-tab;
+  }
+}
+
+@include mq(md) {
+  .l-container.l-container--narrow {
+    max-width: $layout-width-container * 0.8 + $pd-tab*2;
+  }
+
+  .l-container.l-container--wide {
+    max-width: $layout-width-container * 1.2 + $pd-tab*2;
+  }
+}
+
+.l-container.l-container--full {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc((100% - 100vw) / 2);
+}

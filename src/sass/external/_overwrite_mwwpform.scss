@@ -1,0 +1,21 @@
+@use "global" as *;
+
+/************************************************************************
+* MW WP Form Over write
+************************************************************************/
+.mwform-radio-field,
+.mwform-checkbox-field {
+  display: inline-block;
+}
+
+.mw_wp_form_preview {
+  .c-select {
+    &::after {
+      content: none;
+    }
+  }
+
+  .p-hasPlaceholder__text {
+    display: none;
+  }
+}

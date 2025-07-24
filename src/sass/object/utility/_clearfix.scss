@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

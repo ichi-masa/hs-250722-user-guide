@@ -1,0 +1,71 @@
+@use "sass:map";
+// レイアウト幅
+$layout-width-canvas: 1440px;
+$layout-width-container: 1060px;
+$layout-width-vw: $layout-width-container;
+$layout-sp-vw: 767px;
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map.get($breakpoints,'sm')}px)",
+  under-md: "screen and (max-width: #{map.get($breakpoints,'md') - 1}px)",
+  only-md: "screen and (min-width: #{map.get($breakpoints,'md') + 1}px) and (max-width: #{map.get($breakpoints,'lg') - 1}px)",
+  md: "screen and (min-width: #{map.get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map.get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
+);
+
+
+// ブレークポイント
+// $mediaquerys: (
+//   "sm": "only screen and (max-width: #{$layout-sp-vw})",
+//   "md-only": "only screen and (min-width: #{$layout-sp-vw + 1px}) and (max-width: #{$layout-width-vw - 1px})",
+//   "md-up": "only screen and (min-width: #{$layout-sp-vw + 1px})",
+//   "md": "only screen and (max-width: #{$layout-width-vw - 1px})",
+//   "lg": "print,screen and (min-width: #{$layout-width-vw})",
+//   "ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)",
+// );
+
+// Bootstrap 5
+// $mediaquerys: (
+//   'sm': "only screen and (min-width: 640px)",
+//   'md': "only screen and (min-width: 768px)",
+//   'lg': "print, screen and (min-width: 1024px)",
+//   'xl': "only screen and (min-width: 1280px)",
+// ) !default;
+
+// Tailwind CSS
+// $mediaquerys: (
+//   'sm': "only screen and (min-width: 576px)",
+//   'md': "only screen and (min-width: 768px)",
+//   'lg': "print, screen and (min-width: 992px)",
+//   'xl': "only screen and (min-width: 1200px)",
+//   'xxl': "only screen and (min-width: 1400px)",
+// ) !default;
+
+// ヘッダー高さ
+$header-height: 80px;
+$header-height-sp: 60px;
+
+// z-index の指定
+$layer: (
+  loading: 999,
+  modal: 100,
+  drawer: 40,
+  floating: 30,
+  header: 20,
+  footer: 10,
+  default: 1,
+);
+
+// 余白
+$pd-tab: 30px;
+$pd-sp: 20px;

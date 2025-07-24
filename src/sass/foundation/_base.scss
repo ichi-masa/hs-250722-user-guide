@@ -1,0 +1,168 @@
+@use 'sass:math';
+@use 'global' as *;
+
+html {
+  // scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  font-size: $fz-root;
+
+  //~375px
+  @media (max-width: 375px) {
+    font-size: vw(strip-unit($fz-root), 375);
+  }
+
+  @include mq(md) {
+    font-size: vw(strip-unit($fz-root), strip-unit($layout-width-container));
+  }
+
+  @media (min-width: $layout-width-container) {
+    font-size: $fz-root;
+  }
+}
+
+button {
+  color: $color-text;
+}
+
+/************************************************************************
+* layout
+************************************************************************/
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.fadeIn {
+  opacity: 0;
+}
+
+header {}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+/************************************************************************
+* base
+************************************************************************/
+a[target='_blank']:not([class]) {
+  transition: color 0.3s;
+
+  &::after {
+    display: inline-block;
+    margin-left: em(13, 17);
+    content: '';
+    font-weight: 900;
+    width: em(14.5, 17);
+    height: em(13, 17);
+    mask-image: url('../img/common/icon-outerLink.svg');
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+  }
+}
+
+a:not([class]) {
+  // color: #0000ee;
+  color: #03c;
+
+  &:visited {
+    color: #639;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  // width: fit-content;
+  min-width: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+
+thead {
+  // font-weight: $fw-bold;
+  // background-color: $light-gray;
+}
+
+tbody {}
+
+th,
+td {
+  // padding: rem(16);
+  // text-align: left;
+  // vertical-align: top;
+  border: 1px solid;
+}
+
+th {
+  // width: 25%;
+}
+
+address {
+  font-style: normal;
+}
+
+
+details {
+  .icon {
+    display: block;
+    aspect-ratio: 1;
+    width: rem(24);
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      width: rem(13);
+      background-color: $color-text;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      transition: transform 0.3s;
+    }
+  }
+
+}
+
+details[open] > summary .icon::after {
+  // rotate: 0;
+  transform: rotate(0);
+}
+
+details.is-closing[open] > summary .icon::after {
+  transform: rotate(90deg);
+}
+
+summary {
+  /* display: list-item;以外を指定してデフォルトの三角形アイコンを消します */
+  display: block;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  /* Safariで表示されるデフォルトの三角形アイコンを消します */
+  display: none;
+}
+
+/************************************************************************
+* end base
+************************************************************************/

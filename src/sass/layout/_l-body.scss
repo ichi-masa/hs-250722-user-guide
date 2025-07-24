@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-body {
+  // margin-top: var(--header-height, $header-height);
+  // min-height: calc(100vh - #{var(--header-height, $header-height)});
+
+  @include mq(md) {
+    // margin-top: var(--header-height, $header-height-sp);
+    // min-height: calc(100vh - #{var(--header-height, $header-height-sp)});
+  }
+}

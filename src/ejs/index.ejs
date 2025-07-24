@@ -1,0 +1,14 @@
+<%- include('./common/_head', { pageKey: 'top' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'top' }) %>
+  
+  <main class="l-content">
+    <div class="l-container">
+      <h1><%= json.top.title %></h1>
+      <p><%= json.top.description %></p>
+    </div>
+  </main>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

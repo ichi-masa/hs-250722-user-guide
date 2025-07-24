@@ -1,0 +1,67 @@
+/************************************************************************
+* swiper
+************************************************************************/
+@use "global" as *;
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  z-index: 1;
+  width: rem(30);
+  aspect-ratio: 1;
+  background: transparent no-repeat center center / contain;
+
+  @include mq(md) {
+    width: rem(40);
+  }
+}
+
+.swiper-button-prev {
+  background-image: url('../img/common/icon-slider-arrow.svg');
+  rotate: 180deg;
+}
+
+.swiper-button-next {
+  background-image: url('../img/common/icon-slider-arrow.svg');
+}
+
+.swiper-pagination {
+  font-size: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: #D5D5D5;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $color-main;
+}
+
+/* rtl ******************************************************************/
+.swiper[dir="rtl"] {
+  .swiper-button-prev {
+    background-image: url('../img/common/icon-chevron-right.svg');
+  }
+
+  .swiper-button-next {
+    background-image: url('../img/common/icon-chevron-left.svg');
+  }
+
+  .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+/************************************************************************
+* swiper end
+************************************************************************/

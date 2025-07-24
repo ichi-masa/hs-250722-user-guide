@@ -1,0 +1,39 @@
+/************************************************************************
+* p-pagination
+************************************************************************/
+@use "global" as *;
+
+.p-pagination {}
+
+.p-pagination__inner {
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.page-numbers {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: 1px solid $color-main;
+  color: $color-main;
+  font-size: rem(14);
+  line-height: 2;
+  letter-spacing: 0;
+
+  & + .page-numbers {
+    margin-left: rem(10);
+  }
+
+  &.current {
+    color: $white;
+    background-color: $color-main;
+  }
+
+  &.dots {
+    border: none;
+  }
+
+  &.prev,
+  &.next {}
+
+}

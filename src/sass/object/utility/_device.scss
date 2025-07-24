@@ -1,0 +1,29 @@
+@use "global" as *;
+@use "sass:map";
+
+/************************************************************************
+* visible device
+************************************************************************/
+.u-onlyPc {
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.u-onlyTab {
+  display: none;
+
+  @media screen and (min-width: #{map.get($breakpoints,'md')}px) and (max-width: #{map.get($breakpoints,'lg') - 1}px) {
+    display: block;
+  }
+}
+
+.u-onlySp {
+  display: none;
+
+  @include mq(under-md) {
+    display: block;
+  }
+}

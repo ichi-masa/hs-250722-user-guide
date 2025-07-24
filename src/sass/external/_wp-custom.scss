@@ -1,0 +1,41 @@
+@use "global" as *;
+
+// /************************************************************************
+// * colors
+// * add_theme_support('editor-color-palette', array())で登録
+// ************************************************************************/
+// .has-dark-green-color {
+//   color: #0A4D17;
+// }
+
+// .has-dark-green-background-color {
+//   background-color: #0A4D17;
+// }
+
+// .has-bright-green-color {
+//   color: #3DBF38;
+// }
+
+// .has-bright-green-background-color {
+//   background-color: #3DBF38;
+// }
+
+// /************************************************************************
+// * Font Sizes
+// * add_theme_support('editor-font-sizes', array())で登録
+// ************************************************************************/
+
+// /* Font Sizes ******************************************************************/
+// $font-sizes: (
+//   'x-small' : 10px,
+//   'small' : 13px,
+//   'regular' : 16px,
+//   'large' : 24px,
+//   'x-large' : 36px,
+//   'huge' : 50px,
+// );
+// @each $name, $size in $font-sizes {
+//   .has-#{$name}-font-size {
+//     font-size: $size;
+//   }
+// }

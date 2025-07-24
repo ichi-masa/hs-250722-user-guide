@@ -1,0 +1,16 @@
+@use "global" as *;
+@use "sass:map";
+
+.l-header {
+  position: sticky;
+  top: -110%;
+  left: 0;
+  z-index: map.get($layer, "header");
+  width: 100%;
+  transition: top 0.3s ease 0s;
+
+  &.is-fixed {
+    top: 0;
+    box-shadow: 0 3px 6px rgba(117, 117, 117, 0.16);
+  }
+}

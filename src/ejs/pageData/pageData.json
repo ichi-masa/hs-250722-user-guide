@@ -1,0 +1,23 @@
+{
+  "lang": "en",
+  "top": {
+    "title": "Welcome to Our Website",
+    "description": "This is the main page of our English website",
+    "url": "https://example.com"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our company",
+    "content": "We are a company dedicated to providing excellent services..."
+  },
+  "tutorial": {
+    "title": "Tutorial",
+    "description": "Step-by-step guide to get started",
+    "url": "https://example.com/tutorial"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "tutorial": "Tutorial"
+  }
+}

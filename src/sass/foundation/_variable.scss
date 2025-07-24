@@ -1,0 +1,30 @@
+@use "global" as *;
+
+:root {
+  /* ウィンドウサイズ */
+  --vw: 100vw;
+  --vh: 100vh;
+
+  /* 三角形 */
+  --clip-triangle-top: polygon(50% 0, 100% 100%, 0 100%);
+  --clip-triangle-bottom: polygon(0 0, 100% 0, 50% 100%);
+  --clip-triangle-right: polygon(0 0, 100% 50%, 0 100%);
+  --clip-triangle-left: polygon(0 50%, 100% 0, 100% 100%);
+  --clip-triangle-lower-left: polygon(0 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-left: polygon(0 0, 100% 0, 0 100%);
+  --clip-triangle-lower-right: polygon(100% 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-right: polygon(0 0, 100% 0, 100% 100%);
+
+  /**
+     * svgをbackgroundで使う
+     * 色：#ffffff -> %23ffffff
+     */
+  --icon-btn-arrow: url('data:image/svg+xml;utf8,<svg width="37" height="6" viewBox="0 0 37 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5H36L26.2703 1" stroke="%230C4A6E"/></svg>');
+
+  /* ヘッダー高さ */
+  --header-height: #{$header-height-sp};
+
+  @include mq(md) {
+    --header-height: #{$header-height};
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="<%= json.lang %>">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <% const pageData = json[pageKey] || json.top; %>
+  <title><%= pageData.title %></title>
+  <meta name="description" content="<%= pageData.description %>" />
+  <meta property="og:site_name" content="<%= pageData.title %>" />
+  <meta property="og:url" content="<%= pageData.url || '' %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= pageData.title %>" />
+  <meta property="og:description" content="<%= pageData.description %>" />
+  <meta property="og:locale" content="<%= json.lang === 'ja' ? 'ja_JP' : json.lang === 'en' ? 'en_US' : 'de_DE' %>" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- （画像関連） -->
+  <link rel="icon" href="#" />
+  <meta property="og:image" content="./assets/img/common/ogp.jpg" />
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script defer src="./assets/js/core/jquery.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>

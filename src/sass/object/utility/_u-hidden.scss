@@ -1,0 +1,26 @@
+@use "global" as *;
+
+// PC
+.u-hidden {
+  display: none !important;
+}
+
+.u-hidden--pc {
+  @include mq(lg) {
+    display: none !important;
+  }
+}
+
+// タブレット
+.u-hidden--tab {
+  @include mq(only-md) {
+    display: none !important;
+  }
+}
+
+// スマホ
+.u-hidden--sp {
+  @include mq(under-md) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,186 @@
+@use 'global' as *;
+@use "sass:color";
+
+// 色
+$btn-background-color: $color-main;
+$btn-border-color: transparent; // transparentにすることでbackground-colorが見える
+$btn-font-color: #fff;
+
+// サイズ
+$btn-width: rem(300);
+$btn-border-width: 1px;
+$btn-border-radius: 10px;
+$btn-font-size: $fz-base;
+$btn-font-weight: $fw-base;
+$btn-letter-spacing: $ls-base;
+$btn-line-height: $lh-base;
+
+/************************************************************************
+* 基本形
+************************************************************************/
+.c-btn {
+  appearance: none;
+  margin: 0;
+  padding: 1em 2em;
+  display: inline-block;
+  // テキストに応じて大きさを動的に変える場合はwidthを指定しない
+  // width: $btn-width;      // ボタンの大きさを固定したい場合（テキストが多いと改行する）
+  // min-width: $btn-width;  // ボタンの最小の大きさを指定する場合
+  // max-width: 100%;        // どんなに大きくても親要素の大きさまでにする
+  border: $btn-border-width solid $btn-border-color;
+  background-image: none;
+  background-color: $btn-background-color;
+  border-radius: $btn-border-radius;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: $btn-font-color;
+  font: inherit;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  letter-spacing: $btn-letter-spacing;
+  line-height: $btn-line-height;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease 0s;
+  transition-property: prop;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    color: $btn-background-color;
+    background-color: $btn-font-color;
+    border-color: currentColor; // その要素もしくは親要素のcolorの値と同じになる
+  }
+
+  // &::-moz-foucus-inner {
+  // 	padding: 0;
+  // 	border: none;
+  // }
+}
+
+/************************************************************************
+* modifier
+************************************************************************/
+// ホバーでキラッと光る -------------------------------------------------------------------
+.c-btn.c-btn--shine {
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+    position: absolute;
+    top: 0;
+    left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+    transform: skewX(-25deg);
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    color: $btn-font-color;
+    background-color: $btn-background-color;
+    border-color: $btn-background-color; // その要素もしくは親要素のcolorの値と同じになる
+
+    &::before {
+      animation: shine 0.7s;
+    }
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+// 右矢印 -------------------------------------------------------------------
+.c-btn--arrowRight {
+  position: relative;
+  padding-right: 2em;
+  padding-left: 1.38em;
+
+  &::after {
+    content: '\f061';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.83em;
+    font: $ff-awesome;
+    font-weight: $fw-heavy;
+  }
+}
+
+// 大ボタン -------------------------------------------------------------------
+.c-btn--large {}
+
+// 色違い -------------------------------------------------------------------
+.c-btn--yellow {
+  background-color: yellow;
+  color: #222;
+
+  &:hover,
+  &:focus {
+    border-color: yellow;
+    color: #222;
+  }
+}
+
+/************************************************************************
+* バリエーション:角丸ボタン
+************************************************************************/
+.c-roundedBtn {
+  display: inline-block;
+  width: 236px;
+  max-width: 100%;
+  padding: 15px 10px;
+  background-color: $color-main;
+  border: 2px solid transparent;
+  border-bottom-color: color.adjust($color-main, $lightness: -10%);
+  border-radius: 10px;
+  color: #fff;
+  font-size: rem(16);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    border-color: currentColor;
+    color: $color-main;
+  }
+}
+
+/************************************************************************
+* バリエーション：アイコン付き小ボタン
+************************************************************************/
+.c-beforeIconBtn {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0.3em;
+  border: 1px solid currentColor;
+  color: $color-main;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    color: #fff;
+  }
+
+  &::before {
+    display: inline-block;
+    margin-right: 0.5em;
+    font: $ff-awesome;
+    font-weight: $fw-heavy;
+  }
+}
+
+.c-beforeIconBtn--download::before {
+  content: '\f019';
+}
