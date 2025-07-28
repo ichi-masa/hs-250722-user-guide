@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 0 $pd-sp;
   width: 100%;
+  max-width: rem(600);
 
   @include mq(md) {
     max-width: $layout-width-container + $pd-tab*2;

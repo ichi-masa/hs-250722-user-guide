@@ -2,12 +2,58 @@
 <body>
   <%- include('./common/_header', { pageKey: 'top' }) %>
   
-  <main class="l-content">
-    <div class="l-container">
-      <h1><%= json.top.title %></h1>
-      <p><%= json.top.description %></p>
+  <!-- User Guide Section -->
+  <%- include('./project/_p-user-guide-header') %>
+
+  <!-- Main Content Area -->
+  <div class="p-content-area">
+    <div class="p-content-area__inner l-container">
+      <!-- Side Navigation -->
+      <div class="p-content-area__side-nav">
+        <%- include('./project/_p-side-nav', { currentPage: 'home' }) %>
+      </div>
+      <!-- Main Content -->
+      <main class="p-main">
+        <div class="p-main__control">
+          <%- include('./project/_p-control') %>
+        </div>
+        <div class="p-main__content">
+          <section class="p-product">
+            <h2 class="p-product__title">
+              <%= json.top.title %>
+            </h2>
+            <div class="p-product__image">
+              <img src="./assets/img/common/product-img.webp" alt="VIVA 360+ Body Composition Monitor">
+            </div>
+            <div class="p-product__trademarks p-trademarks">
+              <h2 class="p-trademarks__title">
+                trademarks
+              </h2>
+              <ul class="p-trademarks__items">
+                <li class="p-trademarks__item">
+                  ・The <span class="bold">Bluetooth®</span> word mark and logos are registered trademarks owned by Bluetooth SIG, Inc. and any use of such marks by OMRON HEALTHCARE Co., Ltd. is under license.
+                </li>
+                <li class="p-trademarks__item">
+                  ・Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.
+                </li>
+                <li class="p-trademarks__item">
+                  ・Google Play and the Google Play logo are trademarks of Google LLC.
+                </li>
+                <li class="p-trademarks__item">
+                  ・Other brand names and product names mentioned in this document are trademarks or registered trademarks of the respective companies.
+                </li>
+              </ul>
+            </div>
+            <div class="p-product__more-button">
+              <a href="#" class="p-product__more-button-link c-btn">
+                <span>More about this product</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
     </div>
-  </main>
+  </div>
   
   <%- include('./common/_footer') %>
 </body>

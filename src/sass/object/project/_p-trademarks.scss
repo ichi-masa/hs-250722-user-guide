@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.p-trademarks__title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.p-trademarks__items {
+  margin-top: rem(8);
+}
+
+.p-trademarks__item {
+  font-size: rem(14);
+  line-height: 1.4;
+  letter-spacing: 0;
+}

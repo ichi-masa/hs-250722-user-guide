@@ -1,0 +1,12 @@
+@use 'global' as *;
+
+.p-main__content {
+  background: $white;
+  padding: rem(25) rem(24) rem(64);
+  margin-top: rem(42);
+
+  @include mq(md) {
+    padding: rem(100) rem(24) rem(50);
+    margin-top: rem(32);
+  }
+}

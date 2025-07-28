@@ -1,23 +1,23 @@
 {
   "lang": "en",
   "top": {
-    "title": "Welcome to Our Website",
-    "description": "This is the main page of our English website",
+    "title": "VIVA 360+ Body Composition Monitor HBF-H132T1-EBK",
+    "description": "User guide for VIVA 360+ Body Composition Monitor",
     "url": "https://example.com"
   },
   "about": {
-    "title": "About Us",
-    "description": "Learn more about our company",
-    "content": "We are a company dedicated to providing excellent services..."
-  },
-  "tutorial": {
-    "title": "Tutorial",
-    "description": "Step-by-step guide to get started",
-    "url": "https://example.com/tutorial"
+    "title": "About This Product",
+    "description": "Learn more about VIVA 360+ Body Composition Monitor",
+    "content": "The VIVA 360+ Body Composition Monitor is an advanced health monitoring device..."
   },
   "nav": {
     "home": "Home",
-    "about": "About",
-    "tutorial": "Tutorial"
+    "safety": "Important Safety Information",
+    "howToUse": "How to use",
+    "troubleshooting": "Error Messages and Troubleshooting",
+    "maintenance": "Maintenance",
+    "calibration": "Calibration",
+    "specifications": "Specifications",
+    "bodyComposition": "Information on Body Composition"
   }
 }

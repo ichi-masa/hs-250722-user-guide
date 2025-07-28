@@ -1,7 +1,8 @@
 @use "sass:map";
 // レイアウト幅
-$layout-width-canvas: 1440px;
-$layout-width-container: 1060px;
+$layout-width-canvas: 1366px;
+$layout-width-container: 1326px;
+$layout-width-container-narrow: 836px;
 $layout-width-vw: $layout-width-container;
 $layout-sp-vw: 767px;
 
@@ -67,5 +68,5 @@ $layer: (
 );
 
 // 余白
-$pd-tab: 30px;
-$pd-sp: 20px;
+$pd-tab: 48px;
+$pd-sp: 25px;

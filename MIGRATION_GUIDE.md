@@ -80,3 +80,42 @@ npx gulp build
 - **動作確認**: 15分
 
 **合計: 約1〜1.5時間で多言語化完了**
+
+## 💡 重要な設計思想
+
+### サイドナビゲーションの多言語対応
+現在のサイドナビコンポーネント（`_side-nav.ejs`）は、**完全に多言語化準備済み**です。
+
+**設計のポイント：**
+```ejs
+// ❌ 悪い例（ハードコード）
+{ href: './trademarks.html', text: 'Trademarks', key: 'trademarks' }
+
+// ✅ 良い例（JSON参照）
+{ href: './trademarks.html', text: json.nav.trademarks, key: 'trademarks' }
+```
+
+**この設計により：**
+- **30ページ作成してもメンテナンス性抜群**
+- **多言語化時はJSONファイルの翻訳のみ**
+- **コンポーネントファイル自体は一切変更不要**
+
+### 必要なnavプロパティ
+`pageData.json`には以下のnavプロパティが必要：
+```json
+{
+  "nav": {
+    "home": "Home",
+    "trademarks": "Trademarks",
+    "safety": "Important Safety Information",
+    "howToUse": "How to use",
+    "troubleshooting": "Error Messages and Troubleshooting",
+    "maintenance": "Maintenance",
+    "calibration": "Calibration",
+    "specifications": "Specifications",
+    "bodyComposition": "Information on Body Composition"
+  }
+}
+```
+
+**⚠️ 新しいページを追加する際は、必ずnavプロパティも追加してください！**

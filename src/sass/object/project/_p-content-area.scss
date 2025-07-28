@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.p-content-area {
+  background: $light-gray;
+  padding-top: rem(28);
+  padding-bottom: rem(60);
+
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(80);
+  }
+}
+
+.p-content-area__inner {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: rem(185) 1fr;
+    gap: rem(250);
+  }
+}

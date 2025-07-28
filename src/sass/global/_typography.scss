@@ -1,20 +1,75 @@
-$ff-kgpw3: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
-$ff-kgpw6: 'HiraKakuPro-W6', 'ヒラギノ角ゴ Pro W6', sans-serif;
+/**
+ * DIN W06 Font Family
+ * OMRON公式フォント
+ */
+@font-face {
+  font-family: "DIN W06 Extlight";
+  src: url("../fonts/57fa4b3f-7b95-4dc3-ba7f-d0aaaadcec6f.woff2") format("woff2"),
+       url("../fonts/c6d79441-b152-4917-a0b3-84ee8cf9af22.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
 
-$ff-serif: '游明朝体', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', 'MS P明朝', 'MS PMincho', 'Noto Serif JP', serif;
-$ff-sans: '游ゴシック体', '游ゴシック', 'Yu Gothic', 'YuGothic', 'Hiragino Sans', 'ヒラギノ角ゴシック',
-  'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'メイリオ', 'Meiryo',
-  'MS Pゴシック', 'MS PGothic',
-  /* "Noto Sans JP", "Noto Sans CJK JP", */
-  sans-serif; // ヒラギノ角ゴシックは新しい。ヒラギノ角ゴ ProNと一緒。
+@font-face {
+  font-family: "DIN W06 Light";
+  src: url("../fonts/439dfb28-34e7-4397-9e61-57b7792a1d51.woff2") format("woff2"),
+       url("../fonts/bead37db-3e39-42f6-9231-9107b01dfbc1.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
-$ff-en: sans-serif;
+@font-face {
+  font-family: "DIN W06 Regular";
+  src: url("../fonts/9ed03534-f484-47cf-a60b-b0cfd11b7238.woff2") format("woff2"),
+       url("../fonts/e3fd9768-3efe-4bc2-9064-6c2dc909b994.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN W06 Medium";
+  src: url("../fonts/4928b1c0-29d1-4694-9034-4251eac4c128.woff2") format("woff2"),
+       url("../fonts/bb59b38b-ae6e-40bc-82f7-4baeb1d32760.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN W06 Bold";
+  src: url("../fonts/ecf0980a-ae24-4271-ae5d-f538f91dc0eb.woff2") format("woff2"),
+       url("../fonts/fcb50c8b-04fc-453b-b49c-227c6dc45e69.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**
+ * DIN W06 Font Stack Variables
+ * フォールバック付き
+ */
+:root {
+  --font-din: "DIN W06 Regular", "DIN W06", Arial, sans-serif;
+  --font-din-light: "DIN W06 Light", "DIN W06", Arial, sans-serif;
+  --font-din-medium: "DIN W06 Medium", "DIN W06", Arial, sans-serif;
+  --font-din-bold: "DIN W06 Bold", "DIN W06", Arial, sans-serif;
+}
+
+/**
+ * Font Family Variables
+ */
+
+$ff-din: var(--font-din);
+$ff-en: $ff-din;
 $ff-awesome: var(--fa-font-solid);
 $ff-awesome-brand: var(--fa-font-brands);
 
 $fz-root: 16px;
 $fz-base: 1rem;
-$ff-base: $ff-sans;
+$ff-base: $ff-din;
 $lh-base: 1.5;
 $ls-base: 0em;
 

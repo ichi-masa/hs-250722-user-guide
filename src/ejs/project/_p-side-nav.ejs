@@ -1,0 +1,25 @@
+<%
+// サイドナビゲーションメニュー項目
+const sideNavItems = [
+  { href: './index.html', text: json.nav.home, key: 'home' },
+  { href: './safety.html', text: json.nav.safety, key: 'safety' },
+  { href: './how-to-use.html', text: json.nav.howToUse, key: 'how-to-use' },
+  { href: './troubleshooting.html', text: json.nav.troubleshooting, key: 'troubleshooting' },
+  { href: './maintenance.html', text: json.nav.maintenance, key: 'maintenance' },
+  { href: './calibration.html', text: json.nav.calibration, key: 'calibration' },
+  { href: './specifications.html', text: json.nav.specifications, key: 'specifications' },
+  { href: './body-composition.html', text: json.nav.bodyComposition, key: 'body-composition' }
+];
+%>
+
+<aside class="p-side-nav">
+  <nav class="p-side-nav__menu">
+    <ul class="p-side-nav__items">
+      <% sideNavItems.forEach(function(item) { %>
+      <li class="p-side-nav__item <%= currentPage === item.key ? 'p-side-nav__item--current' : '' %>">
+        <a href="<%= item.href %>" class="p-side-nav__link"><%= item.text %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </nav>
+</aside>

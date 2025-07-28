@@ -65,14 +65,17 @@ label {
 
 input,
 textarea {
-  padding: rem(8);
+  padding: rem(9) rem(16);
   width: 100%;
-  border: 1px solid $color-form-bd;
-  border-radius: 0;
+  border: 1px solid $black;
+  border-radius: rem(14);
   background-image: none;
   font-family: inherit;
-  font-size: $fz-base;
-  line-height: $lh-base;
+  font-size: rem(14);
+  line-height: lh(22, 14);
+  letter-spacing: 0.02em;
+  color: $black;
+  background-color: $light-gray;
   appearance: none;
 }
 
@@ -235,16 +238,19 @@ input[type='number'] {
 
 select {
   appearance: none;
-  padding: 0.4em 2.4em 0.4em 0.8em;
-  border-radius: 0;
-  // background-image: url(../img/arrow.svg);
-  // background-position: right 6px center;
-  // background-repeat: no-repeat;
-  // background-size: 24px;
+  padding: rem(9) rem(16);
+  border-radius: rem(14);
+  background-image: url(../img/common/arrow.svg);
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
   font-family: inherit;
-  font-size: $fz-base;
-  color: inherit;
-  border: 1px solid $color-form-bd;
+  font-size: rem(14);
+  line-height: lh(22, 14);
+  letter-spacing: 0.02em;
+  color: $black;
+  border: 1px solid $black;
+  background-color: $light-gray;
 
   &::-ms-expand {
     display: none;

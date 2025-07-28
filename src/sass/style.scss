@@ -1,5 +1,9 @@
 @use "foundation/_reset";
-@use "foundation/!(_reset)**";
+@use "foundation/_animation";
+@use "foundation/_attr";
+@use "foundation/_base";
+@use "foundation/_form";
+@use "foundation/_variable";
 @use "app/**";
 @use "external/**";
 @use "layout/**";

@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.p-user-guide-header {
+  background: $color-main;
+  color: $white;
+  padding: rem(48) 0;
+
+  @include mq(md) {
+    padding: rem(80) 0;
+  }
+}
+
+.p-user-guide-header__inner.l-container {
+  max-width: $layout-width-container-narrow + $pd-tab*2;
+}
+
+.p-user-guide-header__title {
+  font-size: rem(32);
+  font-family: var(--font-din-light);
+  letter-spacing: -0.01em;
+  line-height: lh(36, 32);
+
+  @include mq(md) {
+      font-size: rem(64);
+      line-height: lh(72, 64);
+      letter-spacing: -0.02em;
+  }
+}

@@ -160,7 +160,7 @@ jQuery(function () {
   });
 
   /* ドロワー */
-  jQuery(".js-drawer").on("click", function (event) {
+  jQuery(".js-dropdown").on("click", function (event) {
     event.preventDefault();
     const ariaControls = jQuery(this).attr("aria-controls");
     const addClass = 'is-opened'

@@ -338,6 +338,7 @@ const jsFunc = () => {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+
 // image===========================================
 /**
  * @see https://github.com/svg/svgo#built-in-plugins
