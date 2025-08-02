@@ -4,6 +4,12 @@
       <input type="text" class="p-control__search-input" placeholder="What do you need help with?">
     </div>
     <div class="p-control__language">
+      <% 
+        const languageItems = [
+          { link: './index.html', text: 'English' },
+          { link: './index.html', text: 'Japanese' },
+        ];
+      %>
       <button class="p-control__language-button js-dropdown" aria-controls="languageDropdown" aria-expanded="false">
         <span class="p-control__language-button-text">
           <span class="p-control__language-button-text-span">choose language</span>
@@ -11,16 +17,27 @@
         <span class="p-control__language-button-icon"></span>
       </button>
       <ul class="p-control__language-items" id="languageDropdown">
-        <li class="p-control__language-item">
-          <a href="#" class="p-control__language-link">English</a>
-        </li>
-        <li class="p-control__language-item">
-          <a href="#" class="p-control__language-link">English</a>
-        </li>
+        <% languageItems.forEach(function(item) { %>
+          <li class="p-control__language-item">
+            <a href="<%= item.link %>" class="p-control__language-link"><%= item.text %></a>
+          </li>
+        <% }); %>
       </ul>
     </div>
   </div>
   <div class="p-control__menu">
+    <% 
+      const menuItems = [
+        { href: './index.html', text: json.nav.home, key: 'home' },
+        { href: './safety.html', text: json.nav.safety, key: 'safety' },
+        { href: './how-to-use.html', text: json.nav.howToUse, key: 'how-to-use' },
+        { href: './troubleshooting.html', text: json.nav.troubleshooting, key: 'troubleshooting' },
+        { href: './maintenance.html', text: json.nav.maintenance, key: 'maintenance' },
+        { href: './calibration.html', text: json.nav.calibration, key: 'calibration' },
+        { href: './specifications.html', text: json.nav.specifications, key: 'specifications' },
+        { href: './body-composition.html', text: json.nav.bodyComposition, key: 'body-composition' }
+      ];
+    %>
     <button class="p-control__menu-button js-dropdown" aria-controls="menuDropdown" aria-expanded="false">
       <span class="p-control__menu-button-text">
         <span class="p-control__menu-button-text-default">home</span>
@@ -28,18 +45,11 @@
       <span class="p-control__menu-button-icon"></span>
     </button>
     <ul class="p-control__menu-items" id="menuDropdown">
-      <li class="p-control__menu-item">
-        <a href="#" class="p-control__menu-link">home</a>
-      </li>
-      <li class="p-control__menu-item">
-        <a href="#" class="p-control__menu-link">products</a>
-      </li>
-      <li class="p-control__menu-item">
-        <a href="#" class="p-control__menu-link">about us</a>
-      </li>
-      <li class="p-control__menu-item">
-        <a href="#" class="p-control__menu-link">contact us</a>
-      </li>
+      <% menuItems.forEach(function(item) { %>
+        <li class="p-control__menu-item">
+          <a href="<%= item.href %>" class="p-control__menu-link"><%= item.text %></a>
+        </li>
+      <% }); %>
     </ul>
   </div>
 </div>

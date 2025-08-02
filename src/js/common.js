@@ -181,7 +181,10 @@ jQuery(function () {
     });
 
     // ドロワー開時にbody要素がスクロールしないように
-    (jQuery(`#${ariaControls}`).hasClass(addClass) ? jQuery('body').addClass('u-overflowHidden') : jQuery('body').removeClass('u-overflowHidden'));
+    // menuDropdownとlanguageDropdownの場合はスクロールを許可、それ以外は制御
+    if (ariaControls !== 'menuDropdown' && ariaControls !== 'languageDropdown') {
+      (jQuery(`#${ariaControls}`).hasClass(addClass) ? jQuery('body').addClass('u-overflowHidden') : jQuery('body').removeClass('u-overflowHidden'));
+    }
 
     return false;
   });

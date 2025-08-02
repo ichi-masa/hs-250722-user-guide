@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+.p-table {
+  
+}
+
+.p-table__row {
+  height: rem(50);
+}
+
+.p-table__cell {
+  vertical-align: middle;
+  padding: rem(5) rem(5) rem(5) rem(7);
+}
+
+.p-table__cell--icon {
+  width: 50px;
+}
+
+.p-table__cell--symbol {
+  width: 70px;
+}
+
+.p-table__cell--name {
+  width: 202px;
+  text-align: center;
+}
+
+.p-table__cell--description {
+  width: 400px;
+}
+
+.p-table__icon {
+  width: rem(46);
+  aspect-ratio: 1 / 1;
+  vertical-align: middle;
+  margin-inline: auto;
+}

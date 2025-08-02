@@ -10,14 +10,28 @@ const sideNavItems = [
   { href: './specifications.html', text: json.nav.specifications, key: 'specifications' },
   { href: './body-composition.html', text: json.nav.bodyComposition, key: 'body-composition' }
 ];
+// デバッグ用
+console.log('Current page:', currentPage);
 %>
 
 <aside class="p-side-nav">
   <nav class="p-side-nav__menu">
     <ul class="p-side-nav__items">
       <% sideNavItems.forEach(function(item) { %>
-      <li class="p-side-nav__item <%= currentPage === item.key ? 'p-side-nav__item--current' : '' %>">
+      <% 
+        // 子ページから親ページを判定（例：how-to-use-package-contents -> how-to-use）
+        const isChildOfThisItem = currentPage.startsWith(item.key + '-');
+        const isExactMatch = currentPage === item.key;
+        const shouldShowAsCurrent = isExactMatch || isChildOfThisItem;
+      %>
+      <li class="p-side-nav__item <%= isExactMatch ? 'p-side-nav__item--current' : (isChildOfThisItem ? 'p-side-nav__item--parent' : '') %>">
+        <% if (isExactMatch) { %>
+        <div class="p-side-nav__link p-side-nav__link--current"><%= item.text %></div>
+        <% } else if (isChildOfThisItem) { %>
+        <a href="<%= item.href %>" class="p-side-nav__link p-side-nav__link--parent"><%= item.text %></a>
+        <% } else { %>
         <a href="<%= item.href %>" class="p-side-nav__link"><%= item.text %></a>
+        <% } %>
       </li>
       <% }); %>
     </ul>

@@ -1,0 +1,186 @@
+@use 'global' as *;
+
+.p-manual__title {
+  margin-bottom: rem(14);
+}
+
+.p-manual__wrap {
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+}
+
+.p-manual__lead {
+  font-size: rem(16);
+  font-family: var(--font-din-medium);
+  line-height: 1;
+}
+
+.p-manual__article {
+  margin-top: rem(28);
+}
+
+.p-manual__sub-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__sub-text {
+  font-size: rem(14);
+  line-height: lh(20, 14);
+  margin-top: rem(10);
+  margin-bottom: rem(10);
+}
+
+.p-manual__table-wrap {
+  margin-top: rem(40);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  
+  @include mq(md) {
+    border: none;
+    border-radius: 0;
+    
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.p-manual__table {
+  width: 653px;
+  min-width: 653px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  table-layout: fixed;
+  
+  @include mq(md) {
+    width: 100%;
+    max-width: 653px;
+    min-width: auto;
+  }
+}
+
+.p-manual__table--display {
+  width: 673px;
+  min-width: 673px;
+  
+  @include mq(md) {
+    width: 100%;
+    max-width: 673px;
+    min-width: auto;
+  }
+}
+
+.p-manual__note {
+  font-size: rem(14);
+  line-height: 1.4;
+  margin-top: rem(7);
+}
+
+.p-manual__image {
+  margin-top: rem(10);
+}
+
+.p-manual__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-manual__image--package-contents-main-unit {
+  width: calc(383 / 788 * 100%);
+}
+
+.p-manual__image--package-contents-batteries {
+  width: calc(130 / 788 * 100%);
+}
+
+.p-manual__image--know-your-device-main-unit {
+  width: calc(593 / 788 * 100%);
+}
+
+.p-manual__image--know-your-device-display {
+  width: calc(646 / 788 * 100%);
+}
+
+.p-manual__image--installing-batteries-step1 {
+  width: calc(268 / 788 * 100%);
+}
+
+.p-manual__image--installing-batteries-step2 {
+  width: calc(322 / 788 * 100%);
+}
+
+.p-manual__steps {
+  margin-top: rem(28);
+  display: flex;
+  flex-direction: column;
+  gap: rem(28);
+  counter-reset: step;
+  padding-left: rem(10);
+}
+
+.p-manual__step {
+  position: relative;
+  padding-left: rem(10);
+}
+
+.p-manual__step::before {
+  counter-increment: step;
+  content: counter(step) ".";
+  position: absolute;
+  left: rem(-10);
+  top: 0;
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__step-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__step-list {
+  margin-top: rem(8);
+}
+
+.p-manual__step-list-item {
+  font-size: rem(14);
+  line-height: 1.4;
+  padding-left: rem(10);
+  position: relative;
+}
+
+.p-manual__step-list-item::before {
+  content: "";
+  position: absolute;
+  left: rem(-10);
+  top: rem(9);
+  left: 0;
+  width: rem(2);
+  height: rem(2);
+  background: $black;
+  border-radius: 50%;
+}
+
+.p-manual__tip {
+  margin-top: rem(28);
+}
+
+.p-manual__tip-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__tip-text {
+  margin-top: rem(10);
+  font-size: rem(14);
+  line-height: 1.4;
+} 

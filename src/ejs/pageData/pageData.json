@@ -1,19 +1,101 @@
 {
   "lang": "en",
   "top": {
-    "title": "VIVA 360+ Body Composition Monitor HBF-H132T1-EBK",
+    "title": "VIVA 360+ (HBF-H132T1-EBK)",
     "description": "User guide for VIVA 360+ Body Composition Monitor",
-    "url": "https://example.com"
+    "url": ""
   },
-  "about": {
-    "title": "About This Product",
-    "description": "Learn more about VIVA 360+ Body Composition Monitor",
-    "content": "The VIVA 360+ Body Composition Monitor is an advanced health monitoring device..."
+  "safety": {
+    "title": "Important Safety Information"
+  },
+  "howToUse": {
+    "title": "How to Use",
+    "packageContents": {
+      "title": "Package Contents"
+    },
+    "knowYourDevice": {
+      "title": "Know Your Device"
+    },
+    "installingBatteries": {
+      "title": "Installing Batteries"
+    },
+    "installingOMRONConnectApp": {
+      "title": "Installing the “OMRON connect” App"
+    },
+    "forAccurateMeasurement": {
+      "title": "For Accurate Measurement"
+    },
+    "takingAMeasurement": {
+      "title": "Taking a Measurement"
+    },
+    "automaticTransferOfReadings": {
+      "title": "Automatic Transfer of Readings"
+    },
+    "checkYourReadingsUsingTheOMRONConnectApp": {
+      "title": "Check Your Readings Using the “OMRON connect” App"
+    },
+    "measuringWeightOnly": {
+      "title": "Measuring Weight Only"
+    }
+  },
+  "troubleshooting": {
+    "title": "Error Messages and Troubleshooting",
+    "errorMessages": {
+      "title": "Error Messages"
+    },
+    "troubleshooting": {
+      "title": "Troubleshooting"
+    }
+  },
+  "maintenance": {
+    "title": "Maintenance",
+    "maintenance":{
+      "title": "Cleaning the Main Unit"
+    },
+    "storage": {
+      "title": "Storage"
+    },
+    "disposal": {
+      "title": "Disposal"
+    }
+  },
+  "calibration": {
+    "title": "Calibration",
+    "selectingThePersonalNumberManuallyBeforeMeasurement": {
+      "title": "Selecting the Personal Number Manually Before Measurement"
+    },
+    "transferringTheReadingsLater": {
+      "title": "Transferring the Readings Later"
+    },
+    "measuringWithoutRecording": {
+      "title": "Measuring without Recording"
+    },
+    "changingOrDeletingYourPersonalData": {
+      "title": "Changing or Deleting Your Personal Data"
+    },
+    "replacingTheBatteries": {
+      "title": "Replacing the Batteries"
+    }
+  },
+  "specifications": {
+    "title": "Specifications",
+    "specifications": {
+      "title": "Specifications"
+    },
+    "correctDisposalOfThisProduct": {
+      "title": "Correct Disposal of This Product"
+    },
+    "importantInformationRegardingElectromagneticCompatibility": {
+      "title": "Important information regarding Electromagnetic Compatibility"
+    }
+  },
+  "bodyComposition": {
+    "title": "Information on Body Composition"
   },
   "nav": {
     "home": "Home",
     "safety": "Important Safety Information",
-    "howToUse": "How to use",
+    "howToUse": "How to Use",
     "troubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",
     "calibration": "Calibration",

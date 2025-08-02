@@ -1,0 +1,126 @@
+@use 'global' as *;
+
+.p-how-to-use-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+.p-how-to-use-list__item {
+  background-color: $white;
+  padding: rem(15) rem(24) rem(18);
+}
+
+.p-how-to-use-list__lead {
+  font-size: rem(24);
+  font-family: var(--font-din-light);
+  line-height: lh(28, 24);
+  letter-spacing: 0;
+  color: var(--color-black);
+}
+
+.p-how-to-use-list__link {
+  font-size: rem(24);
+  font-family: var(--font-din-light);
+  line-height: lh(28, 24);
+  letter-spacing: 0;
+  color: var(--color-black);
+  display: block;
+  position: relative;
+}
+
+.p-how-to-use-list__link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(20);
+  aspect-ratio: 1 / 1;
+  background-image: url(../img/common/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+
+  @include mq(md) {
+    left: 32%;
+  }
+}
+
+@media (hover: hover) {
+  .p-how-to-use-list__link:hover::after {
+    transform: translateY(-50%) translateX(rem(5));
+  }
+}
+
+.p-how-to-use-list__sub-items {
+  margin-top: rem(42);
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-how-to-use-list__sub-link {
+  display: block;
+  font-size: rem(14);
+  font-family: var(--font-din-medium);
+  line-height: lh(14, 14);
+  letter-spacing: 0;
+  padding: rem(5) rem(30);
+  position: relative;
+}
+
+.p-how-to-use-list__sub-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(20);
+  aspect-ratio: 1 / 1;
+  background-image: url(../img/common/icon-cordReel.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.p-how-to-use-list__sub-link--cordReel::before {
+  background-image: url(../img/common/icon-cordReel.svg);
+}
+
+.p-how-to-use-list__sub-link--mobile::before {
+  background-image: url(../img/common/icon-mobile.svg);
+}
+
+.p-how-to-use-list__sub-link--measurement::before {
+  background-image: url(../img/common/icon-measurement.svg);
+}
+
+.p-how-to-use-list__sub-link span {
+  position: relative;
+  display: inline-block;
+}
+
+.p-how-to-use-list__sub-link span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: rem(-30);
+  transform: translateY(-50%);
+  width: rem(20);
+  aspect-ratio: 1 / 1;
+  background-image: url(../img/common/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.p-how-to-use-list__sub-link:hover span::after {
+  transform: translateY(-50%) translateX(rem(5));
+}
+
+
+
+

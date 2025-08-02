@@ -58,6 +58,13 @@
   font-size: rem(14);
   line-height: lh(22, 14);
   padding: rem(9) rem(16);
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .p-control__language-button:hover {
+    color: $dark-gray;
+  }
 }
 
 .p-control__language-button-icon {
@@ -82,6 +89,7 @@
   border-radius: .875rem;
   background-color: #F2F2F2;
   width: 100%;
+  z-index: 1;
 }
 
 .p-control__language-items.is-opened {
@@ -104,6 +112,13 @@
   padding: rem(9) rem(16);
   font-size: rem(14);
   line-height: lh(22, 14);
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .p-control__language-link:hover {
+    color: $dark-gray;
+  }
 }
 
 .p-control__language-button.is-opened .p-control__language-button-icon {

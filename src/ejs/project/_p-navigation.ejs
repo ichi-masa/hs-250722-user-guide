@@ -1,0 +1,20 @@
+<% 
+  const navigationItems = [
+    { href: './how-to-use.html', text: json.nav.howToUse, key: 'how-to-use' },
+    { href: './troubleshooting.html', text: json.nav.troubleshooting, key: 'troubleshooting' },
+    { href: './maintenance.html', text: json.nav.maintenance, key: 'maintenance' },
+    { href: './calibration.html', text: json.nav.calibration, key: 'calibration' }
+  ];
+%>
+
+<div class="p-navigation">            
+  <ul class="p-navigation__items">
+    <% navigationItems.forEach(function(item) { %>
+      <li class="p-navigation__item">
+        <a href="<%= item.href %>" class="p-navigation__link c-btn">
+          <%= item.text %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</div>

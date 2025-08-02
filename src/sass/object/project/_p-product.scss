@@ -42,12 +42,32 @@
   }
 }
 
+.p-product__navigation {
+  margin-top: rem(32);
+  width: 100%;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
 .p-product__more-button {
   margin-top: rem(40);
   width: 100%;
-  text-align: right;
-
+  
   @include mq(md) {
     margin-top: rem(58);
+    text-align: right;
+  }
+}
+
+.p-product__more-button-link {
+  display: grid;
+  place-content: center;
+  width: 100%;
+
+  @include mq(md) {
+    display: inline-block;
+    width: fit-content;
   }
 }

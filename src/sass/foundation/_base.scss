@@ -39,9 +39,9 @@ body.fadeIn {
   opacity: 0;
 }
 
-header {}
+// header {}
 
-main {
+.p-content-area {
   flex: 1;
 }
 
@@ -93,12 +93,12 @@ table {
   table-layout: fixed;
 }
 
-thead {
-  // font-weight: $fw-bold;
-  // background-color: $light-gray;
-}
+// thead {
+//   font-weight: $fw-bold;
+//   background-color: $light-gray;
+// }
 
-tbody {}
+// tbody {}
 
 th,
 td {
@@ -108,9 +108,9 @@ td {
   border: 1px solid;
 }
 
-th {
-  // width: 25%;
-}
+// th {
+//   width: 25%;
+// }
 
 address {
   font-style: normal;

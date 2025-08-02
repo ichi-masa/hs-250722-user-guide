@@ -1,0 +1,86 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-package-contents' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.installingBatteries.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              This product uses AAA alkaline batteries. Do not use manganese batteries or rechargeable batteries as they may significantly reduce the number of measurements or cause malfunction.
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Turn over the unit and open the battery cover on the back.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">❶ Push the clasp, and ❷ remove the battery cover.</li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--installing-batteries-step1">
+                  <img src="./assets/img/common/installing-batteries-step1.webp" alt="Battery cover removal">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Install the batteries in the correct polarity as marked inside the battery compartment.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">The side with the spring indicates ⊖ polarity.</li>
+                  <li class="p-manual__step-list-item">Press the battery down to make sure it is installed properly.</li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--installing-batteries-step2">
+                  <img src="./assets/img/common/installing-batteries-step2.webp" alt="Battery installation with polarity">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Close the battery cover.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">Close it until you hear a click.</li>
+                  <li class="p-manual__step-list-item">Battery life is approximately 6 months.<br>        (When using AAA alkaline batteries with four measurements per day under OMRON’s test conditions)</li>
+                </ul>
+              </li>
+            </ol>
+            <div class="p-manual__tip">
+              <p class="p-manual__tip-title">You can configure the initial settings on the main unit immediately after purchase or after replacing its batteries.</p>
+              <p class="p-manual__tip-text">
+                Please refer to "Performing Initial Settings on the Unit" set up the initial settings.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-know-your-device.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.howToUse.installingOMRONConnectApp.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

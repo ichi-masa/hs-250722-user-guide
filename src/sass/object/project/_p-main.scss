@@ -4,9 +4,34 @@
   background: $white;
   padding: rem(25) rem(24) rem(64);
   margin-top: rem(42);
+  
+  @include mq(md) {
+    margin-top: rem(32);
+    padding: rem(25) rem(24) rem(50);
+  }
+}
+
+.p-main__content--top {
+  padding: rem(25) rem(24) rem(64);
 
   @include mq(md) {
     padding: rem(100) rem(24) rem(50);
+  }
+}
+
+.p-main__list {
+  margin-top: rem(42);
+
+  @include mq(md) {
     margin-top: rem(32);
+  }
+}
+
+.p-main__pagination {
+  margin-top: rem(40);
+  text-align: right;
+
+  @include mq(md) {
+    margin-top: rem(60);
   }
 }

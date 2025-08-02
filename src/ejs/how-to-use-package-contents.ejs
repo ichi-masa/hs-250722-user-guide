@@ -1,0 +1,71 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-package-contents' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.packageContents.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              Make sure you have all of the following:
+            </p>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Main Unit
+              </h3>
+              <figure class="p-manual__image p-manual__image--package-contents-main-unit">
+                <img src="./assets/img/common/package-contents-main-unit.webp" alt="Main Unit">
+              </figure>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                4 AAA alkaline batteries
+              </h3>
+              <p class="p-manual__sub-text">
+                ・Battery life of the provided batteries may be less than with new batteries.
+              </p>
+              <figure class="p-manual__image p-manual__image--package-contents-batteries">
+                <img src="./assets/img/common/package-contents-batteries.webp" alt="4 AAA alkaline batteries">
+              </figure>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-know-your-device.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.howToUse.knowYourDevice.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

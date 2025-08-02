@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.p-page-title {
+  font-size: rem(24);
+  font-family: var(--font-din-light);
+  line-height: lh(28, 24);
+  letter-spacing: 0;
+}
