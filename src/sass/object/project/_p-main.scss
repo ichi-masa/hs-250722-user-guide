@@ -21,6 +21,7 @@
 
 .p-main__list {
   margin-top: rem(42);
+  position: relative;
 
   @include mq(md) {
     margin-top: rem(32);

@@ -1,18 +1,15 @@
 @use 'global' as *;
 
-.p-manual__title {
-  margin-bottom: rem(14);
-}
-
 .p-manual__wrap {
   margin-top: rem(20);
   margin-bottom: rem(20);
 }
 
 .p-manual__lead {
-  font-size: rem(16);
+  font-size: rem(12);
   font-family: var(--font-din-medium);
-  line-height: 1;
+  line-height: lh(16, 12);
+  letter-spacing: 0.05em;
 }
 
 .p-manual__article {
@@ -29,7 +26,13 @@
   font-size: rem(14);
   line-height: lh(20, 14);
   margin-top: rem(10);
-  margin-bottom: rem(10);
+}
+
+.p-manual__url-link {
+  display: block;
+  margin-top: rem(10);
+  font-size: rem(14);
+  line-height: lh(20, 14);
 }
 
 .p-manual__table-wrap {
@@ -40,11 +43,11 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   position: relative;
-  
+
   @include mq(md) {
     border: none;
     border-radius: 0;
-    
+
     &::after {
       display: none;
     }
@@ -56,7 +59,7 @@
   min-width: 653px;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   table-layout: fixed;
-  
+
   @include mq(md) {
     width: 100%;
     max-width: 653px;
@@ -67,7 +70,7 @@
 .p-manual__table--display {
   width: 673px;
   min-width: 673px;
-  
+
   @include mq(md) {
     width: 100%;
     max-width: 673px;
@@ -92,29 +95,113 @@
 }
 
 .p-manual__image--package-contents-main-unit {
-  width: calc(383 / 788 * 100%);
+  width: calc(383 / 787 * 100%);
 }
 
 .p-manual__image--package-contents-batteries {
-  width: calc(130 / 788 * 100%);
+  width: calc(130 / 787 * 100%);
 }
 
 .p-manual__image--know-your-device-main-unit {
-  width: calc(593 / 788 * 100%);
+  width: calc(593 / 787 * 100%);
 }
 
 .p-manual__image--know-your-device-display {
-  width: calc(646 / 788 * 100%);
+  width: calc(646 / 787 * 100%);
 }
 
 .p-manual__image--installing-batteries-step1 {
-  width: calc(268 / 788 * 100%);
+  width: calc(268 / 787 * 100%);
 }
 
 .p-manual__image--installing-batteries-step2 {
-  width: calc(322 / 788 * 100%);
+  width: calc(322 / 787 * 100%);
 }
 
+.p-manual__image--qr-code,
+.p-manual__image--search-display,
+.p-manual__image--weight-display {
+  width: calc(223 / 787 * 100%);
+}
+
+.p-manual__image--app-logo {
+  width: calc(100 / 787 * 100%);
+}
+
+.p-manual__store-badges {
+  display: flex;
+  margin-top: rem(10);
+}
+
+.p-manual__store-badge {
+  width: calc(270 / 787 * 100%);
+  display: block;
+}
+
+.p-manual__store-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-manual__icon-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.p-manual__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: rem(17);
+}
+
+// リストのスタイル
+.p-manual__items {
+  margin-top: rem(28);
+}
+
+.p-manual__item {
+  font-size: rem(14);
+  line-height: 1.4;
+  padding-left: rem(10);
+  position: relative;
+}
+
+.p-manual__item::before {
+  content: "";
+  position: absolute;
+  left: rem(-10);
+  top: rem(9);
+  left: 0;
+  width: rem(2);
+  height: rem(2);
+  background: $black;
+  border-radius: 50%;
+}
+
+.p-manual__instruction {
+  font-size: rem(14);
+  line-height: 1.4;
+  padding-left: rem(10);
+  position: relative;
+}
+
+.p-manual__instruction::before {
+  content: "";
+  position: absolute;
+  left: rem(-10);
+  top: rem(9);
+  left: 0;
+  width: rem(2);
+  height: rem(2);
+  background: $black;
+  border-radius: 50%;
+}
+
+
+// 番号付きリストのスタイル
 .p-manual__steps {
   margin-top: rem(28);
   display: flex;
@@ -122,6 +209,10 @@
   gap: rem(28);
   counter-reset: step;
   padding-left: rem(10);
+}
+
+.p-manual__steps:has(h4.p-manual__step-title) {
+  padding-left: rem(25);
 }
 
 .p-manual__step {
@@ -169,6 +260,26 @@
   border-radius: 50%;
 }
 
+.p-manual__procedures {
+  counter-reset: procedure;
+  padding-left: rem(10);
+}
+
+.p-manual__procedure {
+  font-size: rem(14);
+  line-height: 1.4;
+  padding-left: rem(10);
+  position: relative;
+  counter-increment: procedure;
+}
+
+.p-manual__procedure::before {
+  content: "("counter(procedure)")";
+  position: absolute;
+  left: rem(-10);
+  top: 0;
+}
+
 .p-manual__tip {
   margin-top: rem(28);
 }
@@ -177,10 +288,23 @@
   font-size: rem(16);
   font-family: var(--font-din-bold);
   line-height: lh(20, 16);
+  padding-left: rem(16);
+  position: relative;
+}
+
+.p-manual__tip-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(6);
+  width: rem(10);
+  height: rem(10);
+  background: $black;
+  border-radius: 50%;
 }
 
 .p-manual__tip-text {
   margin-top: rem(10);
   font-size: rem(14);
   line-height: 1.4;
-} 
+}

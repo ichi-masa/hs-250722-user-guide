@@ -53,34 +53,34 @@ footer {
 /************************************************************************
 * base
 ************************************************************************/
-a[target='_blank']:not([class]) {
-  transition: color 0.3s;
+// a[target='_blank']:not([class]) {
+//   transition: color 0.3s;
 
-  &::after {
-    display: inline-block;
-    margin-left: em(13, 17);
-    content: '';
-    font-weight: 900;
-    width: em(14.5, 17);
-    height: em(13, 17);
-    mask-image: url('../img/common/icon-outerLink.svg');
-    mask-repeat: no-repeat;
-    background-color: currentColor;
-  }
-}
+//   &::after {
+//     display: inline-block;
+//     margin-left: em(13, 17);
+//     content: '';
+//     font-weight: 900;
+//     width: em(14.5, 17);
+//     height: em(13, 17);
+//     mask-image: url('../img/common/icon-outerLink.svg');
+//     mask-repeat: no-repeat;
+//     background-color: currentColor;
+//   }
+// }
 
-a:not([class]) {
-  // color: #0000ee;
-  color: #03c;
+// a:not([class]) {
+//   // color: #0000ee;
+//   color: #03c;
 
-  &:visited {
-    color: #639;
-  }
+//   &:visited {
+//     color: #639;
+//   }
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 table {
   border-collapse: collapse;

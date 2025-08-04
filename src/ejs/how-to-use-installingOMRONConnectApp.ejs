@@ -1,0 +1,213 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-package-contents' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.installingOMRONConnectApp.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              This unit can transfer your readings to your smartphone, and you can confirm your weight and body composition changes simply by installing the "OMRON connect" app on your smartphone. The "OMRON connect" app allows you to check your weight, body fat percentage, as well as your skeletal muscle, visceral fat level, body age, resting metabolism, and BMI.<br>
+              After installation, register this product and your personal data (date of birth, gender, height and personal number) in the "OMRON connect" app.
+            </p>
+            
+            <article class="p-manual__article" id="install-the-app">
+              <h3 class="p-manual__sub-title">Install the App</h3>
+              <ol class="p-manual__steps">
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Go to “Settings” on your smartphone and enable the Bluetooth function.</h4>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Install the “OMRON connect” app on your smartphone.</h4>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">Install the “OMRON connect” app using one of the following methods.</li>
+                  </ul>
+                  <p class="p-manual__sub-text">Visit the website to download</p>
+                  <figure class="p-manual__image p-manual__image--qr-code">
+                    <img src="./assets/img/common/omron-connect-qr-code.webp" alt="QR code for OMRON connect app">
+                  </figure>
+                  <div class="p-manual__url">
+                    <a href="https://www.omronconnect.com/setup/" class="p-manual__url-link" target="_blank" rel="noopener noreferrer">https://www.omronconnect.com/setup/</a>
+                  </div>
+                  <p class="p-manual__sub-text">Download from “Google Play” or “App Store”</p>
+                  <figure class="p-manual__image p-manual__image--search-display">
+                    <img src="./assets/img/common/omron-connect-search.webp" alt="OMRON connect app search">
+                  </figure>
+                  <figure class="p-manual__image p-manual__image--app-logo">
+                    <img src="./assets/img/common/omron-connect-logo.webp" alt="OMRON connect app logo">
+                  </figure>
+                  <div class="p-manual__store-badges">
+                    <a href="#" class="p-manual__store-badge">
+                      <img src="./assets/img/common/app-store-badge.webp" alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="p-manual__store-badge">
+                      <img src="./assets/img/common/google-play-badge.webp" alt="Get it on Google Play">
+                    </a>
+                  </div>
+                </li>
+              </ol>
+            </article>
+            
+            <article class="p-manual__article" id="perform-initial-settings">
+              <h3 class="p-manual__sub-title">Perform Initial Settings</h3>
+              <ol class="p-manual__steps">
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Open the “OMRON connect” app and register this product and your personal data.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">Follow the instructions in the “OMRON connect” app to register.</p>
+                    </li>
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">If you are already using the “OMRON connect” app, register this product using the following steps.</p>
+                      <ol class="p-manual__procedures">
+                        <li class="p-manual__procedure">Tap the “Devices” icon at the bottom of the “OMRON connect” app screen</li>
+                        <li class="p-manual__procedure">Tap “Add Devices” and follow the on-screen instructions</li>
+                      </ol>
+                    </li>
+                  </ul>
+                  <div class="p-manual__note">
+                    <p class="p-manual__note-title">Next, register your personal data (current weight and body fat percentage).</p>
+                    <p class="p-manual__note-text">The registered personal data will act as a standard for estimating the measured individual (personal number).<br>The readings (weight, body fat percentage) will be automatically transferred to your smartphone. Keep the “OMRON connect” app open until you have completed registering your personal data.</p>
+                  </div>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Turn on the power.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">Simply stand on the unit, then the unit will turn on.</p>
+                    </li>
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">The weight measurement display will appear.</p>
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/app01-initial-weight-screen.webp" alt="initial weight screen">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/navigation-icon.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit and select the personal number registered in the “OMRON connect” app.</h4>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/app02-user-selection-screen.webp" alt="user selection screen">
+                  </figure>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/touch-icon.webp" class="p-manual__icon " alt="Touch icon"></span> on the unit.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">When the “0.0 kg” is displayed, take out the display unit.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">Do not take out the display unit until “0.0 kg” appears on the display.<br>Otherwise, the weight of the display is added to your body weight which causes an incorrect result.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Place your feet on the foot electrodes with your weight evenly distributed.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">After the unit makes a “beeping” sound, the display will show your weight.<br>The unit will then start to measure your body fat percentage, visceral fat level, skeletal muscle percentage, BMI and resting metabolism.</p>
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/app03-weight-display.webp" alt="weight display">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Extend your arms straight at a 90° angle to your body.</h4>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/app04-measurement-pose.webp" alt="measurement pose">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">After the measurement is complete, the estimated personal number is displayed. At this point you may step off the unit.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">The unit makes a “beeping” sound.</p>
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/app05-user-profile-display.webp" alt="user profile display">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Check whether the estimated personal number is correct.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">
+                        Check whether your personal number, which you set when registering your personal data, is displayed.<br>This product automatically estimates your personal number based on your weight and body composition using your personal data. However, if someone with a similar body shape or weight takes a measurement, the correct personal number may not be displayed.
+                      </p>
+                    </li>
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">
+                        If your personal number is displayed, the power will automatically turn off after about 18 seconds without any operation, and the readings will be transferred to your smartphone.<br>During transfer, the Bluetooth symbol (<span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span>) on the display will light up.<br><br>This will complete the registration of your personal data.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Turn off the power.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">Even if you forget to turn off the power, it will automatically turn off after about 3 minutes.</p>
+                    </li>
+                    <li class="p-manual__instruction">
+                      <p class="p-manual__instruction-text">To change or delete your personal data, refer to “Changing or Deleting Your Personal Data”.</p>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <ul class="p-manual__items">
+                <li class="p-manual__item">
+                  To cancel the setting, press the power switch on the unit to turn off the power.
+                </li>
+                <li class="p-manual__item">
+                  One smartphone can manage the readings of one person.<br>    If you are managing the readings of multiple people, prepare one smartphone for each personal number.
+                </li>
+                <li class="p-manual__item">
+                  To use automatic transfer, your location setting on your smartphone must be enabled.<br>Even if the location is enabled, your personal information will not be leaked.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-know-your-device.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.howToUse.forAccurateMeasurement.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>
