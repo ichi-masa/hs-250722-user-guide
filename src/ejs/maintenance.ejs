@@ -1,0 +1,29 @@
+<%- include('./common/_head', { pageKey: 'maintenance' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'maintenance' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__list">
+        <%- include('./project/_p-maintenance-list') %>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

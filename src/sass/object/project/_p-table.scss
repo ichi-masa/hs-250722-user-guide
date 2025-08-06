@@ -1,11 +1,15 @@
 @use 'global' as *;
 
 .p-table {
-  
+  font-size: rem(14);
+  font-family: $ff-roboto;
+  font-weight: $fw-medium;
+  line-height: lh(20, 14);
+  letter-spacing: 0.0025em;
 }
 
 .p-table__row {
-  height: rem(50);
+  // height: rem(50);
 }
 
 .p-table__cell {
@@ -13,12 +17,14 @@
   padding: rem(5) rem(5) rem(5) rem(7);
 }
 
-.p-table__cell--icon {
-  width: 50px;
-}
-
+.p-table__cell--icon,
 .p-table__cell--symbol {
   width: 70px;
+}
+
+.p-table__cell--number {
+  width: 70px;
+  text-align: center;
 }
 
 .p-table__cell--name {
@@ -30,9 +36,51 @@
   width: 400px;
 }
 
+.p-table__cell--display {
+  width: 199px;
+  text-align: center;
+}
+
+.p-table__cell--cause {
+  width: 172px;
+  text-align: center;
+}
+
+.p-table__cell--action {
+  width: 283px;
+  text-align: center;
+}
+
+.p-table__cell--exercise {
+  width: 370px;
+}
+
+.p-table__cell--sports {
+  width: 232px;
+}
+
+.p-table__icon-wrap {
+  vertical-align: middle;
+  padding-block: rem(5);
+}
+
 .p-table__icon {
+  margin-inline: auto;
   width: rem(46);
   aspect-ratio: 1 / 1;
-  vertical-align: middle;
-  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.p-table__icon--personal-number {
+  width: rem(46);
+  aspect-ratio: 46 / 109;
+}
+
+.p-table__icon--weight-display {
+  width: rem(174);
+  aspect-ratio: 174 / 179;
+  padding-block: rem(5);
+}
+

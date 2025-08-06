@@ -1,0 +1,33 @@
+@use 'global' as *;
+
+.p-grip-step {
+  display: flex;
+  flex-direction: column;
+  gap: rem(63);
+}
+
+.p-grip-step__item {
+  position: relative;
+}
+
+.p-grip-step__item::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: rem(-70);
+  transform: translateX(-50%);
+  width: rem(54);
+  aspect-ratio: 54 / 43;
+  background-image: url(../img/common/arrow-down.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.p-grip-step__item:last-child::before {
+  display: none;
+}
+
+.p-grip-step__image {
+  width: calc(200 / 788 * 100%);
+}

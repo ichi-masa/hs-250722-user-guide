@@ -14,6 +14,20 @@
 
 .p-trademarks__item {
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: 1.4;
   letter-spacing: 0;
+  position: relative;
+  padding-left: rem(8);
+}
+
+.p-trademarks__item::before {
+  content: '';
+  position: absolute;
+  top: rem(8);
+  left: 0;
+  width: rem(2);
+  height: rem(2);
+  background: $black;
+  border-radius: 50%;
 }

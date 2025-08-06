@@ -1,17 +1,17 @@
 @use 'global' as *;
 
-.p-how-to-use-list__items {
+.p-lower-list__items {
   display: flex;
   flex-direction: column;
   gap: rem(16);
 }
 
-.p-how-to-use-list__item {
+.p-lower-list__item {
   background-color: $white;
   padding: rem(15) rem(24) rem(18);
 }
 
-.p-how-to-use-list__lead {
+.p-lower-list__lead {
   font-size: rem(24);
   font-family: var(--font-din-light);
   line-height: lh(28, 24);
@@ -19,7 +19,7 @@
   color: var(--color-black);
 }
 
-.p-how-to-use-list__link {
+.p-lower-list__link {
   font-size: rem(24);
   font-family: var(--font-din-light);
   line-height: lh(28, 24);
@@ -29,11 +29,16 @@
   position: relative;
 }
 
-.p-how-to-use-list__link::after {
+.p-lower-list__link-text {
+  display: inline-block;
+  position: relative;
+}
+
+.p-lower-list__link-text::after {
   content: '';
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 60%;
+  right: rem(-30);
   transform: translateY(-50%);
   width: rem(20);
   aspect-ratio: 1 / 1;
@@ -42,26 +47,22 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s ease;
-
-  @include mq(md) {
-    left: 32%;
-  }
 }
 
 @media (hover: hover) {
-  .p-how-to-use-list__link:hover::after {
+  .p-lower-list__link:hover .p-lower-list__link-text::after {
     transform: translateY(-50%) translateX(rem(5));
   }
 }
 
-.p-how-to-use-list__sub-items {
+.p-lower-list__sub-items {
   margin-top: rem(42);
   display: flex;
   flex-direction: column;
   gap: rem(10);
 }
 
-.p-how-to-use-list__sub-link {
+.p-lower-list__sub-link {
   display: block;
   font-size: rem(14);
   font-family: var(--font-din-medium);
@@ -71,7 +72,7 @@
   position: relative;
 }
 
-.p-how-to-use-list__sub-link::before {
+.p-lower-list__sub-link::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -85,24 +86,32 @@
   background-position: center;
 }
 
-.p-how-to-use-list__sub-link--cordReel::before {
+.p-lower-list__sub-link--cordReel::before {
   background-image: url(../img/common/icon-cordReel.svg);
 }
 
-.p-how-to-use-list__sub-link--mobile::before {
+.p-lower-list__sub-link--mobile::before {
   background-image: url(../img/common/icon-mobile.svg);
 }
 
-.p-how-to-use-list__sub-link--measurement::before {
+.p-lower-list__sub-link--measurement::before {
   background-image: url(../img/common/icon-measurement.svg);
 }
 
-.p-how-to-use-list__sub-link span {
+.p-lower-list__sub-link--error::before {
+  background-image: url(../img/common/icon-error.svg);
+}
+
+.p-lower-list__sub-link--troubleshooting::before {
+  background-image: url(../img/common/icon-help.svg);
+}
+
+.p-lower-list__sub-link span {
   position: relative;
   display: inline-block;
 }
 
-.p-how-to-use-list__sub-link span::after {
+.p-lower-list__sub-link span::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -117,10 +126,9 @@
   transition: transform 0.3s ease;
 }
 
-.p-how-to-use-list__sub-link:hover span::after {
-  transform: translateY(-50%) translateX(rem(5));
+@media (hover: hover) {
+  .p-lower-list__sub-link:hover span::after {
+    transform: translateY(-50%) translateX(rem(5));
+  }
 }
-
-
-
 

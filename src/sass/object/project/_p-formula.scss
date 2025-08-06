@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+.p-formula {
+  padding: rem(10) clamp(rem(5), -0.584rem + 3.827vw, rem(20)) rem(20);
+  border: 1px solid $black;
+  width: 100%;
+  
+  @include mq(md) {
+    width: fit-content;
+    min-width: rem(575);
+    padding: rem(10) rem(20) rem(40);
+  }
+}
+
+.p-formula__title {
+  font-size: rem(16);
+  font-family: $ff-inter;
+  font-weight: $fw-bold;
+  line-height: 1.4;
+}
+
+.p-formula__flex {
+  margin-top: rem(18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(rem(5), 1.3vw, rem(10));
+  width: 100%;
+  font-size: rem(14);
+  font-family: $ff-roboto;
+  line-height: ln(20, 14);
+  letter-spacing: 0.0025em;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(md) {
+    gap: rem(25);
+  }
+}
+
+.p-formula__fraction {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+  white-space: nowrap;
+  
+  @include mq(md) {
+    min-width: rem(70);
+  }
+}
+
+.p-formula__numerator {
+  border-bottom: 1px solid $black;
+}

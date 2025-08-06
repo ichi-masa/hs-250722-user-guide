@@ -7,7 +7,9 @@
 
 .p-manual__lead {
   font-size: rem(12);
-  font-family: var(--font-din-medium);
+  // font-family: var(--font-din-medium);
+  font-family: $ff-roboto;
+  font-weight: $fw-medium;
   line-height: lh(16, 12);
   letter-spacing: 0.05em;
 }
@@ -22,8 +24,13 @@
   line-height: lh(20, 16);
 }
 
+.p-manual__sub-title--mt {
+  margin-top: rem(16);
+}
+
 .p-manual__sub-text {
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: lh(20, 14);
   margin-top: rem(10);
 }
@@ -32,6 +39,7 @@
   display: block;
   margin-top: rem(10);
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: lh(20, 14);
 }
 
@@ -54,34 +62,59 @@
   }
 }
 
+.p-manual__table-wrap--mt10 {
+  margin-top: rem(10);
+}
+
 .p-manual__table {
-  width: 653px;
-  min-width: 653px;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  width: rem(653);
+  min-width: rem(653);
   table-layout: fixed;
 
   @include mq(md) {
     width: 100%;
-    max-width: 653px;
+    max-width: rem(653);
     min-width: auto;
   }
 }
 
 .p-manual__table--display {
-  width: 673px;
-  min-width: 673px;
+  width: rem(673);
+  min-width: rem(673);
 
   @include mq(md) {
     width: 100%;
-    max-width: 673px;
+    max-width: rem(673);
+    min-width: auto;
+  }
+}
+
+.p-manual__table--two-column {
+  width: rem(265);
+  min-width: rem(265);
+
+  @include mq(md) {
+    width: 100%;
+    max-width: rem(265);
     min-width: auto;
   }
 }
 
 .p-manual__note {
+  margin-top: rem(7);
+}
+
+.p-manual__note-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+  margin-top: rem(10);
+}
+
+.p-manual__note-text {
   font-size: rem(14);
   line-height: 1.4;
-  margin-top: rem(7);
+  margin-top: rem(10);
 }
 
 .p-manual__image {
@@ -95,37 +128,57 @@
 }
 
 .p-manual__image--package-contents-main-unit {
-  width: calc(383 / 787 * 100%);
+  width: calc(383 / 767 * 100%);
 }
 
 .p-manual__image--package-contents-batteries {
-  width: calc(130 / 787 * 100%);
+  width: calc(130 / 767 * 100%);
 }
 
 .p-manual__image--know-your-device-main-unit {
-  width: calc(593 / 787 * 100%);
+  width: calc(780 / 767 * 100%);
 }
 
 .p-manual__image--know-your-device-display {
-  width: calc(646 / 787 * 100%);
+  width: calc(646 / 767 * 100%);
 }
 
 .p-manual__image--installing-batteries-step1 {
-  width: calc(268 / 787 * 100%);
+  width: calc(268 / 767 * 100%);
 }
 
 .p-manual__image--installing-batteries-step2 {
-  width: calc(322 / 787 * 100%);
+  width: calc(322 / 767 * 100%);
 }
 
 .p-manual__image--qr-code,
 .p-manual__image--search-display,
 .p-manual__image--weight-display {
-  width: calc(223 / 787 * 100%);
+  width: calc(223 / 767 * 100%);
 }
 
 .p-manual__image--app-logo {
-  width: calc(100 / 787 * 100%);
+  width: calc(100 / 767 * 100%);
+}
+
+.p-manual__image--personal-number {
+  width: calc(548 / 767 * 100%);
+}
+
+.p-manual__image--check-the-measurement-results {
+  width: calc(357 / 767 * 100%);
+}
+
+.p-manual__item-image--posture {
+  width: calc(773 / 788 * 100%);
+}
+
+.p-manual__item-image--step-on {
+  width: calc(265 / 788 * 100%);
+}
+
+.p-manual__image--unit {
+  width: calc(220 / 788 * 100%);
 }
 
 .p-manual__store-badges {
@@ -134,7 +187,7 @@
 }
 
 .p-manual__store-badge {
-  width: calc(270 / 787 * 100%);
+  width: calc(270 / 767 * 100%);
   display: block;
 }
 
@@ -146,7 +199,7 @@
 
 .p-manual__icon-wrap {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .p-manual__icon {
@@ -159,11 +212,20 @@
 
 // リストのスタイル
 .p-manual__items {
-  margin-top: rem(28);
+  margin-top: rem(32);
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-manual__items--for-accurate-measurement {
+  margin-top: rem(12);
+  gap: rem(28);
 }
 
 .p-manual__item {
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
@@ -181,8 +243,19 @@
   border-radius: 50%;
 }
 
+.p-manual__item--nodots::before {
+  display: none;
+}
+
+.p-manual__item-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
 .p-manual__instruction {
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
@@ -209,6 +282,10 @@
   gap: rem(28);
   counter-reset: step;
   padding-left: rem(10);
+}
+
+.p-manual__steps--for-accurate-measurement {
+  margin-top: rem(12);
 }
 
 .p-manual__steps:has(h4.p-manual__step-title) {
@@ -243,6 +320,7 @@
 
 .p-manual__step-list-item {
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
@@ -306,5 +384,156 @@
 .p-manual__tip-text {
   margin-top: rem(10);
   font-size: rem(14);
+  font-family: $ff-inter;
   line-height: 1.4;
 }
+
+
+.p-manual__example {
+  margin-top: rem(10);
+  font-size: rem(14);
+  font-family: $ff-inter;
+  font-weight: $fw-bold;
+  line-height: 1.4;
+}
+
+.p-manual__formula {
+  font-size: rem(16);
+  font-family: $ff-inter;
+  font-weight: $fw-bold;
+  line-height: 1.4;
+  border: 1px solid $black;
+  padding: rem(7);
+  width: fit-content;
+  margin-top: rem(8);
+}
+
+.p-manual__formulas {
+  margin-top: rem(8);
+}
+
+.p-manual__formula-item {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+}
+
+.p-manual__formula-list {
+  margin-top: rem(20);
+  padding-inline: rem(50);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+.p-manual__formula-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__formula-wrapper {
+  margin-top: rem(32);
+}
+
+.p-manual__grip-steps {
+  margin-top: rem(10);
+}
+
+.p-manual__figure-items {
+  margin-top: rem(10);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(12);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: rem(700);
+    gap: rem(30) rem(12)
+  }
+}
+
+.p-manual__figure-items--two-columns {
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.p-manual__figure-item {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: 0;
+
+  @include mq(md) {
+    gap: rem(10);
+  }
+}
+
+.p-manual__figure-text {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  position: relative;
+  padding-left: rem(10);
+}
+
+.p-manual__figure-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(9);
+  width: rem(2);
+  height: rem(2);
+  background: $black;
+  border-radius: 50%;
+}
+
+.p-manual__figure-image {
+  width: rem(207);
+  height: auto;
+}
+
+.p-manual__figure-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-manual__unit-placed-items {
+  margin-top: rem(10);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(12);
+
+  @include mq(md) {
+    max-width: rem(792);
+    gap: rem(30) rem(12)
+  }
+}
+
+.p-manual__unit-placed-item {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-manual__unit-placed-text {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+}
+
+.p-manual__unit-placed-image {
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: rem(264);
+  }
+}
+
+

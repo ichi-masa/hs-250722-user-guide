@@ -1,0 +1,78 @@
+@use 'global' as *;
+
+.p-safety__wrap {
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+}
+
+.p-safety__lead {
+  font-size: rem(12);
+  // font-family: var(--font-din-medium);
+  font-family: $ff-roboto;
+  font-weight: $fw-medium;
+  line-height: lh(16, 12);
+  letter-spacing: 0.05em;
+  margin-top: rem(8);
+}
+
+.p-safety__image {
+  margin-top: rem(8);
+  width: rem(173);
+  aspect-ratio: 173 / 45;
+  overflow: hidden;
+}
+
+.p-safety__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-safety__items {
+  margin-top: rem(8);
+}
+
+.p-safety__item {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  padding-left: rem(10);
+  position: relative;
+}
+
+.p-safety__item::before {
+  content: '';
+  position: absolute;
+  top: rem(8);
+  left: 0;
+  width: rem(4);
+  height: rem(4);
+  background: $black;
+  border-radius: 50%;
+}
+
+.p-safety__sub-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+  margin-top: rem(8);
+}
+
+.p-safety__sub-title--wireless {
+  margin-top: 0;
+  font-family: $ff-inter;
+  font-weight: $fw-bold;
+}
+
+.p-safety__text {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  margin-top: rem(20);
+}
+
+.p-safety__wireless {
+  margin-top: rem(10);
+  padding: rem(10);
+  border: 1px solid $black;
+}

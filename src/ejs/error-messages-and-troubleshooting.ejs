@@ -1,0 +1,29 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'error-messages-and-troubleshooting' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__list">
+        <%- include('./project/_p-error-messages-and-troubleshooting-list') %>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-package-contents' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.forAccurateMeasurement.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              To take accurate measurements, follow the items below.
+            </p>
+            
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">Check the Correct Measurement Method</h3>
+              <ul class="p-manual__items p-manual__items--for-accurate-measurement">
+                <li class="p-manual__item p-manual__item--nodots">
+                  <h4 class="p-manual__item-title">
+                    Correct Posture for Measurement
+                  </h4>
+                  <figure class="p-manual__item-image p-manual__item-image--posture">
+                    <img src="./assets/img/common/correct-posture-for-measurement.webp" alt="Correct Posture for Measurement">
+                  </figure>
+                </li>
+                <li class="p-manual__item p-manual__item--nodots">
+                  <h4 class="p-manual__item-title">
+                    Step on the main unit bare-footed.
+                  </h4>
+                  <figure class="p-manual__item-image p-manual__item-image--step-on">
+                    <img src="./assets/img/common/step-on-the-main-unit-bare-footed.webp" alt="Step on the main unit bare-footed">
+                  </figure>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      Make sure each of your heels is positioned as shown. Stand with your weight evenly distributed on the measurement platform.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__item p-manual__item--nodots">
+                  <h4 class="p-manual__item-title">
+                    Press your palms firmly on the grip electrodes.
+                  </h4>
+                  <div class="p-manual__grip-steps p-grip-step">
+                    <div class="p-grip-step__item">
+                      <figure class="p-grip-step__image">
+                        <img src="./assets/img/common/grip-electrodes01.webp" alt="Grip electrodes">
+                      </figure>
+                      <p class="p-grip-steps__text">
+                        Place your middle fingers in the dent at the back of the grip electrodes.
+                      </p>
+                    </div>
+                    <div class="p-grip-step__item">
+                      <figure class="p-grip-step__image">
+                        <img src="./assets/img/common/grip-electrodes02.webp" alt="Grip electrodes">
+                      </figure>
+                      <p class="p-grip-step__text">
+                        Hold the inner grip electrodes firmly with your thumb and index finger.
+                      </p>
+                    </div>
+                    <div class="p-grip-step__item">
+                      <figure class="p-grip-step__image">
+                        <img src="./assets/img/common/grip-electrodes03.webp" alt="Grip electrodes">
+                      </figure>
+                      <p class="p-grip-step__text">
+                        Hold the outer grip electrodes with your ring finger and small finger.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p-manual__item p-manual__item--nodots">
+                  <h4 class="p-manual__item-title">Postures to Avoid During Measurement</h4>
+                  <ul class="p-manual__figure-items">
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Movement during measurement
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement01.webp" alt="">
+                      </figure>
+                    </li>
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Arms bent
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement02.webp" alt="">
+                      </figure>
+                    </li>
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Arms too low or high
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement03.webp" alt="">
+                      </figure>
+                    </li>
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Display facing upwards
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement04.webp" alt="">
+                      </figure>
+                    </li>
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Knees bent
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement05.webp" alt="">
+                      </figure>
+                    </li>
+                    <li class="p-manual__figure-item">
+                      <p class="p-manual__figure-text">
+                        Standing on edge of unit
+                      </p>
+                      <figure class="p-manual__figure-image">
+                        <img src="./assets/img/common/avoid-during-measurement06.webp" alt="">
+                      </figure>
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__item p-manual__item--nodots">
+                  <h4 class="p-manual__item-title">
+                    Recommended Measurement Times
+                  </h4>
+                  <p class="p-manual__sub-text">
+                    The following times are suitable for measurement:
+                  </p>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">After waking up and before breakfast</li>
+                    <li class="p-manual__instruction">Before lunch and about 2 or more hours after breakfast</li>
+                    <li class="p-manual__instruction">Before dinner and about 2 or more hours after lunch</li>
+                    <li class="p-manual__instruction">Before going to bed and about 2 or more hours after dinner or bath</li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+            
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">Install the Unit</h3>
+              <p class="p-manual__sub-text">
+                The unit is regularly calibrated so that the weight is “0 kg” when not in use. When setting up the unit, place it on a hard, flat, and even surface.
+              </p>
+            </article>
+
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">When “0 kg calibration” Is Required</h3>
+              <p class="p-manual__sub-text">
+                The uniIf the unit is placed in conditions as the figures below, "0 kg calibration" is required because the weight displayed may differ from the actual weight.t is regularly calibrated so that the weight is “0 kg” when not in use. When setting up the unit, place it on a hard, flat, and even surface.
+              </p>
+              <ul class="p-manual__figure-items p-manual__figure-items--two-columns">
+                <li class="p-manual__figure-item">
+                  <p class="p-manual__figure-text">
+                    The unit is leaning against a wall or other objects
+                  </p>
+                  <figure class="p-manual__figure-image">
+                    <img src="./assets/img/common/unit-placed-in-conditions01.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__figure-item">
+                  <p class="p-manual__figure-text">
+                    The unit is placed upside down
+                  </p>
+                  <figure class="p-manual__figure-image">
+                    <img src="./assets/img/common/unit-placed-in-conditions02.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__figure-item">
+                  <p class="p-manual__figure-text">
+                    The unit is placed on an object
+                  </p>
+                  <figure class="p-manual__figure-image">
+                    <img src="./assets/img/common/unit-placed-in-conditions03.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__figure-item">
+                  <p class="p-manual__figure-text">
+                    An object is placed on the unit
+                  </p>
+                  <figure class="p-manual__figure-image">
+                    <img src="./assets/img/common/unit-placed-in-conditions04.webp" alt="">
+                  </figure>
+                </li>
+              </ul>
+            </article>
+
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">Implement the “0 kg Calibration”</h3>
+            </article>
+            <ol class="p-manual__steps p-manual__steps--for-accurate-measurement">
+              <li class="p-manual__step">
+                <h4 class="p-manual__step-title">Place the unit on a hard, flat, and even surface.</h4>
+                <figure class="p-manual__image p-manual__image--unit">
+                  <img src="./assets/img/common/unit-placed-good-condition.webp" alt="">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h4 class="p-manual__step-title">Turn on the power.</h4>
+                <ul class="p-manual__instructions">
+                  <li class="p-manual__instruction">
+                    Simply stand on the unit, then the unit will turn on.
+                  </li>
+                  <li class="p-manual__instruction">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen01-initial-weight.webp" alt="">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h4 class="p-manual__step-title">With the unit placed on the floor, press the power switch on the unit.</h4>
+                <ul class="p-manual__instructions">
+                  <li class="p-manual__instruction">
+                    Power is turned off.<br>Even if you forget to turn off the power, it will automatically turn off after about 3 minutes.
+                  </li>
+                  <li class="p-manual__instruction">
+                    Turn off the power, wait for at least 5 seconds, then take a measurement.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-taking-a-measurement.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.howToUse.takingAMeasurement.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

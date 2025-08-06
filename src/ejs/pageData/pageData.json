@@ -38,7 +38,7 @@
       "title": "Measuring Weight Only"
     }
   },
-  "troubleshooting": {
+  "errorMessagesAndTroubleshooting": {
     "title": "Error Messages and Troubleshooting",
     "errorMessages": {
       "title": "Error Messages"
@@ -96,7 +96,7 @@
     "home": "Home",
     "safety": "Important Safety Information",
     "howToUse": "How to Use",
-    "troubleshooting": "Error Messages and Troubleshooting",
+    "errorMessagesAndTroubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",
     "calibration": "Calibration",
     "specifications": "Specifications",
