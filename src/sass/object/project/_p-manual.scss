@@ -153,7 +153,8 @@
 
 .p-manual__image--qr-code,
 .p-manual__image--search-display,
-.p-manual__image--weight-display {
+.p-manual__image--weight-display,
+.p-manual__image--app-display {
   width: calc(223 / 767 * 100%);
 }
 
@@ -181,6 +182,30 @@
   width: calc(220 / 788 * 100%);
 }
 
+.p-manual__image--auto-transfer-1 {
+  width: calc(598 / 788 * 100%);
+}
+
+.p-manual__image--auto-transfer-2 {
+  width: calc(350 / 788 * 100%);
+}
+
+.p-manual__image--results {
+  width: calc(236 / 788 * 100%);
+}
+
+.p-manual__image--maintenance {
+  width: calc(190 / 777 * 100%);
+}
+
+.p-manual__image--storage {
+  width: calc(413 / 777 * 100%);
+}
+
+.p-manual__image--unit-placed {
+  width: calc(264 / 777 * 100%);
+}
+
 .p-manual__store-badges {
   display: flex;
   margin-top: rem(10);
@@ -202,6 +227,10 @@
   vertical-align: text-bottom;
 }
 
+.p-manual__icon-wrap--scale {
+  vertical-align: top;
+}
+
 .p-manual__icon {
   display: flex;
   align-items: center;
@@ -210,17 +239,27 @@
   height: rem(17);
 }
 
+.p-manual__icon--scale {
+  height: rem(30);
+  transform: translateY(rem(-5));
+}
+
 // リストのスタイル
 .p-manual__items {
   margin-top: rem(32);
   display: flex;
   flex-direction: column;
-  gap: rem(10);
+  gap: rem(20);
 }
 
 .p-manual__items--for-accurate-measurement {
   margin-top: rem(12);
   gap: rem(28);
+}
+
+.p-manual__items--storage {
+  margin-top: rem(10);
+  gap: rem(10);
 }
 
 .p-manual__item {
@@ -229,6 +268,14 @@
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
+}
+
+.p-manual__item--no {
+  padding-left: 0;
+}
+
+.p-manual__item--square {
+  padding-left: rem(12);
 }
 
 .p-manual__item::before {
@@ -243,7 +290,22 @@
   border-radius: 50%;
 }
 
-.p-manual__item--nodots::before {
+.p-manual__item--square::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(5);
+  width: rem(10);
+  height: rem(10);
+  background: $black;
+  border-radius: 0;
+}
+
+.p-manual__item--no::before {
+  display: none;
+}
+
+.p-manual__item--no-dot::before {
   display: none;
 }
 
@@ -251,6 +313,16 @@
   font-size: rem(16);
   font-family: var(--font-din-bold);
   line-height: lh(20, 16);
+}
+
+.p-manual__instructions--mt10 {
+  margin-top: rem(10);
+}
+
+.p-manual__instructions--timing {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
 }
 
 .p-manual__instruction {
@@ -273,6 +345,36 @@
   border-radius: 50%;
 }
 
+.p-manual__instruction--no-dot::before {
+  display: none;
+}
+
+.p-manual__instruction--bold::before {
+  width: rem(4);
+  height: rem(4);
+  top: rem(8);
+}
+
+.p-manual__instruction-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+}
+
+.p-manual__instruction-head {
+  margin-top: rem(10);
+  font-size: rem(14);
+  font-family: $ff-inter;
+  font-weight: $fw-semiBold;
+  line-height: 1.4;
+  width: fit-content;
+  text-align: center;
+}
+
+.p-manual__instruction-text--semi-bold {
+  font-weight: $fw-semiBold;
+  margin-top: rem(10);
+}
 
 // 番号付きリストのスタイル
 .p-manual__steps {
@@ -440,6 +542,52 @@
   margin-top: rem(10);
 }
 
+.p-manual__app-items {
+  margin-top: rem(20);
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  counter-reset: app-item;
+}
+
+.p-manual__app-item {
+  position: relative;
+  padding-left: rem(38);
+  counter-increment: app-item;
+}
+
+.p-manual__app-item::before {
+  content: counter(app-item);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+  color: $white;
+  background: $black;
+  width: rem(28);
+  height: rem(28);
+  border-radius: rem(4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-manual__app-item-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(20, 16);
+  margin-top: rem(4);
+}
+
+.p-manual__app-item-text {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  margin-top: rem(10);
+}
+
 .p-manual__figure-items {
   margin-top: rem(10);
   display: grid;
@@ -527,13 +675,6 @@
   line-height: 1.4;
 }
 
-.p-manual__unit-placed-image {
-  width: 100%;
-  height: auto;
-
-  @include mq(md) {
-    width: rem(264);
-  }
+.p-manual__timing {
+  margin-top: rem(48);
 }
-
-

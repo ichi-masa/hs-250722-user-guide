@@ -1,0 +1,347 @@
+<%- include('./common/_head', { pageKey: 'errorMessagesAndTroubleshooting' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'errorMessagesAndTroubleshooting' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'error-messages-and-troubleshooting-error-messages' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.errorMessagesAndTroubleshooting.errorMessages.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <div class="p-manual__table-wrap">
+              <div class="p-manual__table p-manual__table--display">
+                <table class="p-table">
+                  <thead class="p-table__head">
+                    <tr class="p-table__row">
+                      <th class="p-table__cell p-table__cell--display">Error Display</th>
+                      <th class="p-table__cell p-table__cell--cause-solution">Causes and solutions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="p-table__body">
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message01.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell" rowspan="2">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Got off the unit while your body composition was being measured.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Do not step off the unit until the measurement of body composition is complete.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              You moved during the measurement.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Stand still during measurement.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The soles of your feet are not in firm contact with the electrodes.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Place the soles of your feet in close contact with the electrodes when taking measurements. Refer to “Check the Correct Measurement Method”.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The soles of your feet were dry.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Slightly dampen the soles of your feet with a wet towel and try again.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Measurements are taken with socks or stockings.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Measure with bare feet.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message02.webp" alt="">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message03.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell" rowspan="2">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Internal processing failed.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Remove the battery for more than 20 seconds, then install the battery again and perform the initial settings. Then, touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-ok.webp" class="p-manual__icon" alt="ok icon"></span> .
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message04.webp" alt="">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message05.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              You moved the unit before “0.0 kg” was displayed.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Do not move the unit until the measurement is complete.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Moved your body during weight measurement.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Stand still during measurement.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Body weight exceeded 135 kg.
+                            </h3>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message06.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Communication is not established properly.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Check the display on your smartphone and follow the instructions in the “OMRON connect” app, or refer to the “Help” section in the “OMRON connect” app.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message07.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Personal data cannot be identified.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・When your weight is displayed but your personal number is not displayed and a “-” is shown instead, touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> and select the set personal number.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message08.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Continued to touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> .
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・This is displayed when registering this product in the “OMRON
+connect” app. When registering, follow the instructions in the “OMRON connect” app. If you are not registering, you can cancel the operation by pressing the power switch on the unit for more than 2 seconds.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon">
+                          <img src="./assets/img/common/icon-bluetooth.webp" alt="">
+                          <p class="p-table__icon-text">lights up</p>
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Touched <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> on the unit.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・This is displayed when transferring readings to your smartphone. When transferring readings, follow the instructions in the “OMRON connect” app. If you do not transfer readings, you can cancel the operation by pressing  the power switch on the unit for more than 2 seconds.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon">
+                          <img src="./assets/img/common/icon-sync.webp" alt="">
+                          <p class="p-table__icon-text">flashes</p>
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              More than 24 sets of readings are not transferred.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・<span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-sync.webp" class="p-manual__icon" alt="sync icon"></span> will disappear when you transfer the readings to the “OMRON connect” app.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              30 sets of readings are not transferred.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・<span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-sync.webp" class="p-manual__icon" alt="sync icon"></span> will disappear when you transfer the readings to the “OMRON connect” app.<br>
+                              If you continue measuring without transferring the data, the oldest readings will be deleted.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon">
+                          <img src="./assets/img/common/icon-battery.webp" alt="">
+                          <p class="p-table__icon-text">flashes</p>
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Batteries are running low.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Replace all four at the same time with new AAA alkaline batteries of the same brand.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message09.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Batteries are depleted.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Replace all four at the same time with new AAA alkaline batteries of the same brand.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__icon-wrap">
+                        <div class="p-table__icon p-table__icon--weight-display">
+                          <img src="./assets/img/common/error-message10.webp" alt="">
+                        </div>
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The initial settings were not performed after replacing the batteries.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Open the “OMRON connect” app and touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> on the unit to communicate with your smartphone.
+                            </p>
+                            <p class="p-table__cell-description">
+                              To perform the initial settings on the unit, refer to “Performing Initial Settings on the Unit”.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./error-messages-and-troubleshooting.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.errorMessagesAndTroubleshooting.title %>
+            </span>
+          </a>
+          <a href="./troubleshooting.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.errorMessagesAndTroubleshooting.troubleshooting.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

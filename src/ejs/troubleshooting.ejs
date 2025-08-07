@@ -1,0 +1,308 @@
+<%- include('./common/_head', { pageKey: 'errorMessagesAndTroubleshooting' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'errorMessagesAndTroubleshooting' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'error-messages-and-troubleshooting-troubleshooting' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.errorMessagesAndTroubleshooting.troubleshooting.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              In case of any if the below problems occur during measurement, first check that no other electrical device is within 30 cm.<br>
+If the problem persists, please refer to the table below.
+            </p>
+            <div class="p-manual__table-wrap">
+              <div class="p-manual__table p-manual__table--display">
+                <table class="p-table">
+                  <thead class="p-table__head">
+                    <tr class="p-table__row">
+                      <th class="p-table__cell p-table__cell--display">Problem</th>
+                      <th class="p-table__cell p-table__cell--cause-solution">Causes and solutions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="p-table__body">
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        Nothing is displayed when the unit is turned on.
+                      </td>
+                      <td class="p-table__cell" rowspan="2">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              No batteries are installed.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Install the batteries.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Battery <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-plus-minus.svg" class="p-manual__icon" alt="plus minus icon"></span> polarities are installed in the wrong direction.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Install the batteries in the correct direction.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The batteries are depleted.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Replace all four at the same time with new AAA alkaline batteries of the same brand.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        Even if you step on the unit, nothing is displayed.
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        The “OMRON connect” app only displays weight and BMI.
+                      </td>
+                      <td class="p-table__cell" rowspan="2">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The person has not yet reached the age for measurement.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・For children who are 5 years old or younger, only weight and BMI values are displayed. If the target person is 17 years old or younger, the visceral fat level, skeletal muscle percentage classification and subcutaneous fat classification will not be displayed.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The date of birth or date setting is incorrect.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Open the “OMRON connect” app and touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> on the unit to communicate with your smartphone.
+                              <p class="p-table__cell-description">To change your personal data on the unit, refer to “Changing or Deleting Your Personal Data”.</p>
+                              <p class="p-table__cell-description">If the date is incorrect, remove the batteries, wait for about 20 seconds, then install them again and perform the initial settings.</p>
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        The “OMRON connect” app does not display the visceral fat level, skeletal muscle percentage classification and subcutaneous fat classification.
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        Some readings are displayed as “----”.
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The registered values, weight, and body composition values were outside the measurable range.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Check if your personal data (date of birth, gender, height, mode) set in the “OMRON connect” app is correct.
+                            </p>
+                            <p class="p-table__cell-description">
+                              ・Even if the date of birth, gender, height, and mode are correct, “----” will be displayed if they are out of the display range or supported age range. Refer to “Specifications”.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        The correct personal number is not identified when you step on the unit.
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Your body weight has changed significantly since the last measurement.<br>People with similar builds are registered.<br>Another person’s readings were recorded.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Select your personal number before taking measurements. Refer to “Selecting the Personal Number Manually Before Measurement”.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        Only weight, body fat percentage, skeletal muscle percentage and BMI is measured.
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <p class="p-table__cell-description">
+                              ・You can only check your weight, body fat percentage, skeletal muscle percentage and BMI on the unit. You can check indicators other than weight, body fat percentage, skeletal muscle percentage and BMI on the “OMRON connect” app. Install the “OMRON connect” app.
+                            </p>
+                            <p class="p-table__cell-description">
+                              ・You can change the display indicators in "Display settings".
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        High weight and body composition measurements are not transferred.
+                      </td>
+                      <td class="p-table__cell" rowspan="3">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Your posture is wrong during measurement.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Take measurement with a correct posture. Refer to “Check the Correct Measurement Method”.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Measurements are taken on soft surfaces such as carpets or on uneven floor surfaces.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Measure on a hard, flat surface. Refer to “Install the Unit”.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The soles of your feet and body are cold, impairing blood circulation.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Warm up your body to get blood circulation back to normal before taking a measurement.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The soles of your feet are dry.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Slightly dampen the soles of your feet with a wet towel and then measure.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              The “0 kg calibration” is not implemented correctly.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Implement the “0 kg calibration”. Refer to the “Implement the “0 kg Calibration”.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Your date of birth, gender, height, or mode is not set correctly.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Check if your personal data set in the “OMRON connect” app is correct.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        Low measured values
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        The values are extremely different for each measurement.
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        None of the touch buttons respond.
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              You touched a button when you stepped on the unit.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Do not operate the touch buttons while standing on the unit.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              You touched two or more buttons simultaneously.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Touch one button at a time.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              Your fingertips are dry.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Slightly dampen your fingertips with a wet towel before operating the touch buttons.
+                            </p>
+                          </li>
+                          <li class="p-table__cell-item">
+                            <h3 class="p-table__cell-title">
+                              No batteries are installed.
+                            </h3>
+                            <p class="p-table__cell-description">
+                              ・Install the batteries. Refer to “Installing Batteries”.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="p-table__row">
+                      <td class="p-table__cell">
+                        
+                      </td>
+                      <td class="p-table__cell">
+                        <ul class="p-table__cell-items">
+                          <li class="p-table__cell-item">
+                            <p class="p-table__cell-description">
+                              ・Refer to “Help” section in the “OMRON connect” app.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./error-messages-and-troubleshooting.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.errorMessagesAndTroubleshooting.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

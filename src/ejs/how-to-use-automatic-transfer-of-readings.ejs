@@ -1,0 +1,153 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-automatic-transfer-of-readings' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.automaticTransferOfReadings.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              Requirements<br>To automatically transfer readings to your smartphone, the following conditions must be met.
+            </p>
+            <ul class="p-manual__items">
+              <li class="p-manual__item p-manual__item--square">
+                <h3 class="p-manual__item-title">
+                  Smartphone Requirements
+                </h3>
+                <ul class="p-manual__instructions">
+                  <li class="p-manual__instruction p-manual__instruction--bold">
+                    <h4 class="p-manual__instruction-title">
+                      Bluetooth communication must be enabled
+                    </h4>
+                  </li>
+                  <li class="p-manual__instruction p-manual__instruction--bold">
+                    <h4 class="p-manual__instruction-title">
+                      Location must be enabled
+                    </h4>
+                    <p class="p-manual__instruction-text">
+                      To use automatic transfer, your smartphone's location setting must be enabled.<br>However, depending on the smartphone you use, you may not need to set the location.
+                    </p>
+                  </li>
+                  <li class="p-manual__instruction p-manual__instruction--bold">
+                    <h4 class="p-manual__instruction-title">
+                      The distance from the unit must be within 10 m
+                    </h4>
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--auto-transfer-1">
+                  <img src="./assets/img/common/automatic-transfer-of-readings01.webp" alt="">
+                </figure>
+                <ul class="p-manual__instructions p-manual__instructions--mt10">
+                  <li class="p-manual__instruction">
+                    For iPhone, depending on the OS version, automatic transfer may not be possible when the app is running in the background. In this case, transfer the data when the app screen is displayed.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__item p-manual__item--square">
+                <h3 class="p-manual__item-title">
+                  “OMRON connect” App Requirements
+                </h3>
+                <ul class="p-manual__instructions">
+                  <li class="p-manual__instruction p-manual__instruction--bold">
+                    <h4 class="p-manual__instruction-title">
+                      This product must be registered
+                    </h4>
+                    <p class="p-manual__instruction-text">
+                      After installing the “OMRON connect” app, select this product when registering the device during initial setup.
+                    </p>
+                  </li>
+                  <li class="p-manual__instruction p-manual__instruction--bold">
+                    <h4 class="p-manual__instruction-title">
+                      “Automatic data transfer” in the device settings must be enabled
+                    </h4>
+                    <p class="p-manual__instruction-text">
+                      For details, refer to “Help” section in the “OMRON connect” app.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="p-manual__timing">
+              <h3 class="p-manual__sub-title">
+                Automatic Transfer Timing
+              </h3>
+              <p class="p-manual__sub-text">
+                The timing when the unit automatically transfers readings to your smartphone is as follows.
+              </p>
+              <ul class="p-manual__instructions p-manual__instructions--timing">
+                <li class="p-manual__instruction p-manual__instruction--bold">
+                  <p class="p-manual__instruction-title">
+                    After determining your personal number
+                  </p>
+                  <p class="p-manual__instruction-head">
+                      &lt;Personal number display&gt;
+                  </p>
+                  <figure class="p-manual__image p-manual__image--auto-transfer-2">
+                    <img src="./assets/img/common/automatic-transfer-of-readings02.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__instruction p-manual__instruction--bold">
+                  <p class="p-manual__instruction-title">
+                    When the power is automatically turned off after about 18 seconds of no operation even if the personal number has not been determined
+                  </p>
+                  <p class="p-manual__instruction-head">
+                      &lt;Personal number display&gt;<br>(After 18 seconds)
+                  </p>
+                  <figure class="p-manual__image p-manual__image--auto-transfer-2">
+                    <img src="./assets/img/common/automatic-transfer-of-readings03.webp" alt="">
+                  </figure>
+                  <p class="p-manual__instruction-text p-manual__instruction-text--semi-bold">
+                    Note that if the personal number is incorrect, the readings will be transferred to another registered user’s smartphone.
+                  </p>
+                </li>
+                <li class="p-manual__instruction p-manual__instruction--bold">
+                  <p class="p-manual__instruction-title">
+                    Must be within one hour of measurement
+                  </p>
+                  <p class="p-manual__instruction-text">
+                    Even if you do not have your smartphone with you when taking a measurement, if you bring your smartphone close to the unit (within 10 m) within 1 hour of measurement, the readings are automatically transferred.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-check-your-readings-using-the-omron-connect-app.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.howToUse.checkYourReadingsUsingTheOMRONConnectApp.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

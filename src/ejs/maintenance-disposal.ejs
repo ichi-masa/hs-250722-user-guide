@@ -1,0 +1,52 @@
+<%- include('./common/_head', { pageKey: 'maintenance' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'maintenance' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance-disposal' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.maintenance.disposal.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <ul class="p-manual__instructions">
+              <li class="p-manual__instruction">
+                Remove the batteries from the unit and dispose of the unit.
+              </li>
+              <li class="p-manual__instruction">
+                When disposing of the unit and batteries, follow the instructions of your local municipality.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./maintenance.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.maintenance.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

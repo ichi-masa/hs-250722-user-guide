@@ -1,0 +1,145 @@
+<%- include('./common/_head', { pageKey: 'calibration' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'calibration' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'calibration-selecting-the-personal-number-manually-before-measurement' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.calibration.selectingThePersonalNumberManuallyBeforeMeasurement.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              If your personal number is often not displayed on the unit display when you take a measurement, follow the procedure below to select your personal number and take a measurement.
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Turn on the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Simply stand on the unit, then the unit will turn on.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen01-initial-weight.webp" alt="">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div> on the unit to select your personal number.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen09-personal-number.webp" alt="personal number">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-ok.webp" class="p-manual__icon" alt="ok symbol"></div> on the unit to confirm your personal number.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen10-confirm-personal-number.webp" alt="confirm personal number">
+                </figure>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display appears.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  When the “0.0 kg” is displayed, take out the display unit.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Do not take out the display unit until “0.0 kg” appears on the display.<br>Otherwise, the weight of the display is added to your body weight which causes an incorrect result.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Step on the main unit and place your feet on the foot electrodes with your weight evenly distributed.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The display will show your weight.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen11-weight-display.webp" alt="weight display">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Extend your arms straight at a 90° angle to your body.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen04-measurement-pose.webp" alt="measurement pose">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Check the measurement results.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    After the unit makes a “beeping” sound, the display on the unit will repeatedly show the measurement results in sequence. (The display will change automatically.)
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    You can change the display indicators in "Display settings".
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    After 16 seconds, the unit will automatically turn off.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    Once you touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div> on the unit, the display will change every time you touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div>.<br>Even if you forget to turn off the power, it will automatically turn off after about 3 minutes.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    The readings are automatically transferred to your smartphone.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    During transfer, the Bluetooth symbol (<div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth symbol"></div>) on the display will light up.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./error-messages-and-troubleshooting.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.errorMessagesAndTroubleshooting.title %>
+            </span>
+          </a>
+          <a href="./troubleshooting.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.errorMessagesAndTroubleshooting.troubleshooting.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

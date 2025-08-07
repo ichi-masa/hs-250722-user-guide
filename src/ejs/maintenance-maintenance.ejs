@@ -1,0 +1,69 @@
+<%- include('./common/_head', { pageKey: 'maintenance' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'maintenance' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance-maintenance' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.maintenance.maintenance.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <ul class="p-manual__instructions">
+              <li class="p-manual__instruction">
+                Always keep the unit clean.
+              </li>
+              <li class="p-manual__instruction">
+                When the unit is very dirty or is being shared with someone who has a skin disease or other infection on their feet, use a cloth soaked with water or detergent and squeeze it well before wiping the unit, then wipe it off with a dry cloth.<br>(Otherwise, a bacterial infection can be caused.)
+              </li>
+              <li class="p-manual__instruction">
+                Do not use benzene, thinner, or other volatile solvents to wipe the unit.<br>   (It may cause discoloration or damage.)
+                <figure class="p-manual__image p-manual__image--maintenance">
+                  <img src="./assets/img/common/maintenance01.webp" alt="cleaning the main unit">
+                </figure>
+              </li>
+              <li class="p-manual__instruction">
+                Do not wash the unit with water.<br>(It may cause the unit to malfunction.)
+              </li>
+              <li class="p-manual__instruction">
+                You can use cleaning alcohol to clean the electrodes, but do not use it on other parts of the unit.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./maintenance.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.maintenance.title %>
+            </span>
+          </a>
+          <a href="./maintenance-storage.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.maintenance.storage.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

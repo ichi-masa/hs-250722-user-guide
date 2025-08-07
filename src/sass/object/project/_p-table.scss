@@ -15,6 +15,11 @@
 .p-table__cell {
   vertical-align: middle;
   padding: rem(5) rem(5) rem(5) rem(7);
+  font-size: rem(14);
+  font-family: $ff-roboto;
+  font-weight: $fw-regular;
+  line-height: lh(20, 14);
+  letter-spacing: 0.025em;
 }
 
 .p-table__cell--icon,
@@ -46,6 +51,10 @@
   text-align: center;
 }
 
+.p-table__cell--cause-solution {
+  width: 473px;
+}
+
 .p-table__cell--action {
   width: 283px;
   text-align: center;
@@ -59,28 +68,59 @@
   width: 232px;
 }
 
+.p-table__cell-title {
+  font-size: rem(14);
+  font-family: $ff-roboto;
+  font-weight: $fw-semiBold;
+  line-height: lh(20, 14);
+  letter-spacing: 0.025em;
+}
+
+.p-table__cell-items {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+.p-table__cell-description {
+  font-size: rem(12);
+  font-family: $ff-roboto;
+  font-weight: $fw-regular;
+  line-height: lh(16, 12);
+  letter-spacing: 0.004em;
+  text-indent: 0.5em;
+}
+
 .p-table__icon-wrap {
-  vertical-align: middle;
   padding-block: rem(5);
+  vertical-align: middle;
 }
 
 .p-table__icon {
   margin-inline: auto;
   width: rem(46);
-  aspect-ratio: 1 / 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.p-table__icon-text {
+  font-size: rem(14);
+  font-weight: $fw-medium;
+  font-family: $ff-roboto;
+  line-height: lh(20, 14);
+  letter-spacing: 0.0025em;
+  margin-top: rem(5);
+  text-align: center;
+  white-space: nowrap;
+}
+
 .p-table__icon--personal-number {
   width: rem(46);
-  aspect-ratio: 46 / 109;
 }
 
 .p-table__icon--weight-display {
   width: rem(174);
-  aspect-ratio: 174 / 179;
-  padding-block: rem(5);
 }
 

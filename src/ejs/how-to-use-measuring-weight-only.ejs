@@ -1,0 +1,105 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-measuring-weight-only' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.howToUse.measuringWeightOnly.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              When measuring only weight, the readings are not transferred to the smartphone.
+It will also not be saved in the unit’s memory.
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Turn on the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Simply stand on the unit, then the unit will turn on.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen01-initial-weight.webp" alt="">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div> on the unit and select “<div class="p-manual__icon-wrap p-manual__icon-wrap--scale"><img src="./assets/img/common/icon-scale.svg" class="p-manual__icon p-manual__icon--scale" alt="scale icon"></div>” mode.</h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen07-weight-only-mode.webp" alt="">
+                </figure>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-ok.webp" class="p-manual__icon" alt="ok icon"></div> on the unit.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Stand still on the unit.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Leave the display unit in the display unit holder.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    The unit will start measuring your weight.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Check the readings.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    After the unit makes a “beeping” sound, the display will show your weight.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen08-weight-display.webp" alt="">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">When the measurement is completed, step down from the unit and turn off the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Even if you forget to turn off the power, it will automatically turn off after about 16 seconds.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.howToUse.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>
