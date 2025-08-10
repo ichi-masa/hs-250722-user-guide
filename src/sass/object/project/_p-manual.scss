@@ -18,13 +18,17 @@
   margin-top: rem(28);
 }
 
+.p-manual__article--mt0 {
+  margin-top: 0;
+}
+
 .p-manual__sub-title {
   font-size: rem(16);
   font-family: var(--font-din-bold);
   line-height: lh(20, 16);
 }
 
-.p-manual__sub-title--mt {
+.p-manual__sub-title--mt16 {
   margin-top: rem(16);
 }
 
@@ -204,6 +208,14 @@
 
 .p-manual__image--unit-placed {
   width: calc(264 / 777 * 100%);
+}
+
+.p-manual__image--measurement-results {
+  width: calc(621 / 767 * 100%);
+}
+
+.p-manual__image--replace-batteries {
+  width: calc(420 / 787 * 100%);
 }
 
 .p-manual__store-badges {
@@ -386,8 +398,8 @@
   padding-left: rem(10);
 }
 
-.p-manual__steps--for-accurate-measurement {
-  margin-top: rem(12);
+.p-manual__steps--mt10 {
+  margin-top: rem(10);
 }
 
 .p-manual__steps:has(h4.p-manual__step-title) {
@@ -677,4 +689,11 @@
 
 .p-manual__timing {
   margin-top: rem(48);
+}
+
+.p-manual__personal-data-items {
+  margin-top: rem(16);
+  display: flex;
+  flex-direction: column;
+  gap: rem(70);
 }
