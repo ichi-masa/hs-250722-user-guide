@@ -163,6 +163,11 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-/************************************************************************
-* end base
-************************************************************************/
+// 検索ハイライト用スタイル
+.search-highlight {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: rem(2) rem(4);
+  border-radius: rem(3);
+  font-weight: 500;
+}

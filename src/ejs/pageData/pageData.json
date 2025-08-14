@@ -5,9 +5,10 @@
     "description": "User guide for VIVA 360+ Body Composition Monitor",
     "url": ""
   },
-  "safety": {
+  "importantSafetyInformation": {
     "title": "Important Safety Information"
   },
+
   "howToUse": {
     "title": "How to Use",
     "packageContents": {
@@ -92,9 +93,14 @@
   "bodyComposition": {
     "title": "Information on Body Composition"
   },
+
+  "search": {
+    "title": "Search Results",
+    "description": "Search through the user guide to find the information you need"
+  },
   "nav": {
     "home": "Home",
-    "safety": "Important Safety Information",
+    "importantSafetyInformation": "Important Safety Information",
     "howToUse": "How to Use",
     "errorMessagesAndTroubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",

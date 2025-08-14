@@ -30,6 +30,30 @@
   }
 }
 
+.p-control__search-input {
+  width: 100%;
+  font-size: rem(14);
+  font-weight: 400;
+  color: $black;
+  letter-spacing: 0.02em;
+  line-height: lh(22, 14);
+  padding: rem(9) rem(50) rem(9) rem(16);
+  border: 1px solid $black;
+  border-radius: rem(14);
+  background-color: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &::placeholder {
+    color: $medium-gray;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-blue;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+}
+
 .p-control__search::after {
   content: '';
   position: absolute;
@@ -41,6 +65,7 @@
   top: 50%;
   right: rem(16);
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .p-control__language {

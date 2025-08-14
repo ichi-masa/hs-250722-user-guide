@@ -1,0 +1,135 @@
+@use 'global' as *;
+
+.p-search {
+}
+
+.p-search__content {
+  min-height: rem(400);
+}
+
+.p-search__results-header {
+  padding-bottom: rem(15);
+  border-bottom: 1px solid $light-gray;
+}
+
+.p-search__results-count {
+  font-size: rem(16);
+  font-weight: 400;
+  color: $dark-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.p-search__results-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+}
+
+.p-search__result-item {
+  padding: rem(20);
+  margin-top: rem(30);
+  border: 1px solid $light-gray;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.p-search__result-link {
+  font-size: rem(20);
+  font-weight: 600;
+  color: $primary-blue;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+
+  mark {
+    background-color: #ffeb3b;
+    color: inherit;
+    padding: rem(2) rem(4);
+    border-radius: rem(3);
+  }
+}
+
+.p-search__result-description {
+  margin-top: rem(8);
+  font-size: rem(14);
+  font-weight: 400;
+  color: $dark-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+
+  mark {
+    background-color: #ffeb3b;
+    color: inherit;
+    padding: rem(2) rem(4);
+    border-radius: rem(3);
+  }
+}
+
+.p-search__result-snippet {
+  margin-top: rem(6);
+  font-size: rem(13);
+  font-weight: 400;
+  color: $medium-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-style: italic;
+  padding: rem(8) rem(12);
+  background-color: #f8f9fa;
+  border-left: 3px solid $light-gray;
+
+  mark {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: rem(2) rem(4);
+    border-radius: rem(3);
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.p-search__result-url {
+  font-size: rem(12);
+  font-weight: 400;
+  color: $medium-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  display: block;
+  margin-top: rem(8);
+}
+
+.p-search__no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: rem(300);
+  text-align: center;
+}
+
+.p-search__no-results-content {
+  max-width: rem(400);
+}
+
+.p-search__no-results-text {
+  margin-bottom: rem(16);
+  font-size: rem(18);
+  font-weight: 600;
+  color: $dark-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.p-search__no-results-suggestion {
+  font-size: rem(14);
+  font-weight: 400;
+  color: $medium-gray;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}

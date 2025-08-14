@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'safety' }) %>
+<%- include('./common/_head', { pageKey: 'importantSafetyInformation' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'safety' }) %>
+  <%- include('./common/_header', { pageKey: 'importantSafetyInformation' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'safety' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'important-safety-information' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-safety">
           <h2 class="p-safety__title p-page-title">
-            <%= json.safety.title %>
+            <%= json.importantSafetyInformation.title %>
           </h2>
           <div class="p-safety__wrap">
             <p class="p-safety__lead">

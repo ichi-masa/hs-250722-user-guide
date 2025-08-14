@@ -1,0 +1,42 @@
+<%- include('./common/_head', { pageKey: 'search' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'search' }) %>
+  
+  <!-- User Guide Section -->
+  <%- include('./project/_p-user-guide-header') %>
+
+  <!-- Main Content Area -->
+  <div class="p-content-area">
+    <div class="p-content-area__inner l-container">
+      <!-- Side Navigation -->
+      <div class="p-content-area__side-nav">
+        <%- include('./project/_p-side-nav', { currentPage: 'search' }) %>
+      </div>
+      <!-- Main Content -->
+      <main class="p-main">
+        <div class="p-main__control">
+          <%- include('./project/_p-control') %>
+        </div>
+        <div class="p-main__content">
+          <section class="p-search">
+            <div class="p-search__content">
+              <div class="p-search__results">
+                <!-- 検索結果がここに表示されます -->
+              </div>
+              
+              <div class="p-search__no-results" style="display: none;">
+                <div class="p-search__no-results-content">
+                  <p class="p-search__no-results-text">No results found</p>
+                  <p class="p-search__no-results-suggestion">Try using different keywords or check your spelling.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>
