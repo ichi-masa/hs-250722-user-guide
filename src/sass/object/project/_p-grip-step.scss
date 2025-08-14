@@ -13,7 +13,7 @@
 .p-grip-step__item::before {
   content: "";
   position: absolute;
-  left: 15%;
+  left: 50%;
   bottom: rem(-70);
   transform: translateX(-50%);
   width: rem(54);
@@ -22,6 +22,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  
+  @include mq(md) {
+    left: 15%;
+  }
 }
 
 .p-grip-step__item:last-child::before {
@@ -29,5 +33,11 @@
 }
 
 .p-grip-step__image {
-  width: calc(200 / 788 * 100%);
+  width: calc(200 / 299 * 100%);
+  margin-inline: auto;
+
+  @include mq(md) {
+    width: calc(200 / 788 * 100%);
+    margin-inline: initial;
+  }
 }

@@ -1,0 +1,56 @@
+<%- include('./common/_head', { pageKey: 'specifications' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'specifications' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'specifications-important-information-regarding-electromagnetic-compatibility' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.specifications.importantInformationRegardingElectromagneticCompatibility.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__text p-manual__text--mt0">
+              This device conforms to EN 60601-1-2:2015+A1:2021 Electromagnetic Compatibility (EMC) standard.
+            </p>
+            <p class="p-manual__text">
+              Further documentation in accordance with this EMC standard is available at:
+            </p>
+            <a href="https://healthcare.omron.com/electro-electromagnetic-compatibility" class="p-manual__url-link p-manual__url-link--mt8" target="_blank" rel="noopener noreferrer">
+              https://healthcare.omron.com/electro-electromagnetic-compatibility
+            </a>
+            <p class="p-manual__text">
+              Refer to the EMC information for this device on the website.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./specifications.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.specifications.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

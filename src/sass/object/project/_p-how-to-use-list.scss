@@ -32,13 +32,14 @@
 .p-lower-list__link-text {
   display: inline-block;
   position: relative;
+  padding-right: rem(30);
 }
 
 .p-lower-list__link-text::after {
   content: '';
   position: absolute;
   top: 60%;
-  right: rem(-30);
+  right: 0;
   transform: translateY(-50%);
   width: rem(20);
   aspect-ratio: 1 / 1;

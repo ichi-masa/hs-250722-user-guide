@@ -2,22 +2,30 @@
 
 .p-birth-date-card {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: normal;
   border: 1px solid $black;
   max-width: rem(693);
   width: 100%;
   position: relative;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
 }
 
-.p-birth-date-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: calc(328 / 693 * 100%);
-  width: 1px;
-  height: 100%;
-  background-color: $black;
-}
+// .p-birth-date-card::before {
+  
+//   @include mq(md) {    
+//     content: '';
+//     position: absolute;
+//     background-color: $black;
+//     top: 0;
+//     left: calc(328 / 693 * 100%);
+//     width: 1px;
+//     height: 100%;
+//   }
+// }
 
 .p-birth-date-card::after {
   content: "";
@@ -38,18 +46,31 @@
 }
 
 .p-birth-date-card__image {
-  width: calc(328 / 693 * 100%);
-  padding: rem(23) rem(40);
+  width: 100%;
+  padding: rem(15) rem(25);
+  border-bottom: 1px solid $black;
+  
+  @include mq(md) {
+    width: calc(328 / 693 * 100%);
+    padding: rem(23) rem(40);
+    border-bottom: none;
+    border-right: 1px solid $black;
+  }
 }
 
 .p-birth-date-card__text-block {
-  width: calc(365 / 693 * 100%);
-  height: 100%;
-  padding: rem(23) rem(15);
+  width: 100%;
+  padding: rem(15);
   font-size: rem(14);
   font-family: $ff-roboto;
   line-height: calc(20 / 14);
   letter-spacing: 0.025em;
+
+  @include mq(md) {
+    width: calc(365 / 693 * 100%);
+    height: 100%;
+    padding: rem(23) rem(40);
+  }
 }
 
 .p-birth-date-card__title {

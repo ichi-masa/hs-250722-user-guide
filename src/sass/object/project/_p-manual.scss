@@ -39,12 +39,33 @@
   margin-top: rem(10);
 }
 
+.p-manual__sub-text--mt0 {
+  margin-top: 0;
+}
+
+.p-manual__text {
+  font-size: rem(14);
+  font-family: $ff-inter;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin-top: rem(8);
+}
+
+.p-manual__text--mt0 {
+  margin-top: 0;
+}
+
 .p-manual__url-link {
-  display: block;
   margin-top: rem(10);
+  display: block;
   font-size: rem(14);
   font-family: $ff-inter;
   line-height: lh(20, 14);
+  // text-decoration: underline;
+}
+
+.p-manual__url-link--mt8 {
+  margin-top: rem(8);
 }
 
 .p-manual__table-wrap {
@@ -132,70 +153,137 @@
 }
 
 .p-manual__image--package-contents-main-unit {
-  width: calc(383 / 767 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(383 / 767 * 100%);
+  }
 }
 
 .p-manual__image--package-contents-batteries {
-  width: calc(130 / 767 * 100%);
+  width: calc(130 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(130 / 767 * 100%);
+  }
 }
 
 .p-manual__image--know-your-device-main-unit {
-  width: calc(780 / 767 * 100%);
+  width: 100%;
 }
 
 .p-manual__image--know-your-device-display {
-  width: calc(646 / 767 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(646 / 767 * 100%);
+  }
 }
 
 .p-manual__image--installing-batteries-step1 {
-  width: calc(268 / 767 * 100%);
+  width: calc(200 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(268 / 767 * 100%);
+  }
 }
 
 .p-manual__image--installing-batteries-step2 {
-  width: calc(322 / 767 * 100%);
+  width: calc(225 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(322 / 767 * 100%);
+  }
 }
 
-.p-manual__image--qr-code,
+.p-manual__image--qr-code {
+  width: calc(223 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(223 / 767 * 100%);
+  }
+}
+
 .p-manual__image--search-display,
 .p-manual__image--weight-display,
 .p-manual__image--app-display {
-  width: calc(223 / 767 * 100%);
+  width: calc(200 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(223 / 767 * 100%);
+  }
 }
 
 .p-manual__image--app-logo {
-  width: calc(100 / 767 * 100%);
+  width: calc(100 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(100 / 767 * 100%);
+  }
 }
 
 .p-manual__image--personal-number {
-  width: calc(548 / 767 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(548 / 767 * 100%);
+  }
 }
 
 .p-manual__image--check-the-measurement-results {
-  width: calc(357 / 767 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(357 / 767 * 100%);
+  }
 }
 
 .p-manual__item-image--posture {
-  width: calc(773 / 788 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(773 / 788 * 100%);
+  }
 }
 
 .p-manual__item-image--step-on {
-  width: calc(265 / 788 * 100%);
+  width: calc(200 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(265 / 788 * 100%);
+  }
 }
 
 .p-manual__image--unit {
-  width: calc(220 / 788 * 100%);
+  width: calc(220 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(220 / 788 * 100%);
+  }
 }
 
 .p-manual__image--auto-transfer-1 {
-  width: calc(598 / 788 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(598 / 788 * 100%);
+  }
 }
 
 .p-manual__image--auto-transfer-2 {
-  width: calc(350 / 788 * 100%);
+  width: calc(200 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(350 / 788 * 100%);
+  }
 }
 
 .p-manual__image--results {
-  width: calc(236 / 788 * 100%);
+  width: calc(236 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(236 / 788 * 100%);
+  }
 }
 
 .p-manual__image--maintenance {
@@ -203,32 +291,71 @@
 }
 
 .p-manual__image--storage {
-  width: calc(413 / 777 * 100%);
+  width: calc(250 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(413 / 777 * 100%);
+  }
 }
 
 .p-manual__image--unit-placed {
-  width: calc(264 / 777 * 100%);
+  width: calc(264 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(264 / 777 * 100%);
+  }
 }
 
 .p-manual__image--measurement-results {
-  width: calc(621 / 767 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(621 / 767 * 100%);
+  }
 }
 
 .p-manual__image--replace-batteries {
   width: calc(420 / 787 * 100%);
 }
 
+.p-manual__image--correct-disposal {
+  width: calc(153 / 792 * 100%);
+}
+
 .p-manual__store-badges {
   display: flex;
   margin-top: rem(10);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(10);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
 }
 
-.p-manual__store-badge {
-  width: calc(270 / 767 * 100%);
+.p-manual__app-store-badge {
+  height: rem(80);
   display: block;
+
+  @include mq(md) {
+    width: calc(235 / 767 * 100%);
+    height: auto;
+  }
 }
 
-.p-manual__store-badge img {
+.p-manual__google-play-badge {
+  height: rem(80);
+  display: block;
+
+  @include mq(md) {
+    width: calc(270 / 767 * 100%);
+    height: auto;
+  }
+}
+
+.p-manual__app-store-badge img,
+.p-manual__google-play-badge img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -254,6 +381,19 @@
 .p-manual__icon--scale {
   height: rem(30);
   transform: translateY(rem(-5));
+}
+
+.p-manual__link {
+  text-decoration: underline;
+  color: $blue;
+  transition: color 0.3s ease;
+  display: inline;
+}
+
+@media (hover: hover) {
+  .p-manual__link:hover {
+    color: #59c2e6;
+  }
 }
 
 // リストのスタイル
@@ -343,6 +483,7 @@
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
+  
 }
 
 .p-manual__instruction::before {
@@ -395,7 +536,11 @@
   flex-direction: column;
   gap: rem(28);
   counter-reset: step;
-  padding-left: rem(10);
+  padding-left: rem(5);
+
+  @include mq(md) {
+    padding-left: rem(10);
+  }
 }
 
 .p-manual__steps--mt10 {
@@ -403,12 +548,20 @@
 }
 
 .p-manual__steps:has(h4.p-manual__step-title) {
-  padding-left: rem(25);
+  padding-left: rem(10);
+
+  @include mq(md) {
+    padding-left: rem(25);
+  }
 }
 
 .p-manual__step {
   position: relative;
-  padding-left: rem(10);
+  padding-left: rem(5);
+
+  @include mq(md) {
+    padding-left: rem(10);
+  }
 }
 
 .p-manual__step::before {
@@ -436,8 +589,12 @@
   font-size: rem(14);
   font-family: $ff-inter;
   line-height: 1.4;
-  padding-left: rem(10);
+  padding-left: rem(5);
   position: relative;
+
+  @include mq(md) {
+    padding-left: rem(10);
+  }
 }
 
 .p-manual__step-list-item::before {
@@ -534,10 +691,13 @@
 
 .p-manual__formula-list {
   margin-top: rem(20);
-  padding-inline: rem(50);
   display: flex;
   flex-direction: column;
   gap: rem(20);
+  
+  @include mq(md) {
+    padding-inline: rem(50);
+  }
 }
 
 .p-manual__formula-title {
@@ -616,6 +776,8 @@
 .p-manual__figure-items--two-columns {
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
+    max-width: initial;
+    gap: rem(30) rem(42);
   }
 }
 
@@ -653,8 +815,20 @@
 }
 
 .p-manual__figure-image {
-  width: rem(207);
-  height: auto;
+  width: calc(207 / 299 * 100%);
+
+  @include mq(md) {
+    width: rem(207);
+    height: auto;
+  }
+}
+
+.p-manual__figure-image--unit-placed {
+  width: calc(264 / 299 * 100%);
+
+  @include mq(md) {
+    width: rem(264);
+  }
 }
 
 .p-manual__figure-image img {

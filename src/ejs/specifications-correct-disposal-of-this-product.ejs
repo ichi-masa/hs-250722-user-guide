@@ -1,0 +1,65 @@
+<%- include('./common/_head', { pageKey: 'specifications' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'specifications' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'specifications-correct-disposal-of-this-product' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.specifications.correctDisposalOfThisProduct.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <figure class="p-manual__image p-manual__image--correct-disposal">
+              <img src="./assets/img/common/correct-disposal01.webp" alt="">
+            </figure>
+            <p class="p-manual__text">
+              This marking shown on the product or its literature, indicates that it should not be disposed with other household wastes at the end of its working life. To prevent possible harm to the environment or human health from uncontrolled waste disposal, please separate this from other types of wastes and recycle it responsibly to promote the sustainable reuse of material resources.
+            </p>
+            <p class="p-manual__text">
+              Household users should contact either the retailer where they purchased this product, or their local government office, for details of where and how they can take this item for environmentally safe recycling.
+            </p>
+            <p class="p-manual__text">
+              Business users should contact their supplier and check the terms and conditions of the purchase contract. This product should not be mixed with other commercial wastes for disposal.
+            </p>
+            <p class="p-manual__text">
+              This product does not contain any hazardous substances.<br>
+              Disposal of used batteries should be carried out in accordance with the national regulations for the disposal of batteries.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./specifications.html" class="p-pagination__link c-btn">
+            <span class="p-pagination__link-text">
+              Back to <%= json.specifications.title %>
+            </span>
+          </a>
+          <a href="./specifications-important-information-regarding-electromagnetic-compatibility.html" class="p-pagination__link c-btn c-btn--next">
+            <span class="p-pagination__link-text">
+              <%= json.specifications.importantInformationRegardingElectromagneticCompatibility.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>
