@@ -3,12 +3,15 @@
     <li class="p-lower-list__item">
       <p class="p-lower-list__lead"><%= json.errorMessagesAndTroubleshooting.title %></p>
       <ul class="p-lower-list__sub-items">
+        <% const errorTroubleshootingItems = [
+          { href: './error-messages.html', text: 'Error Messages', class: 'error' },
+          { href: './troubleshooting.html', text: 'Troubleshooting', class: 'troubleshooting' }
+        ]; %>
+        <% errorTroubleshootingItems.forEach(item => { %>
         <li class="p-lower-list__sub-item">
-          <a href="./error-messages.html" class="p-lower-list__sub-link p-lower-list__sub-link--error"><span>Error Messages</span></a>
+          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--<%= item.class %>"><span><%= item.text %></span></a>
         </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./troubleshooting.html" class="p-lower-list__sub-link p-lower-list__sub-link--troubleshooting"><span>Troubleshooting</span></a>
-        </li>
+        <% }); %>
       </ul>
     </li>
   </ul>

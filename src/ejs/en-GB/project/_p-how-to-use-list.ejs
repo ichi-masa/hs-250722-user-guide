@@ -1,61 +1,78 @@
 <div class="p-lower-list">
   <ul class="p-lower-list__items">
+    <% const howToUseItems = [
+      {
+        type: 'link',
+        href: './how-to-use-package-contents.html',
+        text: 'Package Contents'
+      },
+      {
+        type: 'section',
+        title: 'Know Your Device',
+        subItems: [
+          { href: './how-to-use-know-your-device.html#main-unit', text: 'Main Unit', class: 'storage' },
+          { href: './how-to-use-know-your-device.html#display', text: 'Display', class: 'storage' }
+        ]
+      },
+      {
+        type: 'link',
+        href: './how-to-use-installing-batteries.html',
+        text: 'Installing Batteries'
+      },
+      {
+        type: 'section',
+        title: 'Installing the "OMRON connect" App',
+        subItems: [
+          { href: './how-to-use-installing-omron-connect-app.html#install-the-app', text: 'Install the App', class: 'mobile' },
+          { href: './how-to-use-installing-omron-connect-app.html#perform-initial-settings', text: 'Perform Initial Settings', class: 'measurement' }
+        ]
+      },
+      {
+        type: 'section',
+        title: 'For Accurate Measurement',
+        subItems: [
+          { href: './how-to-use-for-accurate-measurement.html#check-the-correct-measurement-method', text: 'Check the Correct Measurement Method', class: 'measurement' },
+          { href: './how-to-use-for-accurate-measurement.html#install-the-unit', text: 'Install the Unit', class: 'measurement' },
+          { href: './how-to-use-for-accurate-measurement.html#when-0-kg-calibration-is-required', text: 'When "0 kg calibration" Is Required', class: 'measurement' },
+          { href: './how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration', text: 'Implement the "0 kg Calibration"', class: 'measurement' }
+        ]
+      },
+      {
+        type: 'link',
+        href: './how-to-use-taking-a-measurement.html',
+        text: 'Taking a Measurement'
+      },
+      {
+        type: 'link',
+        href: './how-to-use-automatic-transfer-of-readings.html',
+        text: 'Automatic Transfer of Readings'
+      },
+      {
+        type: 'link',
+        href: './how-to-use-check-your-readings-using-the-omron-connect-app.html',
+        text: 'Check Your Readings Using the "OMRON connect" App'
+      },
+      {
+        type: 'link',
+        href: './how-to-use-measuring-weight-only.html',
+        text: 'Measuring Weight Only'
+      }
+    ]; %>
+    <% howToUseItems.forEach(item => { %>
     <li class="p-lower-list__item">
-      <a href="./how-to-use-package-contents.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Package Contents</span></a>
+      <% if (item.type === 'link') { %>
+        <a href="<%= item.href %>" class="p-lower-list__link"><span class="p-lower-list__link-text"><%= item.text %></span></a>
+      <% } else if (item.type === 'section') { %>
+        <p class="p-lower-list__lead"><%= item.title %></p>
+        <ul class="p-lower-list__sub-items">
+          <% item.subItems.forEach(subItem => { %>
+          <li class="p-lower-list__sub-item">
+            <a href="<%= subItem.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--<%= subItem.class %>"><span><%= subItem.text %></span></a>
+          </li>
+          <% }); %>
+        </ul>
+      <% } %>
     </li>
-    <li class="p-lower-list__item">
-      <p class="p-lower-list__lead">Know Your Device</p>
-      <ul class="p-lower-list__sub-items">
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-know-your-device.html#main-unit" class="p-lower-list__sub-link p-lower-list__sub-link--storage"><span>Main Unit</span></a> 
-        </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-know-your-device.html#display" class="p-lower-list__sub-link p-lower-list__sub-link--storage"><span>Display</span></a>
-        </li>
-      </ul>
-    </li>
-    <li class="p-lower-list__item">
-      <a href="./how-to-use-installing-batteries.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Installing Batteries</span></a>
-    </li>
-    <li class="p-lower-list__item">
-      <p class="p-lower-list__lead">Installing the “OMRON connect” App</p>
-      <ul class="p-lower-list__sub-items">
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-installing-omron-connect-app.html#install-the-app" class="p-lower-list__sub-link p-lower-list__sub-link--mobile"><span>Install the App</span></a>
-        </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-installing-omron-connect-app.html#perform-initial-settings" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span>Perform Initial Settings</span></a>
-        </li>
-      </ul>
-    </li>
-    <li class="p-lower-list__item">
-      <p class="p-lower-list__lead">For Accurate Measurement</p>
-      <ul class="p-lower-list__sub-items">
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-for-accurate-measurement.html#check-the-correct-measurement-method" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span>Check the Correct Measurement Method</span></a>
-        </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-for-accurate-measurement.html#install-the-unit" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span>Install the Unit</span></a>
-        </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-for-accurate-measurement.html#when-0-kg-calibration-is-required" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span>When “0 kg calibration” Is Required</span></a>
-        </li>
-        <li class="p-lower-list__sub-item">
-          <a href="./how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span>Implement the “0 kg Calibration”</span></a>
-        </li>
-      </ul>
-    </li>
-    <li class="p-lower-list__item">
-      <a href="./how-to-use-taking-a-measurement.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Taking a Measurement</span></a>
-    </li>
-    <li class="p-lower-list__item">
-      <a href="./how-to-use-automatic-transfer-of-readings.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Automatic Transfer of Readings</span></a>
-    </li>
-    <li class="p-lower-list__item">
-      <a href="./how-to-use-check-your-readings-using-the-omron-connect-app.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Check Your Readings Using the “OMRON connect” App</span></a>
-    </li>
-    <li class="p-lower-list__item">
-      <a href="./how-to-use-measuring-weight-only.html" class="p-lower-list__link"><span class="p-lower-list__link-text">Measuring Weight Only</span></a>
-    </li>
+    <% }); %>
   </ul>
 </div>
