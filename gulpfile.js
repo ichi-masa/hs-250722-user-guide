@@ -106,7 +106,7 @@ const isJsMap = (isDevelopment ? true : false);
 const themesDir = "theme_dir";  // テーマディレクトリ名
 const localURI = `${themesDir}.local`;  // local by flywheel で表示されるドメイン（基本はテーマ名と同じ）
 const addDir = "/";  // WPのインストール先がデフォルトから変わっている場合設定
-const staticBase = "./dist";
+const staticBase = "./dist/en-GB";
 const wpBase = "../app/public/";
 const wpThemesBase = `${wpBase}${addDir}/wp-content/themes/${themesDir}`;
 /********************* 設定ここまで **********************/
@@ -124,8 +124,8 @@ const PATHS = {
     dest: staticBase,
   },
   ejs: {
-    src: "./src/ejs/**/!(_)*.ejs",
-    watch: "./src/ejs/**/*.ejs",
+    src: "./src/ejs/en-GB/**/!(_)*.ejs",
+    watch: "./src/ejs/en-GB/**/*.ejs",
     dest: staticBase
   },
   php: {
@@ -220,7 +220,7 @@ const copyFunc = () => {
 const markUpFunc = (done) => {
   if (isStatic) {
     if (isMarkupEjs) {
-      let jsonFile = "./src/ejs/pageData/pageData.json",
+      let jsonFile = "./src/ejs/en-GB/pageData/pageData.json",
         json = JSON.parse(fs.readFileSync(jsonFile, "utf8"));
 
       return src(PATHS.ejs.src)

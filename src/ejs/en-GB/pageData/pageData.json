@@ -8,7 +8,6 @@
   "importantSafetyInformation": {
     "title": "Important Safety Information"
   },
-
   "howToUse": {
     "title": "How to Use",
     "packageContents": {
@@ -50,7 +49,7 @@
   },
   "maintenance": {
     "title": "Maintenance",
-    "maintenance":{
+    "maintenance": {
       "title": "Maintenance"
     },
     "storage": {
@@ -93,7 +92,6 @@
   "bodyComposition": {
     "title": "Information on Body Composition"
   },
-
   "search": {
     "title": "Search Results",
     "description": "Search through the user guide to find the information you need"
