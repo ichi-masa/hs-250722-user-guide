@@ -2,8 +2,7 @@
 
 .p-table {
   font-size: rem(14);
-  font-family: $ff-roboto;
-  font-weight: $fw-medium;
+  font-family: var(--font-din-medium);
   line-height: lh(20, 14);
   letter-spacing: 0.0025em;
 }
@@ -16,10 +15,7 @@
   vertical-align: middle;
   padding: rem(5) rem(5) rem(5) rem(7);
   font-size: rem(14);
-  font-family: $ff-roboto;
-  font-weight: $fw-regular;
   line-height: lh(20, 14);
-  letter-spacing: 0.025em;
 }
 
 .p-table__cell--icon,
@@ -70,10 +66,13 @@
 
 .p-table__cell-title {
   font-size: rem(14);
-  font-family: $ff-roboto;
-  font-weight: $fw-semiBold;
+  font-family: var(--font-din-bold);
   line-height: lh(20, 14);
   letter-spacing: 0.025em;
+}
+
+.p-table__cell-title--fz12 {
+  font-size: rem(12);
 }
 
 .p-table__cell-items {
@@ -84,11 +83,9 @@
 
 .p-table__cell-description {
   font-size: rem(12);
-  font-family: $ff-roboto;
-  font-weight: $fw-regular;
   line-height: lh(16, 12);
   letter-spacing: 0.004em;
-  text-indent: 0.5em;
+  // text-indent: 0.5em;
 }
 
 .p-table__icon-wrap {
@@ -107,8 +104,7 @@
 
 .p-table__icon-text {
   font-size: rem(14);
-  font-weight: $fw-medium;
-  font-family: $ff-roboto;
+  font-family: var(--font-din-medium);
   line-height: lh(20, 14);
   letter-spacing: 0.0025em;
   margin-top: rem(5);

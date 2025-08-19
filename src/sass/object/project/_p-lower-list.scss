@@ -98,6 +98,14 @@
   background-image: url(../img/common/icon-measurement.svg);
 }
 
+.p-lower-list__sub-link--setting::before {
+  background-image: url(../img/common/icon-setting.svg);
+}
+
+.p-lower-list__sub-link--wholebody::before {
+  background-image: url(../img/common/icon-wholebody.svg);
+}
+
 .p-lower-list__sub-link--error::before {
   background-image: url(../img/common/icon-error.svg);
 }

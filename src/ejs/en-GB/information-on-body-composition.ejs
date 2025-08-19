@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'bodyComposition' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'information-on-body-composition' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -23,13 +23,155 @@
             <%= json.bodyComposition.title %>
           </h2>
           <div class="p-manual__wrap">
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Principle of body composition calculation
+              </h3>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Body fat has low electric conductivity
+              </h3>
+              <p class="p-manual__sub-text">
+                The HBF-H132T1-EBK measures the body fat percentage by the Bioelectrical Impedance (BI) method. Muscles, blood vessels and bones are body tissues with a high water content that conducts electricity easily. Body fat is tissue that has little electric conductivity. The HBF-H132T1-EBK sends an extremely weak electrical current of 50 kHz and less than 500 μA through your body to determine the amount of fat tissue. This weak electrical current is not felt while operating the HBF-H132T1-EBK.<br>
+In order for the scale to determine body composition, it uses the electrical impedance, along with your height, weight, age and gender information to generate results based on OMRON’s data of body composition.
+              </p>
+              <ul class="p-manual__items">
+                <li class="p-manual__item p-manual__item--no">
+                  <h4 class="p-manual__item-title">
+                    Measures the whole body to avoid the influence of fluctuations
+                  </h4>
+                  <p class="p-manual__item-text">
+                    During the course of a day, the amount of water in the body tends to gradually shift to the lower limbs. This is why there is a tendency for the legs and ankles to swell in the evening or at night. The ratio of water in the upper body and lower body is different in the morning and evening, and this means that the electrical impedance of the body also varies. Since the HBF-H132T1-EBK uses electrodes for both hands and feet to take measurements, it can reduce the influence of these fluctuations on measurement results.
+                  </p>
+                </li>
+                <li class="p-manual__item p-manual__item--no">
+                  <h4 class="p-manual__item-title">
+                    Recommended measurement times
+                  </h4>
+                  <p class="p-manual__item-text">
+                    Understanding the normal changes in your body fat percentage can help you in preventing or reducing obesity.<br>
+Being aware of the times when the body fat percentages shift within your own daily schedule will assist you in obtaining an accurate trending of your body fat. It is recommended to use this unit in the same environment and daily circumstances. (See chart)
+                  </p>
+                  <figure class="p-manual__image p-manual__image--daily-activity">
+                    <img src="./assets/img/common/daily-activity.webp" alt="Body composition chart">
+                  </figure>
+                </li>
+                <li class="p-manual__item p-manual__item--no">
+                  <h4 class="p-manual__item-title">
+                    Avoid Taking Measurements Under the Following Conditions:
+                  </h4>
+                  <p class="p-manual__item-text">
+                    - Immediately after vigorous exercise, after a bath or sauna.<br>
+- After drinking alcohol or a large amount of water, after a meal (about 2 hours).<br>
+If a measurement is taken under these physical conditions, the calculated body composition may differ significantly from the actual one because the water content in the body is changing.
+                  </p>
+                </li>
+              </ul>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                What is BMI (Body Mass Index)?
+              </h3>
+              <p class="p-manual__sub-text">
+                BMI uses the following simple formula to indicate the ratio between weight and height of a person.
+              </p>
+              <p class="p-manual__formula-text">
+                BMI = weight (kg) / height (m) / height (m)
+              </p>
+              <p class="p-manual__sub-text">
+                The OMRON HBF-H132T1-EBK uses the height information stored in your personal profile number or when entering information in the Guest Mode to calculate your BMI classification.<br>
+If the fat level revealed by BMI is higher than the international standard, there is an increased likelihood of common diseases. However, not all types of fat can be revealed by BMI.
+              </p>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                What is Body Fat Percentage?
+              </h3>
+              <p class="p-manual__sub-text">
+                Body fat percentage refers to the amount of body fat mass in regards to the total body weight expressed as a percentage.
+              </p>
+              <p class="p-manual__formula-text">
+                Body fat percentage (%) = {Body fat mass (kg) / Body weight (kg)} &times; 100
+              </p>
+              <p class="p-manual__sub-text">
+                The device uses BI method to estimate your body fat percentage.<br>
+Depending on where fat is distributed in the body, it is classified as visceral fat or subcutaneous fat.
+              </p>
+              <p class="p-manual__sub-text"></p>
+            </article>
+            <article class="p-manual__article">
+              <div class="p-manual__flex">                
+                <div class="p-manual__text-block">                
+                  <h3 class="p-manual__sub-title">
+                    What is Visceral Fat Level?
+                  </h3>
+                  <p class="p-manual__sub-text p-manual__sub-text--bold p-manual__sub-text--mt5">
+                    Visceral fat = fat surrounding internal organs
+                  </p>
+                  <p class="p-manual__sub-text p-manual__sub-text--mt5">
+                    Too much visceral fat is thought to be closely linked to increased levels of fat in the bloodstream, which can lead to common diseases such as hyperlipidemia and diabetes, which impairs the ability of insulin to transfer energy from the bloodstream and using it in cells. In order to prevent or improve conditions of common diseases, it is important to try and reduce visceral fat levels to an acceptable level. People with high visceral fat levels tend to have large stomachs. However, this is not always the case and high visceral fat levels can lead to metabolically obese.<br>
+                    Metabolically obese (visceral obesity with normal weight) represents fat levels that are higher than average, even if a person’s weight is at or below the standard for their height.
+                  </p>
+                </div>
+                <figure class="p-manual__image p-manual__image--visceral-fat">
+                  <img src="./assets/img/common/visceral-fat01.webp" alt="Visceral fat">
+                </figure>
+              </div>
+            </article>
+            <article class="p-manual__article">
+              <div class="p-manual__flex">                
+                <div class="p-manual__text-block">                
+                  <h3 class="p-manual__sub-title">
+                    What is Subcutaneous Fat?
+                  </h3>
+                  <p class="p-manual__sub-text p-manual__sub-text--bold p-manual__sub-text--mt5">
+                    Subcutaneous fat = fat below the skin
+                  </p>
+                  <p class="p-manual__sub-text p-manual__sub-text--mt5">
+                    Subcutaneous fat not only accumulates around the stomach but also around the upper arms, hips and thighs, and can cause a distortion of the body's proportions.<br>
+Although not directly linked to increased risk of disease, it is thought to increase pressure on the heart and other complications. Subcutaneous fat is not displayed in this unit, but is included in the body fat percentage.
+                  </p>
+                </div>
+                <figure class="p-manual__image p-manual__image--visceral-fat">
+                  <img src="./assets/img/common/visceral-fat02.webp" alt="Visceral fat">
+                </figure>
+              </div>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                What is Skeletal Muscle?
+              </h3>
+              <p class="p-manual__sub-text">
+                Muscle is divided into two types, muscle in internal organs, such as the heart, and skeletal muscle attached to bones that is used to move the body. Skeletal muscle can be increased through exercise and other activity.<br>
+Increasing the ratio of skeletal muscle means that body can burn energy more easily, which means that it is less likely to turn to fat, and makes it easier to lead an energetic lifestyle.
+              </p>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                What is Resting Metabolism?
+              </h3>
+              <p class="p-manual__sub-text">
+                Regardless of your activity level, a minimum level of caloric intake is required to sustain the body’s everyday functions. Known as the resting metabolism, this indicates how many calories you need to ingest in order to provide enough energy for your body to function.
+              </p>
+            </article>
+            <div class="p-manual__box">
+              <h3 class="p-manual__sub-title p-manual__sub-title--medium">
+                The reason calculated results may differ from actual body fat percentage
+              </h3>
+              <p class="p-manual__sub-text">
+                The body fat percentage measured by this unit may significantly differ from the actual body fat percentage in
+the following situations:<br>
+Elderly people (over 81 years old) / People with a fever / Body builders or highly trained athletes / Patients undergoing dialysis / Patients with osteoporosis who have very low bone density / Pregnant women / People with swelling These differences may be related to changing ratios of body fluid and/or body composition.
+              </p>
+            </div>
           </div>
         </section>
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
           <a href="./index.html" class="p-pagination__link c-btn">
-            <span class="p-pagination__link-text">
+            <span class="c-btn__text">
               Back to <%= json.nav.home %>
             </span>
           </a>

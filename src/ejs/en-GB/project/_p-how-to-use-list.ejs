@@ -24,23 +24,27 @@
         title: 'Installing the "OMRON connect" App',
         subItems: [
           { href: './how-to-use-installing-omron-connect-app.html#install-the-app', text: 'Install the App', class: 'mobile' },
-          { href: './how-to-use-installing-omron-connect-app.html#perform-initial-settings', text: 'Perform Initial Settings', class: 'measurement' }
+          { href: './how-to-use-installing-omron-connect-app.html#perform-initial-settings', text: 'Perform Initial Settings', class: 'setting' }
         ]
       },
       {
         type: 'section',
         title: 'For Accurate Measurement',
         subItems: [
-          { href: './how-to-use-for-accurate-measurement.html#check-the-correct-measurement-method', text: 'Check the Correct Measurement Method', class: 'measurement' },
-          { href: './how-to-use-for-accurate-measurement.html#install-the-unit', text: 'Install the Unit', class: 'measurement' },
-          { href: './how-to-use-for-accurate-measurement.html#when-0-kg-calibration-is-required', text: 'When "0 kg calibration" Is Required', class: 'measurement' },
-          { href: './how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration', text: 'Implement the "0 kg Calibration"', class: 'measurement' }
+          { href: './how-to-use-for-accurate-measurement.html#check-the-correct-measurement-method', text: 'Check the Correct Measurement Method', class: 'wholebody' },
+          { href: './how-to-use-for-accurate-measurement.html#install-the-unit', text: 'Install the Unit', class: 'storage' },
+          { href: './how-to-use-for-accurate-measurement.html#when-0-kg-calibration-is-required', text: 'When "0 kg calibration" Is Required', class: 'storage' },
+          { href: './how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration', text: 'Implement the "0 kg Calibration"', class: 'storage' }
         ]
       },
       {
-        type: 'link',
+        type: 'special-measurement',
         href: './how-to-use-taking-a-measurement.html',
-        text: 'Taking a Measurement'
+        text: 'Taking a Measurement',
+        subItem: {
+          href: './how-to-use-taking-a-measurement.html#calculate-your-fit-index',
+          text: 'Calculate Your FIT Index'
+        }
       },
       {
         type: 'link',
@@ -70,6 +74,13 @@
             <a href="<%= subItem.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--<%= subItem.class %>"><span><%= subItem.text %></span></a>
           </li>
           <% }); %>
+        </ul>
+      <% } else if (item.type === 'special-measurement') { %>
+        <a href="<%= item.href %>" class="p-lower-list__link"><span class="p-lower-list__link-text"><%= item.text %></span></a>
+        <ul class="p-lower-list__sub-items">
+          <li class="p-lower-list__sub-item">
+            <a href="<%= item.subItem.href %>" class="p-lower-list__sub-link"><span><%= item.subItem.text %></span></a>
+          </li>
         </ul>
       <% } %>
     </li>

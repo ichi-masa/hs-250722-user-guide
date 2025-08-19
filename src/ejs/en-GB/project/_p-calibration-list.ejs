@@ -11,12 +11,11 @@
           { href: './calibration-replacing-the-batteries.html', text: 'Replacing the Batteries' },
           { href: './calibration-restoring-the-unit-to-factory-settings.html', text: 'Restoring the Unit to Factory Settings' },
           { href: './calibration-performing-initial-settings-on-the-unit.html', text: 'Performing Initial Settings on the Unit' },
-          { href: './calibration-registering-personal-data-on-the-unit.html', text: 'Registering Personal Data on the Unit' },
-          { href: './calibration-selecting-measurement-unit.html', text: 'Selecting Measurement Unit' }
+          { href: './calibration-registering-personal-data-on-the-unit.html', text: 'Registering Personal Data on the Unit' }
         ]; %>
         <% calibrationItems.forEach(item => { %>
         <li class="p-lower-list__sub-item">
-          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--measurement"><span><%= item.text %></span></a>
+          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--storage"><span><%= item.text %></span></a>
         </li>
         <% }); %>
       </ul>

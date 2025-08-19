@@ -64,9 +64,17 @@
   transition: color 0.3s ease;
 }
 
-.p-side-nav__link--parent {
-  font-family: var(--font-din-medium);
+.p-side-nav__link--home {
+  font-family: var(--font-din-bold);
 }
+
+// .p-side-nav__link--current {
+//   font-family: var(--font-din-bold);
+// }
+
+// .p-side-nav__link--parent {
+//   font-family: var(--font-din-medium);
+// }
 
 @media (hover: hover) {
   .p-side-nav__link:hover {
@@ -76,10 +84,6 @@
   .p-side-nav__link--current:hover {
     color: $black;
   }
-}
-
-.p-side-nav__link--current {
-  font-family: var(--font-din-bold);
 }
 
 .p-side-nav__item:first-child .p-side-nav__link {

@@ -5,13 +5,29 @@
   margin-bottom: rem(20);
 }
 
+.p-manual__flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  @include mq(md) {
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
 .p-manual__lead {
   font-size: rem(12);
-  // font-family: var(--font-din-medium);
-  font-family: $ff-roboto;
-  font-weight: $fw-medium;
+  font-family: var(--font-din-medium);
   line-height: lh(16, 12);
   letter-spacing: 0.05em;
+}
+
+.p-manual__lead--bold {
+  font-family: var(--font-din-bold);
+  font-size: rem(16);
 }
 
 .p-manual__article {
@@ -28,13 +44,16 @@
   line-height: lh(20, 16);
 }
 
+.p-manual__sub-title--medium {
+  font-family: var(--font-din-medium);
+}
+
 .p-manual__sub-title--mt16 {
   margin-top: rem(16);
 }
 
 .p-manual__sub-text {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: lh(20, 14);
   margin-top: rem(10);
 }
@@ -43,9 +62,16 @@
   margin-top: 0;
 }
 
+.p-manual__sub-text--mt5 {
+  margin-top: rem(5);
+}
+
+.p-manual__sub-text--bold {
+  font-family: var(--font-din-bold);
+}
+
 .p-manual__text {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   letter-spacing: 0;
   margin-top: rem(8);
@@ -59,9 +85,8 @@
   margin-top: rem(10);
   display: block;
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: lh(20, 14);
-  // text-decoration: underline;
+  text-decoration: underline;
 }
 
 .p-manual__url-link--mt8 {
@@ -69,7 +94,7 @@
 }
 
 .p-manual__table-wrap {
-  margin-top: rem(40);
+  margin-top: rem(-2);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;
@@ -85,10 +110,6 @@
       display: none;
     }
   }
-}
-
-.p-manual__table-wrap--mt10 {
-  margin-top: rem(10);
 }
 
 .p-manual__table {
@@ -181,10 +202,10 @@
 }
 
 .p-manual__image--installing-batteries-step1 {
-  width: calc(200 / 299 * 100%);
+  width: calc(225 / 299 * 100%);
 
   @include mq(md) {
-    width: calc(268 / 767 * 100%);
+    width: calc(322 / 767 * 100%);
   }
 }
 
@@ -211,6 +232,14 @@
 
   @include mq(md) {
     width: calc(223 / 767 * 100%);
+  }
+}
+
+.p-manual__image--display-example {
+  width: calc(260 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(260 / 767 * 100%);
   }
 }
 
@@ -322,6 +351,22 @@
   width: calc(153 / 792 * 100%);
 }
 
+.p-manual__image--daily-activity {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(526 / 767 * 100%);
+  }
+}
+
+.p-manual__image--visceral-fat {
+  width: calc(128 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(128 / 708 * 100%);
+  }
+}
+
 .p-manual__store-badges {
   display: flex;
   margin-top: rem(10);
@@ -404,6 +449,14 @@
   gap: rem(20);
 }
 
+.p-manual__items--mt10 {
+  margin-top: rem(10);
+}
+
+.p-manual__items--gap0 {
+  gap: 0;
+}
+
 .p-manual__items--for-accurate-measurement {
   margin-top: rem(12);
   gap: rem(28);
@@ -416,7 +469,6 @@
 
 .p-manual__item {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
@@ -467,8 +519,16 @@
   line-height: lh(20, 16);
 }
 
+.p-manual__item-text {
+  margin-top: rem(5);
+}
+
 .p-manual__instructions--mt10 {
   margin-top: rem(10);
+}
+
+.p-manual__instructions--mt40 {
+  margin-top: rem(40);
 }
 
 .p-manual__instructions--timing {
@@ -479,11 +539,9 @@
 
 .p-manual__instruction {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(10);
   position: relative;
-  
 }
 
 .p-manual__instruction::before {
@@ -505,6 +563,7 @@
 .p-manual__instruction--bold::before {
   width: rem(4);
   height: rem(4);
+
   top: rem(8);
 }
 
@@ -514,18 +573,30 @@
   line-height: lh(20, 16);
 }
 
+.p-manual__instruction-title--fz14 {
+  font-size: rem(14);
+}
+
+.p-manual__instruction-text {
+  font-size: rem(16);
+}
+
+.p-manual__instruction-text--fz14 {
+  font-size: rem(14);
+}
+
 .p-manual__instruction-head {
   margin-top: rem(10);
   font-size: rem(14);
-  font-family: $ff-inter;
-  font-weight: $fw-semiBold;
+  font-family: var(--font-din-medium);
   line-height: 1.4;
   width: fit-content;
   text-align: center;
 }
 
-.p-manual__instruction-text--semi-bold {
-  font-weight: $fw-semiBold;
+.p-manual__instruction-text--medium {
+  font-family: var(--font-din-medium);
+  font-size: rem(14);
   margin-top: rem(10);
 }
 
@@ -585,9 +656,14 @@
   margin-top: rem(8);
 }
 
+.p-manual__step-list--gap30 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+}
+
 .p-manual__step-list-item {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   padding-left: rem(5);
   position: relative;
@@ -607,6 +683,36 @@
   height: rem(2);
   background: $black;
   border-radius: 50%;
+}
+
+.p-manual__circle-steps {
+  counter-reset: circle-step;
+}
+
+.p-manual__circle-step {
+  font-size: rem(14);
+  line-height: 1.4;
+  padding-left: rem(20);
+  position: relative;
+  counter-increment: circle-step;
+}
+
+.p-manual__circle-step::before {
+  content: counter(circle-step);
+  position: absolute;
+  font-size: rem(12);
+  color: $white;
+  left: rem(-10);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(14);
+  height: rem(14);
+  background: $black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .p-manual__procedures {
@@ -639,6 +745,7 @@
   line-height: lh(20, 16);
   padding-left: rem(16);
   position: relative;
+  margin-top: rem(10);
 }
 
 .p-manual__tip-title::before {
@@ -655,7 +762,6 @@
 .p-manual__tip-text {
   margin-top: rem(10);
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
 }
 
@@ -663,18 +769,16 @@
 .p-manual__example {
   margin-top: rem(10);
   font-size: rem(14);
-  font-family: $ff-inter;
-  font-weight: $fw-bold;
+  font-family: var(--font-din-bold);
   line-height: 1.4;
 }
 
 .p-manual__formula {
   font-size: rem(16);
-  font-family: $ff-inter;
-  font-weight: $fw-bold;
+  font-family: var(--font-din-bold);
   line-height: 1.4;
   border: 1px solid $black;
-  padding: rem(7);
+  padding: rem(7) rem(30);
   width: fit-content;
   margin-top: rem(8);
 }
@@ -685,7 +789,6 @@
 
 .p-manual__formula-item {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
 }
 
@@ -708,6 +811,13 @@
 
 .p-manual__formula-wrapper {
   margin-top: rem(32);
+}
+
+.p-manual__formula-text {
+  font-family: var(--font-din-bold);
+  line-height: 1.4;
+  text-align: center;
+  margin-top: rem(10);
 }
 
 .p-manual__grip-steps {
@@ -755,7 +865,6 @@
 
 .p-manual__app-item-text {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   margin-top: rem(10);
 }
@@ -783,7 +892,6 @@
 
 .p-manual__figure-item {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   display: grid;
   grid-template-rows: subgrid;
@@ -797,7 +905,6 @@
 
 .p-manual__figure-text {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
   position: relative;
   padding-left: rem(10);
@@ -857,7 +964,6 @@
 
 .p-manual__unit-placed-text {
   font-size: rem(14);
-  font-family: $ff-inter;
   line-height: 1.4;
 }
 
@@ -870,4 +976,18 @@
   display: flex;
   flex-direction: column;
   gap: rem(70);
+}
+
+.p-manual__text-block {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(522 / 708 * 100%);
+  }
+}
+
+.p-manual__box {
+  margin-top: rem(20);
+  padding: rem(10);
+  border: 1px solid $black;
 }

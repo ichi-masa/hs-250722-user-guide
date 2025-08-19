@@ -75,6 +75,15 @@
     },
     "replacingTheBatteries": {
       "title": "Replacing the Batteries"
+    },
+    "restoringTheUnitToFactorySettings": {
+      "title": "Restoring the Unit to Factory Settings"
+    },
+    "performingInitialSettingsOnTheUnit": {
+      "title": "Performing Initial Settings on the Unit"
+    },
+    "registeringPersonalDataOnTheUnit": {
+      "title": "Registering Personal Data on the Unit"
     }
   },
   "specifications": {

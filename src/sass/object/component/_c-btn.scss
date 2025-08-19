@@ -45,6 +45,34 @@
   background-position: center center;
 }
 
+.c-btn--next--storage span::before {
+  background-image: url(../img/common/icon-storage.svg);
+}
+
+.c-btn--next--battery span::before {
+  background-image: url(../img/common/icon-battery.svg);
+}
+
+.c-btn--next--mobile span::before {
+  background-image: url(../img/common/icon-mobile.svg);
+}
+
+.c-btn--next--wholebody span::before {
+  background-image: url(../img/common/icon-wholebody.svg);
+}
+
+.c-btn--next--composition-monitor span::before {
+  background-image: url(../img/common/icon-composition-monitor.svg);
+}
+
+.c-btn--next--help span::before {
+  background-image: url(../img/common/icon-help.svg);
+}
+
+.c-btn--next--disposal span::before {
+  background-image: url(../img/common/icon-delete.svg);
+}
+
 .c-btn--next span::after {
   content: '';
   position: absolute;

@@ -23,7 +23,7 @@
             <%= json.howToUse.checkYourReadingsUsingTheOMRONConnectApp.title %>
           </h2>
           <div class="p-manual__wrap">
-            <p class="p-manual__lead">
+            <p class="p-manual__lead p-manual__lead--bold">
               You can check the following readings on the “OMRON connect” app.<br>(The screen display is for illustrative purposes. It may differ from the actual screen)
             </p>
             <figure class="p-manual__image p-manual__image--app-display">
@@ -40,31 +40,26 @@
               </li>
               <li class="p-manual__app-item">
                 <h3 class="p-manual__app-item-title">Body fat percentage</h3>
-                <p class="p-manual__app-item-text">Dummy</p>
               </li>
               <li class="p-manual__app-item">
                 <h3 class="p-manual__app-item-title">Body fat mass</h3>
-                <p class="p-manual__app-item-text">Dummy</p>
               </li>
               <li class="p-manual__app-item">
                 <h3 class="p-manual__app-item-title">Skeletal muscle</h3>
                 <p class="p-manual__app-item-text">Displays the percentage of body weight that is made up of skeletal muscle weight (skeletal muscle mass) = skeletal muscle percentage, along with the assessment results (on a 4-level scale).</p>
               </li>
               <li class="p-manual__app-item">
-                <h3 class="p-manual__app-item-title">Skeletal muscle percentage</h3>
-                <p class="p-manual__app-item-text">Dummy</p>
+                <h3 class="p-manual__app-item-title">Skeletal muscle percentage (Whole body)</h3>
               </li>
               <li class="p-manual__app-item">
-                <h3 class="p-manual__app-item-title">Skeletal muscle mass</h3>
-                <p class="p-manual__app-item-text">Dummy</p>
+                <h3 class="p-manual__app-item-title">Skeletal muscle mass (Whole body)</h3>
+              </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Skeletal muscle percentage (Segmental)</h3>
               </li>
               <li class="p-manual__app-item">
                 <h3 class="p-manual__app-item-title">Visceral fat</h3>
                 <p class="p-manual__app-item-text">Displays the level of fat area around the internal organs along with the assessment results (on a 3-level scale).</p>
-              </li>
-              <li class="p-manual__app-item">
-                <h3 class="p-manual__app-item-title">Body age</h3>
-                <p class="p-manual__app-item-text">Displays the body age calculated based on your resting metabolism.</p>
               </li>
               <li class="p-manual__app-item">
                 <h3 class="p-manual__app-item-title">Resting metabolism</h3>
@@ -74,28 +69,34 @@
                 <h3 class="p-manual__app-item-title">BMI</h3>
                 <p class="p-manual__app-item-text">Displays the numerical value to determine how your mass relates to your height.</p>
               </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Subcutaneous fat classification（Whole body）</h3>
+              </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Subcutaneous fat classification（Segmental）</h3>
+              </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Body water percentage</h3>
+              </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Bone mass</h3>
+              </li>
+              <li class="p-manual__app-item">
+                <h3 class="p-manual__app-item-title">Fat free mass</h3>
+              </li>
             </ol>
-            <p class="p-manual__sub-text">
-              ・The assessment results are shown in an ascending level from left (low) to right (high).
-            </p>
-            <p class="p-manual__sub-text">
-              &lt;How to read the results&gt;
-            </p>
-            <figure class="p-manual__image p-manual__image--results">
-              <img src="./assets/img/common/connect-app02.webp" alt="">
-            </figure>
           </div>
         </section>
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
           <a href="./how-to-use.html" class="p-pagination__link c-btn">
-            <span class="p-pagination__link-text">
+            <span class="c-btn__text">
               Back to <%= json.howToUse.title %>
             </span>
           </a>
-          <a href="./how-to-use-measuring-weight-only.html" class="p-pagination__link c-btn c-btn--next">
-            <span class="p-pagination__link-text">
+          <a href="./how-to-use-measuring-weight-only.html" class="p-pagination__link c-btn c-btn--next c-btn--next--composition-monitor">
+            <span class="c-btn__text">
               <%= json.howToUse.measuringWeightOnly.title %>
             </span>
           </a>

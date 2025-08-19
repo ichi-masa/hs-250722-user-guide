@@ -23,7 +23,7 @@
             <%= json.howToUse.automaticTransferOfReadings.title %>
           </h2>
           <div class="p-manual__wrap">
-            <p class="p-manual__lead">
+            <p class="p-manual__lead p-manual__lead--bold">
               Requirements<br>To automatically transfer readings to your smartphone, the following conditions must be met.
             </p>
             <ul class="p-manual__items">
@@ -93,7 +93,7 @@
               </p>
               <ul class="p-manual__instructions p-manual__instructions--timing">
                 <li class="p-manual__instruction p-manual__instruction--bold">
-                  <p class="p-manual__instruction-title">
+                  <p class="p-manual__instruction-title p-manual__instruction-title--fz14">
                     After determining your personal number
                   </p>
                   <p class="p-manual__instruction-head">
@@ -104,24 +104,24 @@
                   </figure>
                 </li>
                 <li class="p-manual__instruction p-manual__instruction--bold">
-                  <p class="p-manual__instruction-title">
-                    When the power is automatically turned off after about 18 seconds of no operation even if the personal number has not been determined
+                  <p class="p-manual__instruction-title p-manual__instruction-title--fz14">
+                    When the power is automatically turned off after about 16 seconds of no operation even if the personal number has not been determined
                   </p>
                   <p class="p-manual__instruction-head">
-                      &lt;Personal number display&gt;<br>(After 18 seconds)
+                      &lt;Personal number display&gt;<br>(After 16 seconds)
                   </p>
                   <figure class="p-manual__image p-manual__image--auto-transfer-2">
                     <img src="./assets/img/common/automatic-transfer-of-readings03.webp" alt="">
                   </figure>
-                  <p class="p-manual__instruction-text p-manual__instruction-text--semi-bold">
+                  <p class="p-manual__instruction-text p-manual__instruction-text--medium">
                     Note that if the personal number is incorrect, the readings will be transferred to another registered user’s smartphone.
                   </p>
                 </li>
                 <li class="p-manual__instruction p-manual__instruction--bold">
-                  <p class="p-manual__instruction-title">
+                  <p class="p-manual__instruction-title p-manual__instruction-title--fz14">
                     Must be within one hour of measurement
                   </p>
-                  <p class="p-manual__instruction-text">
+                  <p class="p-manual__instruction-text p-manual__instruction-text--fz14">
                     Even if you do not have your smartphone with you when taking a measurement, if you bring your smartphone close to the unit (within 10 m) within 1 hour of measurement, the readings are automatically transferred.
                   </p>
                 </li>
@@ -133,12 +133,12 @@
       <div class="p-main__pagination">
         <div class="p-pagination">
           <a href="./how-to-use.html" class="p-pagination__link c-btn">
-            <span class="p-pagination__link-text">
+            <span class="c-btn__text">
               Back to <%= json.howToUse.title %>
             </span>
           </a>
-          <a href="./how-to-use-check-your-readings-using-the-omron-connect-app.html" class="p-pagination__link c-btn c-btn--next">
-            <span class="p-pagination__link-text">
+          <a href="./how-to-use-check-your-readings-using-the-omron-connect-app.html" class="p-pagination__link c-btn c-btn--next c-btn--next--mobile">
+            <span class="c-btn__text">
               <%= json.howToUse.checkYourReadingsUsingTheOMRONConnectApp.title %>
             </span>
           </a>

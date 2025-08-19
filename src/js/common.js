@@ -76,7 +76,8 @@ function scrollHash() {
 読み込み時実行
 --------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
-  headerHeight = document.querySelector('.js-header').offsetHeight;
+  const headerElement = document.querySelector('.js-header');
+  headerHeight = headerElement ? headerElement.offsetHeight : 0;
   // wrapSpan();
   // setTimeout('stopload()', 10000);
 });
@@ -91,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
 jQuery(window).on('load resize', function () {
   let vw = document.body.clientWidth;// スクロールバーを除いた幅を取得
   let vh = window.innerHeight; // アドレスバーを覗いた画面高さ
-  headerHeight = document.querySelector('.js-header').offsetHeight;
+  const headerElement = document.querySelector('.js-header');
+  headerHeight = headerElement ? headerElement.offsetHeight : 0;
   document.documentElement.style.setProperty('--vw', `${vw}px`);
   document.documentElement.style.setProperty('--vh', `${vh}px`);
   document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);

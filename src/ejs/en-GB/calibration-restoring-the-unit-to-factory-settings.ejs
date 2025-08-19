@@ -1,0 +1,76 @@
+<%- include('./common/_head', { pageKey: 'calibration' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'calibration' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'calibration-restoring-the-unit-to-factory-settings' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.calibration.restoringTheUnitToFactorySettings.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              If you want to restore your unit to the factory settings, follow the steps below.<br>
+This will delete all registration information (date and time settings, personal data, communication settings) and all readings stored in the unit’s memory.
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch and hold the <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> and <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit for more than 3 seconds.
+                </h3>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch and hold the <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth.webp" class="p-manual__icon" alt="bluetooth icon"></span> and <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> again for more than 3 seconds.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen37-factory-settings.webp" alt="performing initial settings">
+                </figure>
+                <ul class="p-manual__step-list p-manual__step-list--gap30">
+                  <li class="p-manual__step-list-item">
+                    After 2 seconds, the unit will automatically turn off.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    To cancel restoring, press the power switch on the unit to turn off the power.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./calibration.html" class="p-pagination__link c-btn">
+            <span class="c-btn__text">
+              Back to <%= json.calibration.title %>
+            </span>
+          </a>
+          <a href="./calibration-performing-initial-settings-on-the-unit.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+            <span class="c-btn__text">
+              <%= json.calibration.performingInitialSettingsOnTheUnit.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

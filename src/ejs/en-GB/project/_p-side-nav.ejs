@@ -20,17 +20,18 @@ console.log('Current page:', currentPage);
       <% sideNavItems.forEach(function(item) { %>
       <% 
         // 子ページから親ページを判定（例：how-to-use-package-contents -> how-to-use）
-        const isChildOfThisItem = currentPage.startsWith(item.key + '-');
+        // 正確な判定のため、完全一致と子ページ判定を分ける
         const isExactMatch = currentPage === item.key;
+        const isChildOfThisItem = !isExactMatch && currentPage.startsWith(item.key + '-');
         const shouldShowAsCurrent = isExactMatch || isChildOfThisItem;
       %>
       <li class="p-side-nav__item <%= isExactMatch ? 'p-side-nav__item--current' : (isChildOfThisItem ? 'p-side-nav__item--parent' : '') %>">
         <% if (isExactMatch) { %>
-        <div class="p-side-nav__link p-side-nav__link--current"><%= item.text %></div>
+        <div class="p-side-nav__link p-side-nav__link--current <%= item.key === 'home' ? 'p-side-nav__link--home' : '' %>"><%= item.text %></div>
         <% } else if (isChildOfThisItem) { %>
-        <a href="<%= item.href %>" class="p-side-nav__link p-side-nav__link--parent"><%= item.text %></a>
+        <a href="<%= item.href %>" class="p-side-nav__link p-side-nav__link--parent <%= item.key === 'home' ? 'p-side-nav__link--home' : '' %>"><%= item.text %></a>
         <% } else { %>
-        <a href="<%= item.href %>" class="p-side-nav__link"><%= item.text %></a>
+        <a href="<%= item.href %>" class="p-side-nav__link <%= item.key === 'home' ? 'p-side-nav__link--home' : '' %>"><%= item.text %></a>
         <% } %>
       </li>
       <% }); %>

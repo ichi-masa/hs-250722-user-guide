@@ -62,17 +62,16 @@
   width: 100%;
   padding: rem(15);
   font-size: rem(14);
-  font-family: $ff-roboto;
   line-height: calc(20 / 14);
   letter-spacing: 0.025em;
 
   @include mq(md) {
     width: calc(365 / 693 * 100%);
-    height: 100%;
-    padding: rem(23) rem(40);
+    height: inherit;
+    padding: rem(23) rem(20);
   }
 }
 
 .p-birth-date-card__title {
-  font-weight: $fw-medium;
+  font-family: var(--font-din-medium);
 }
