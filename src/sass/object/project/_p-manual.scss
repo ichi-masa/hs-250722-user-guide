@@ -94,7 +94,7 @@
 }
 
 .p-manual__table-wrap {
-  margin-top: rem(-2);
+  margin-top: rem(40);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;
@@ -110,6 +110,14 @@
       display: none;
     }
   }
+}
+
+.p-manual__table-wrap--mt10 {
+  margin-top: rem(10);
+}
+
+.p-manual__table-wrap--mt0 {
+  margin-top: 0;
 }
 
 .p-manual__table {
@@ -269,6 +277,7 @@
 
 .p-manual__item-image--posture {
   width: 100%;
+  margin-top: rem(10);
 
   @include mq(md) {
     width: calc(773 / 788 * 100%);
