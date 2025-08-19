@@ -9,6 +9,7 @@
   font-family: var(--font-din-medium);
   line-height: 1;
   letter-spacing: 0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
   @include mq(md) {
     font-size: rem(16);
@@ -85,8 +86,21 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  transition: transform 0.3s ease;
 
   @include mq(md) {
     width: rem(24);
+  }
+}
+
+@media (hover: hover) {
+  .c-btn:hover {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, .25);
+    border-color: $primary-blue;
+  }
+
+  .c-btn:hover span::after {
+    transform: translateY(-50%) translateX(rem(5));
   }
 }

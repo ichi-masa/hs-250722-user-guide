@@ -64,13 +64,17 @@ function scrollHash() {
   }
 }
 
-
-// /**
-//  * ローディング画面
-//  */
-// function stopload() {
-//   jQuery('#js-loading').delay(900).fadeOut(800);
-// }
+/**
+ * ページロード時のデフォルトスクロールを防止
+ */
+function preventDefaultScroll() {
+  if (location.hash) {
+    // ページロード直後にトップに強制移動
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  }
+}
 
 /*-------------------------------------------------------------------
 読み込み時実行
@@ -78,6 +82,8 @@ function scrollHash() {
 document.addEventListener("DOMContentLoaded", function () {
   const headerElement = document.querySelector('.js-header');
   headerHeight = headerElement ? headerElement.offsetHeight : 0;
+  // デフォルトスクロールを防止
+  preventDefaultScroll();
   // wrapSpan();
   // setTimeout('stopload()', 10000);
 });
@@ -120,14 +126,16 @@ jQuery(function () {
   jQuery(window).on('load', function() {
     scrollHash();
   });
-  // gsap.to('body', { opacity: 1, duration: 0.5 });
 
-  // 画面遷移
-  window.addEventListener('beforeunload', function (e) {
-    document.body.classList.add("fadeOut");
-    setTimeout(() => {
-      window.location = url;
-    }, 500);
+  // 遷移処理（ちらつき軽減）
+  jQuery(document).on('click', 'a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"]):not([target="_blank"])', function(e) {
+    const href = this.href;
+    if (href && href !== window.location.href) {
+      e.preventDefault();
+      setTimeout(() => {
+        window.location.href = href;
+      }, 50);
+    }
   });
 
   // スクロール判定
