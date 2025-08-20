@@ -234,7 +234,14 @@
   }
 }
 
-.p-manual__image--search-display,
+.p-manual__image--search-display {
+  width: calc(180 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(300 / 767 * 100%);
+  }
+}
+
 .p-manual__image--weight-display,
 .p-manual__image--app-display {
   width: calc(290 / 299 * 100%);
