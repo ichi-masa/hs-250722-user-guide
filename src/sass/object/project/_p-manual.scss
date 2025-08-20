@@ -508,7 +508,7 @@
 }
 
 .p-manual__item--square {
-  padding-left: rem(12);
+  padding-left: 0;
 }
 
 .p-manual__item::before {
@@ -532,6 +532,10 @@
   height: rem(10);
   background: $black;
   border-radius: 0;
+}
+
+.p-manual__item--square .p-manual__item-title {
+  text-indent: rem(12);
 }
 
 .p-manual__item--no::before {

@@ -85,7 +85,19 @@
   font-size: rem(12);
   line-height: lh(16, 12);
   letter-spacing: 0.004em;
-  // text-indent: 0.5em;
+  position: relative;
+  padding-left: rem(14);
+}
+
+.p-table__cell-description::before {
+  content: '';
+  position: absolute;
+  top: rem(7);
+  left: rem(7);
+  width: rem(2);
+  height: rem(2);
+  background-color: $black;
+  border-radius: 50%;
 }
 
 .p-table__icon-wrap {

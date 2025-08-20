@@ -75,3 +75,19 @@
 .p-birth-date-card__title {
   font-family: var(--font-din-medium);
 }
+
+.p-birth-date-card__text {
+  padding-left: rem(10);
+  position: relative;
+}
+
+.p-birth-date-card__text::before {
+  content: '';
+  position: absolute;
+  top: rem(9);
+  left: 0;
+  width: rem(2);
+  height: rem(2);
+  background-color: $black;
+  border-radius: 50%;
+}

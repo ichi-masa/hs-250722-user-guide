@@ -122,6 +122,10 @@
   background-image: url(../img/common/icon-delete.svg);
 }
 
+.p-lower-list__sub-link--information::before {
+  background-image: url(../img/common/icon-information.svg);
+}
+
 .p-lower-list__sub-link span {
   position: relative;
   display: inline-block;
