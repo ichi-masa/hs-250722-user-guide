@@ -8,6 +8,7 @@
 .p-manual__flex {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   
   @include mq(md) {
@@ -210,18 +211,18 @@
 }
 
 .p-manual__image--installing-batteries-step1 {
-  width: calc(225 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(322 / 767 * 100%);
+    width: calc(400 / 767 * 100%);
   }
 }
 
 .p-manual__image--installing-batteries-step2 {
-  width: calc(225 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(322 / 767 * 100%);
+    width: calc(400 / 767 * 100%);
   }
 }
 
@@ -236,10 +237,10 @@
 .p-manual__image--search-display,
 .p-manual__image--weight-display,
 .p-manual__image--app-display {
-  width: calc(200 / 299 * 100%);
+  width: calc(290 / 299 * 100%);
 
   @include mq(md) {
-    width: calc(223 / 767 * 100%);
+    width: calc(300 / 767 * 100%);
   }
 }
 
@@ -247,7 +248,7 @@
   width: calc(260 / 299 * 100%);
 
   @include mq(md) {
-    width: calc(260 / 767 * 100%);
+    width: calc(350 / 767 * 100%);
   }
 }
 
@@ -263,7 +264,7 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(548 / 767 * 100%);
+    width: calc(750 / 767 * 100%);
   }
 }
 
@@ -271,7 +272,7 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(357 / 767 * 100%);
+    width: calc(500 / 767 * 100%);
   }
 }
 
@@ -285,18 +286,18 @@
 }
 
 .p-manual__item-image--step-on {
-  width: calc(200 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(265 / 788 * 100%);
+    width: calc(350 / 788 * 100%);
   }
 }
 
 .p-manual__image--unit {
-  width: calc(220 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(220 / 788 * 100%);
+    width: calc(400 / 788 * 100%);
   }
 }
 
@@ -304,15 +305,15 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(598 / 788 * 100%);
+    width: calc(700 / 788 * 100%);
   }
 }
 
 .p-manual__image--auto-transfer-2 {
-  width: calc(200 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(350 / 788 * 100%);
+    width: calc(500 / 788 * 100%);
   }
 }
 
@@ -325,11 +326,15 @@
 }
 
 .p-manual__image--maintenance {
-  width: calc(190 / 777 * 100%);
+  width: calc(150 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(190 / 777 * 100%);
+  }
 }
 
 .p-manual__image--storage {
-  width: calc(250 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
     width: calc(413 / 777 * 100%);
@@ -337,10 +342,10 @@
 }
 
 .p-manual__image--unit-placed {
-  width: calc(264 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: calc(264 / 777 * 100%);
+    width: calc(300 / 777 * 100%);
   }
 }
 
@@ -348,16 +353,24 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(621 / 767 * 100%);
+    width: calc(750 / 767 * 100%);
   }
 }
 
 .p-manual__image--replace-batteries {
-  width: calc(420 / 787 * 100%);
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(420 / 787 * 100%);
+  }
 }
 
 .p-manual__image--correct-disposal {
-  width: calc(153 / 792 * 100%);
+  width: calc(153 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(153 / 792 * 100%);
+  }
 }
 
 .p-manual__image--daily-activity {
@@ -369,10 +382,10 @@
 }
 
 .p-manual__image--visceral-fat {
-  width: calc(128 / 299 * 100%);
+  width: calc(180 / 299 * 100%);
 
   @include mq(md) {
-    width: calc(128 / 708 * 100%);
+    width: calc(186 / 708 * 100%);
   }
 }
 
@@ -931,7 +944,7 @@
 }
 
 .p-manual__figure-image {
-  width: calc(207 / 299 * 100%);
+  width: calc(250 / 299 * 100%);
 
   @include mq(md) {
     width: rem(207);
@@ -940,10 +953,10 @@
 }
 
 .p-manual__figure-image--unit-placed {
-  width: calc(264 / 299 * 100%);
+  width: 100%;
 
   @include mq(md) {
-    width: rem(264);
+    width: rem(300);
   }
 }
 

@@ -37,7 +37,7 @@
   margin-inline: auto;
 
   @include mq(md) {
-    width: calc(200 / 788 * 100%);
+    width: calc(300 / 788 * 100%);
     margin-inline: initial;
   }
 }
