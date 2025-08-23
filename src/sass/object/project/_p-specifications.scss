@@ -77,9 +77,26 @@
   letter-spacing: 0;
 }
 
-.p-specifications__note-image {
+.p-specifications__note-image-wrap {
+  display: flex;
+  gap: rem(85);
   margin-top: rem(16);
-  width: calc(387 / 792 * 100%);
+}
+
+.p-specifications__note-image:first-child {
+  width: rem(98);
+
+  @include mq(md) {
+    width: calc(98 / 787 * 100%);
+  }
+}
+
+.p-specifications__note-image:last-child {
+  width: rem(50);
+
+  @include mq(md) {
+    width: calc(50 / 787 * 100%);
+  }
 }
 
 .p-specifications__note-image img {
