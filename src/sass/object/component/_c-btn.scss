@@ -74,6 +74,10 @@
   background-image: url(../img/common/icon-delete.svg);
 }
 
+.c-btn--next--information span::before {
+  background-image: url(../img/common/icon-information.svg);
+}
+
 .c-btn--next span::after {
   content: '';
   position: absolute;
