@@ -1,27 +1,27 @@
 [
   {
-    "title": "Home - User Guide",
+    "title": "VIVA 360+ (HBF-H132T1-EBK)",
     "url": "./index.html",
     "description": "User guide for VIVA 360+ Body Composition Monitor",
-    "content": "VIVA 360+ HBF-H132T1-EBK body composition monitor user guide instructions manual trademarks word mark logos registered owned bluetooth any such marks OMRON healthcare under apple logo other app store service google play brand names product mentioned document respective"
+    "content": "VIVA 360+ HBF-H132T1-EBK user guide body composition monitor how use error messages troubleshooting maintenance calibration specifications information trademarks bluetooth word mark logos registered owned OMRON healthcare apple logo app store service google play brand names product mentioned document respective companies XXXXXXX-XA WEBIM-HBF-H132T1-EBK-EN-01-08/2025 more about product choose language english français what need help"
   },
   {
     "title": "Important Safety Information",
     "url": "./important-safety-information.html",
     "description": "Important safety information and precautions",
-    "content": "safety information instruction manual slippery surfaces wet floor infants toddlers children jump fall slip injury bath shower edges display area disabilities physically frail medical electrical equipment data transmission radio frequencies RF 2.4 GHz aircraft hospitals physician healthcare provider weight reduction exercise program disassemble modify repair cushioned floor carpet mat bare feet professional use hospitals medical facilities read important before using follow thoroughly indicates potentially hazardous situation could result death serious keep out reach doing cause falling stepping another person prevent incorrect operation devices inaccurate product emits locations minor moderate consult beginning attempt measurement place battery replace worn manganese alkaline same different remove months while being failure integrated metal emit electromagnetic fields wireless communication interference bluetooth option connect dedicated mobile device handling operates unlicensed unknown event microwave frequency possibility stop relocate away attempting"
+    "content": "important safety information read instruction manual before using device follow thoroughly improper use may cause danger resulting death serious injury situations device should not used never unit combination medical electronic devices pacemakers electronic life support systems artificial heart lung portable electrocardiograph unit could cause devices malfunction posing considerable health risk users devices indicates potentially hazardous situation which avoided could result death serious injury not use unit slippery surfaces wet floor not jump unit doing may cause fall slip resulting serious injury not use unit when body feet wet such after taking bath shower not step edges display area unit because may lose balance fall resulting serious injury persons disabilities persons who physically frail should assisted another person when using unit prevent falling when stepping unit data transmission product emits radio frequencies RF 2.4 GHz band not use product locations where RF restricted such aircraft hospitals indicates potentially hazardous situation which avoided may result minor moderate injury user patient cause damage equipment other property consult physician healthcare provider before beginning weight reduction exercise program keep unit out reach infants toddlers children not attempt disassemble modify repair unit not place unit cushioned floor surface such carpet mat because measurement may not accurate step onto unit bare feet when measuring unit not professional use not use unit hospitals other medical facilities battery usage replace worn batteries new ones immediately only use 4 AA manganese alkaline batteries unit not use other types batteries not use new used batteries together replace all 4 batteries same time not use different types batteries together remove batteries unit will not used 3 months more not use batteries after their expiration date data transmission not replace battery while measurement result being transferred smart device may result incorrect operation unit failure transfer measurement result not place integrated circuit cards magnets metal objects other devices emit electromagnetic fields near unit while measurement result being transferred smart device may result incorrect operation unit failure transfer measurement result about wireless communication interference bluetooth option product used connect dedicated apps mobile devices synchronize date time data mobile device product synchronize measurement data product mobile device further handling data mobile device user discretion product operates unlicensed ISM band 2.4 GHz where any third party can intercept radio waves willfully accidentally any unknown purpose event product used near other wireless devices such microwave wireless LAN which operate same frequency band product there possibility interference may occur interference occurs stop operation other devices relocate product away from other wireless devices before attempting use"
   },
   {
     "title": "How to Use",
     "url": "./how-to-use.html",
     "description": "Complete guide on how to use your device",
-    "content": "package contents know your device main unit display installing batteries OMRON connect app install app perform initial settings accurate measurement check correct measurement method install unit 0 kg calibration implement calibration taking measurement automatic transfer readings check readings measuring weight only"
+    "content": "how use package contents know your device installing batteries initial settings accurate measurement taking measurement automatic transfer readings check readings using OMRON connect app measuring weight only user guide what need help choose language english français home important safety information error messages troubleshooting maintenance calibration specifications information body composition"
   },
   {
     "title": "Package Contents",
     "url": "./how-to-use-package-contents.html",
     "description": "What's included in your package",
-    "content": "package contents main unit 4 AA alkaline batteries battery life provided batteries new batteries make sure less than"
+    "content": "package contents make sure you have all following main unit 4 AA alkaline batteries battery life provided batteries may less than new batteries instruction manual know your device user guide what need help choose language english français"
   },
   {
     "title": "Know Your Device",
@@ -94,24 +94,6 @@
     "url": "./maintenance.html",
     "description": "How to maintain and care for your device",
     "content": "maintenance storage disposal"
-  },
-  {
-    "title": "Maintenance and Care",
-    "url": "./maintenance-maintenance.html",
-    "description": "Daily maintenance and care instructions",
-    "content": "maintenance care always keep unit clean unit very dirty shared someone skin disease infection feet cloth soaked water detergent squeeze well wiping unit wipe off dry cloth bacterial infection benzene thinner volatile solvents wipe unit discoloration damage wash unit water malfunction cleaning alcohol clean electrodes being other their before then cause but parts"
-  },
-  {
-    "title": "Storage",
-    "url": "./maintenance-storage.html",
-    "description": "How to properly store your device",
-    "content": "storage proper storing device do not store following locations unit malfunction places water may get into unit places high temperatures humidity direct sunlight dust high salinity places sloping surfaces vibrations shocks display main careful crease cause chemicals stored corrosive gas readings displayed differ actual implement before taking leaning against wall other objects placed upside down object"
-  },
-  {
-    "title": "Disposal",
-    "url": "./maintenance-disposal.html",
-    "description": "How to properly dispose of your device",
-    "content": "disposal proper disposing device batteries recycling environment waste electrical electronic equipment WEEE compliance local regulations remove unit dispose follow instructions local"
   },
   {
     "title": "Calibration",
