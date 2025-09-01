@@ -10,15 +10,133 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'maintenance' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance-maintenance' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
       <div class="p-main__control">
         <%- include('./project/_p-control') %>
       </div>
-      <div class="p-main__list">
-        <%- include('./project/_p-maintenance-list') %>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title p-page-title--maintenance">
+            <%= json.maintenance.maintenance.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Maintenance
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Always keep the unit clean.
+                </li>
+                <li class="p-manual__instruction">
+                  When the unit is very dirty or is being shared with someone who has a skin disease or other infection on their feet, use a cloth soaked with water or detergent and squeeze it well before wiping the unit, then wipe it off with a dry cloth.<br>(Otherwise, a bacterial infection can be caused.)
+                </li>
+                <li class="p-manual__instruction">
+                  Do not use benzine, thinner, or other volatile solvents to wipe the unit.<br>(It may cause discoloration or damage.)
+                  <figure class="p-manual__image p-manual__image--maintenance">
+                    <img src="./assets/img/common/maintenance01.webp" alt="cleaning the main unit">
+                  </figure>
+                </li>
+                <li class="p-manual__instruction">
+                  Do not wash the unit with water.<br>(It may cause the unit to malfunction.)
+                </li>
+                <li class="p-manual__instruction">
+                  You can use cleaning alcohol to clean the electrodes, but do not use it on other parts of the unit.
+                </li>
+              </ul>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Storage
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Store the display unit in the main unit as shown.
+                </li>
+                <li class="p-manual__instruction">
+                  When storing the display unit, be careful not to crease the cord.
+                  <figure class="p-manual__image p-manual__image--storage">
+                    <img src="./assets/img/common/storage01.webp" alt="storing the display unit">
+                  </figure>
+                </li>
+              </ul>
+              <h3 class="p-manual__sub-title p-manual__sub-title--mt16">
+                Do not store the unit in the following locations. It may cause the unit to malfunction.
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Places where water may get into the unit.
+                </li>
+                <li class="p-manual__instruction">
+                  Places with high temperatures, high humidity, direct sunlight, dust, or places with high salinity.
+                </li>
+                <li class="p-manual__instruction">
+                  Places with sloping surfaces, vibrations, or shocks.
+                </li>
+                <li class="p-manual__instruction">
+                  Places where chemicals are stored or where corrosive gas is present.
+                </li>
+                <li class="p-manual__instruction">
+                  Do not store the unit in the following conditions.
+                </li>
+              </ul>
+              <p class="p-manual__sub-text p-manual__sub-text--mt0">
+                The readings displayed may differ from the actual results. Implement the “0 kg calibration” before taking a measurement. <br>Refer to <a href="./how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration" class="p-manual__link">“Implement the “0 kg Calibration”</a>.  
+              </p>
+              <ul class="p-manual__items p-manual__items--storage">
+                <li class="p-manual__item">
+                  The unit is leaning against a wall or other objects
+                  <figure class="p-manual__image p-manual__image--unit-placed">
+                    <img src="./assets/img/common/unit-placed-in-conditions01.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__item">
+                  The unit is placed upside down
+                  <figure class="p-manual__image p-manual__image--unit-placed">
+                    <img src="./assets/img/common/unit-placed-in-conditions02.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__item">
+                  The unit is placed on an object
+                  <figure class="p-manual__image p-manual__image--unit-placed">
+                    <img src="./assets/img/common/unit-placed-in-conditions03.webp" alt="">
+                  </figure>
+                </li>
+                <li class="p-manual__item">
+                  An object is placed on the unit
+                  <figure class="p-manual__image p-manual__image--unit-placed">
+                    <img src="./assets/img/common/unit-placed-in-conditions04.webp" alt="">
+                  </figure>
+                </li>
+              </ul>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Disposal
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Remove the batteries from the unit and dispose of the unit.
+                </li>
+                <li class="p-manual__instruction">
+                  When disposing of the unit and batteries, follow the instructions of your local municipality.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./index.html" class="p-pagination__link c-btn">
+            <span class="c-btn__text">
+              Back to <%= json.nav.home %>
+            </span>
+          </a>
+        </div>
       </div>
     </main>
   </div>

@@ -4,9 +4,61 @@
   font-size: rem(20);
   font-family: var(--font-din-light);
   line-height: lh(24, 20);
+  padding-left: 1.5em;
   letter-spacing: 0;
+  position: relative;
 
   @include mq(md) {
     font-size: rem(24);
   }
+}
+
+.p-page-title::before {
+  content: '';
+  position: absolute;
+  top: 0.5lh;
+  transform: translateY(-50%);
+  left: 0;
+  width: 1.15em;
+  height: 1.15em;
+  background-image: url(../img/common/icon-storage.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.p-page-title--package::before {
+  background-image: url(../img/common/icon-package.svg);
+}
+
+.p-page-title--battery::before {
+  background-image: url(../img/common/icon-battery.svg);
+}
+
+.p-page-title--setting::before {
+  background-image: url(../img/common/icon-setting.svg);
+}
+
+.p-page-title--wholebody::before {
+  background-image: url(../img/common/icon-wholebody.svg);
+}
+
+.p-page-title--mobile::before {
+  background-image: url(../img/common/icon-mobile.svg);
+}
+
+.p-page-title--composition-monitor::before {
+  background-image: url(../img/common/icon-composition-monitor.svg);
+}
+
+.p-page-title--error::before {
+  background-image: url(../img/common/icon-error.svg);
+}
+
+.p-page-title--help::before {
+  background-image: url(../img/common/icon-help.svg);
+}
+
+.p-page-title--maintenance::before {
+  background-image: url(../img/common/icon-maintenance.svg);
 }

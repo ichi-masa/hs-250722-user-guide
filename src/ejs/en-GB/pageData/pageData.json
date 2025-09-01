@@ -19,8 +19,8 @@
     "installingBatteries": {
       "title": "Installing Batteries"
     },
-    "installingOMRONConnectApp": {
-      "title": "Installing the “OMRON connect” App"
+    "initialSetting": {
+      "title": "Initial Settings"
     },
     "forAccurateMeasurement": {
       "title": "For Accurate Measurement"

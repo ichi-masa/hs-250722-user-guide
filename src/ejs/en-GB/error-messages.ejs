@@ -19,7 +19,7 @@
       </div>
       <div class="p-main__content">
         <section class="p-manual">
-          <h2 class="p-manual__title p-page-title">
+          <h2 class="p-manual__title p-page-title p-page-title--error">
             <%= json.errorMessagesAndTroubleshooting.errorMessages.title %>
           </h2>
           <div class="p-manual__wrap">
@@ -325,11 +325,6 @@
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./error-messages-and-troubleshooting.html" class="p-pagination__link c-btn">
-            <span class="c-btn__text">
-              Back to <%= json.errorMessagesAndTroubleshooting.title %>
-            </span>
-          </a>
           <a href="./troubleshooting.html" class="p-pagination__link c-btn c-btn--next c-btn--next--help">
             <span class="c-btn__text">
               <%= json.errorMessagesAndTroubleshooting.troubleshooting.title %>

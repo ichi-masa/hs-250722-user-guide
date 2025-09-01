@@ -21,16 +21,90 @@
   display: inline-block;
 }
 
+.c-btn--previous span {
+  position: relative;
+  padding-left: rem(60);
+}
+
 .c-btn--next span {
   position: relative;
   padding-left: rem(30);
   padding-right: rem(30);
-
-  @include mq(md) {
-    padding-left: rem(36);
-    padding-right: rem(36);
-  }
 }
+
+.c-btn--previous span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(30);
+  width: rem(24);
+  aspect-ratio: 1 / 1;
+  background-image: url(../img/common/icon-storage.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.c-btn--previous--storage span::before {
+  background-image: url(../img/common/icon-storage.svg);
+}
+
+.c-btn--previous--battery span::before {
+  background-image: url(../img/common/icon-battery.svg);
+}
+
+.c-btn--previous--mobile span::before {
+  background-image: url(../img/common/icon-mobile.svg);
+}
+
+.c-btn--previous--wholebody span::before {
+  background-image: url(../img/common/icon-wholebody.svg);
+}
+
+.c-btn--previous--composition-monitor span::before {
+  background-image: url(../img/common/icon-composition-monitor.svg);
+}
+
+.c-btn--previous--error span::before {
+  background-image: url(../img/common/icon-error.svg);
+}
+
+.c-btn--previous--help span::before {
+  background-image: url(../img/common/icon-help.svg);
+}
+
+.c-btn--previous--disposal span::before {
+  background-image: url(../img/common/icon-delete.svg);
+}
+
+.c-btn--previous--information span::before {
+  background-image: url(../img/common/icon-information.svg);
+}
+
+.c-btn--previous--package span::before {
+  background-image: url(../img/common/icon-package.svg);
+}
+
+.c-btn--previous--initial-setting span::before {
+  background-image: url(../img/common/icon-setting.svg);
+}
+
+.c-btn--previous span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(24);
+  aspect-ratio: 1 / 1;
+  background-image: url(../img/common/arrow-left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: transform 0.3s ease;
+}
+
 
 .c-btn--next span::before {
   content: '';
@@ -78,6 +152,10 @@
   background-image: url(../img/common/icon-information.svg);
 }
 
+.c-btn--next--setting span::before {
+  background-image: url(../img/common/icon-setting.svg);
+}
+
 .c-btn--next span::after {
   content: '';
   position: absolute;
@@ -104,7 +182,11 @@
     border-color: $primary-blue;
   }
 
-  .c-btn:hover span::after {
+  .c-btn--previous:hover span::after {
+    transform: translateY(-50%) translateX(rem(-5));
+  }
+
+  .c-btn--next:hover span::after {
     transform: translateY(-50%) translateX(rem(5));
   }
 }

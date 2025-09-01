@@ -1,0 +1,356 @@
+<%- include('./common/_head', { pageKey: 'howToUse' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'howToUse' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'how-to-use-initial-setting' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title p-page-title--setting">
+            <%= json.howToUse.initialSetting.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              This unit can transfer your readings to your smartphone, and you can confirm your weight and body composition changes simply by installing the “OMRON connect” app on your smartphone. The “OMRON connect” app allows you to check your weight, body fat percentage, as well as your skeletal muscle, visceral fat level, resting metabolism, and BMI.<br>
+              After installation, register this product and your personal data (date of birth, gender, height and personal number) in the "OMRON connect" app.
+            </p>
+            
+            <article class="p-manual__article" id="install-the-app">
+              <h3 class="p-manual__sub-title">Install the App</h3>
+              <ol class="p-manual__steps">
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Go to “Settings” on your smartphone and enable the Bluetooth function.</h4>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Install the “OMRON connect” app on your smartphone.</h4>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">Install the “OMRON connect” app using one of the following methods.</li>
+                  </ul>
+                  <p class="p-manual__sub-text">Visit the website to download</p>
+                  <div class="p-manual__store-badges">
+                    <a href="#" class="p-manual__app-store-badge">
+                      <img src="./assets/img/common/app-store-badge.webp" alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="p-manual__google-play-badge">
+                      <img src="./assets/img/common/google-play-badge.webp" alt="Get it on Google Play">
+                    </a>
+                  </div>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Open the “OMRON connect” app and register this product and your personal data.</h4>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      Follow the instructions in the “OMRON connect” app to register.
+                    </li>
+                    <li class="p-manual__step-list-item">
+                      If you are already using the “OMRON connect” app, register this product using the following steps.
+                      <ol class="p-manual__procedures">
+                        <li class="p-manual__procedure">Tap the “Devices” icon at the bottom of the “OMRON connect” app screen</li>
+                        <li class="p-manual__procedure">Tap “Add Devices” and follow the on-screen instructions</li>
+                      </ol>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </article>
+            
+            <article class="p-manual__article" id="perform-initial-settings">
+              <h3 class="p-manual__sub-title">Performing Initial Settings on the Unit</h3>
+              <p class="p-manual__sub-text">You can configure the initial settings on the main unit immediately after purchase or after replacing its batteries.</p>
+              <ol class="p-manual__steps">
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Turn on the power.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      Pairing will be performed if the device is registered using the app.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/error-message10.webp" alt="initial weight screen">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> on the unit.</h4>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Set the date and time.</h4>
+                  <ul class="p-manual__personal-data-items">
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen1.webp" alt="setting screen1">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the measurement unit
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span>  to select “kg” or “lb” or “st”.<br>This will also automatically change “cm” and “in”.
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the measurement unit.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen2.webp" alt="setting screen2">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the year
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Year”.
+                          <br>Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Year”.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen3.webp" alt="setting screen3">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the month
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Month”.<br>Each time you touch the button, the value will change in increments of one month, and if you continue to touch the button, the value will change in increments of one month (fast forward).
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Month”.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen4.webp" alt="setting screen4">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the day
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Day”.<br>Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Day”.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen5.webp" alt="setting screen5">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the hour
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Hour”.<br>Each time you touch the button, the value will change in increments of one hour, and if you continue to touch the button, the value will change in increments of 10 hours.
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Hour”.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-manual__personal-data-item p-birth-date-card">
+                      <figure class="p-birth-date-card__image">
+                        <img src="./assets/img/common/setting-screen6.webp" alt="setting screen6">
+                      </figure>
+                      <div class="p-birth-date-card__text-block">
+                        <p class="p-birth-date-card__title">
+                          Set the minute
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Minute”.<br>Each time you touch the button, the value will change in increments of one minute, and if you continue to touch the button, the value will change in increments of 10 minutes.
+                        </p>
+                        <p class="p-birth-date-card__text">
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Minute”.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      When you set the “minute”, the configured “measurement unit”, “year, month, day” and “hour, minute” will be displayed, then the power will automatically turn off.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/screen46-confirm-settings.webp" alt="confirm settings">
+                  </figure>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      If you make a mistake while setting the numbers, turn off the power, then start over from step 1.
+                    </li>
+                    <li class="p-manual__step-list-item">
+                      To change the values after setting the date and time, follow the steps below.
+                      <ol class="p-manual__procedures">
+                        <li class="p-manual__procedure">
+                          Remove the batteries
+                        </li>
+                        <li class="p-manual__procedure">
+                          Wait for more than 20 seconds, then insert the batteries again
+                        </li>
+                        <li class="p-manual__procedure">
+                          Repeat from step 1
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="p-manual__step-list-item">
+                      If you do not perform any operation for more than 3 minutes during the setup, the unit will automatically turn off. Start over from step 1.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </article>
+            <article class="p-manual__article" id="taking-a-measurement">
+              <h3 class="p-manual__sub-title">Register Your Personal Data (Current Weight and Body Fat Percentage)</h3>
+              <p class="p-manual__sub-text">
+                The registered personal data will act as a standard for estimating the measured individual (personal number).<br>The readings (weight, body fat percentage) will be automatically transferred to your smartphone. Keep the “OMRON connect” app open until you have completed registering your personal data.
+              </p>
+              <ol class="p-manual__steps">
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Turn on the power.</h4>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      Simply stand on the unit, then the unit will turn on.
+                    </li>
+                    <li class="p-manual__step-list-item">
+                      The weight measurement display will appear.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/initialsettings-illust1.webp" alt="Feet standing on a scale">
+                  </figure>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/screen01-initial-weight.webp" alt="initial weight">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit and select the personal number registered in the “OMRON connect” app.</h4>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/screen02-user-selection.webp" alt="personal number">
+                  </figure>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">When the “0.0 kg” is displayed, take out the display unit.</h4>
+                  <ul class="p-manual__step-list">
+                    <li class="p-manual__step-list-item">
+                      Do not take out the display unit until “0.0 kg” appears on the display.<br>Otherwise, the weight of the display is added to your body weight which causes an incorrect result.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/initialsettings-illust2.webp" alt="Body fat scale with handles being held">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Place your feet on the foot electrodes with your weight evenly distributed.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      After the unit makes a "beeping" sound, the display will show your weight.<br>The unit will then start to measure your body fat percentage, visceral fat level, skeletal muscle percentage, BMI, resting metabolism and more.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--body-fat-scale">
+                    <img src="./assets/img/common/initialsettings-illust3.webp" alt="Person using a scale with hand grips">
+                  </figure>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/screen03-weight-display.webp" alt="weight display">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Extend your arms straight at a 90° angle to your body.</h4>
+                  <figure class="p-manual__image p-manual__image--body-angle">
+                    <img src="./assets/img/common/initialsettings-illust4.webp" alt="measurement pose">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">After the measurement is complete, the estimated personal number is displayed. At this point you may step off the unit.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      The unit makes a “beeping” sound.
+                    </li>
+                  </ul>
+                  <figure class="p-manual__image p-manual__image--weight-display">
+                    <img src="./assets/img/common/screen05-user-profile-display.webp" alt="user profile display">
+                  </figure>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Check whether the estimated personal number is correct.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      Check whether your personal number, which you set when registering your personal data, is displayed.<br>This product automatically estimates your personal number based on your weight and body composition using your personal data. However, if someone with a similar body shape or weight takes a measurement, the correct personal number may not be displayed.
+                    </li>
+                    <li class="p-manual__instruction">
+                      If your personal number is displayed, the power will automatically turn off after about 16 seconds without any operation, and the readings will be transferred to your smartphone.<br>During transfer, the Bluetooth symbol (<span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-bluetooth2.webp" class="p-manual__icon" alt="bluetooth icon"></span>) on the display will light up.<br><br>This will complete the registration of your personal data.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-manual__step">
+                  <h4 class="p-manual__step-title">Turn off the power.</h4>
+                  <ul class="p-manual__instructions">
+                    <li class="p-manual__instruction">
+                      Even if you forget to turn off the power, it will automatically turn off after about 3 minutes.
+                    </li>
+                    <li class="p-manual__instruction">
+                      To change or delete your personal data, refer to <a href="./calibration-changing-or-deleting-your-personal-data.html" class="p-manual__link">“Changing or Deleting Your Personal Data”</a>.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <ul class="p-manual__items p-manual__items--gap0">
+                <li class="p-manual__item">
+                  To cancel the setting, press the power switch on the unit to turn off the power.
+                </li>
+                <li class="p-manual__item">
+                  One smartphone can manage the readings of one person.<br>If you are managing the readings of multiple people, prepare one smartphone for each personal number.
+                </li>
+                <li class="p-manual__item">
+                  To use automatic transfer, your location setting on your smartphone must be enabled.<br>Even if the location is enabled, your personal information will not be leaked.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./how-to-use-installing-batteries.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--battery">
+            <span class="c-btn__text">
+              <%= json.howToUse.installingBatteries.title %>
+            </span>
+          </a>
+          <a href="./how-to-use-for-accurate-measurement.html" class="p-pagination__link c-btn c-btn--next c-btn--next--wholebody">
+            <span class="c-btn__text">
+              <%= json.howToUse.forAccurateMeasurement.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

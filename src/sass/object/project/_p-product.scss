@@ -71,3 +71,21 @@
     width: fit-content;
   }
 }
+
+.p-product__serial-number {
+  font-size: rem(12);
+  font-family: var(--font-din-light);
+  line-height: lh(15, 12);
+  margin-top: rem(40);
+  width: 100%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.p-product__serial-number-span {
+  display: block;
+  width: fit-content;
+  text-align: left;
+}

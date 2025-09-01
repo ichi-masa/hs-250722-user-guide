@@ -126,6 +126,18 @@
   background-image: url(../img/common/icon-information.svg);
 }
 
+.p-lower-list__sub-link--batteries::before {
+  background-image: url(../img/common/icon-battery.svg);
+}
+
+.p-lower-list__sub-link--composition-monitor::before {
+  background-image: url(../img/common/icon-composition-monitor.svg);
+}
+
+.p-lower-list__sub-link--package::before {
+  background-image: url(../img/common/icon-package.svg);
+}
+
 .p-lower-list__sub-link span {
   position: relative;
   display: inline-block;

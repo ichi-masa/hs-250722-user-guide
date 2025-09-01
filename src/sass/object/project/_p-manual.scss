@@ -251,6 +251,22 @@
   }
 }
 
+.p-manual__image--body-fat-scale {
+  width: calc(200 / 299 * 100%);
+
+  @include mq(md) {
+    width: calc(200 / 767 * 100%);
+  }
+}
+
+.p-manual__image--body-angle {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(500 / 767 * 100%);
+  }
+}
+
 .p-manual__image--display-example {
   width: calc(260 / 299 * 100%);
 

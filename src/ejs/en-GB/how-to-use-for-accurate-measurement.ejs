@@ -19,7 +19,7 @@
       </div>
       <div class="p-main__content">
         <section class="p-manual">
-          <h2 class="p-manual__title p-page-title">
+          <h2 class="p-manual__title p-page-title p-page-title--wholebody">
             <%= json.howToUse.forAccurateMeasurement.title %>
           </h2>
           <div class="p-manual__wrap">
@@ -244,12 +244,12 @@
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./how-to-use.html" class="p-pagination__link c-btn">
+          <a href="./how-to-use-initial-setting.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--initial-setting">
             <span class="c-btn__text">
-              Back to <%= json.howToUse.title %>
+              <%= json.howToUse.initialSetting.title %>
             </span>
           </a>
-          <a href="./how-to-use-taking-a-measurement.html" class="p-pagination__link c-btn c-btn--next c-btn--next--wholebody">
+          <a href="./how-to-use-taking-a-measurement.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
             <span class="c-btn__text">
               <%= json.howToUse.takingAMeasurement.title %>
             </span>
