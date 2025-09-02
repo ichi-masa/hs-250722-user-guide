@@ -252,10 +252,10 @@
 }
 
 .p-manual__image--body-fat-scale {
-  width: calc(200 / 299 * 100%);
+  width: calc(250 / 299 * 100%);
 
   @include mq(md) {
-    width: calc(200 / 767 * 100%);
+    width: calc(250 / 767 * 100%);
   }
 }
 
@@ -263,7 +263,7 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(500 / 767 * 100%);
+    width: calc(650 / 767 * 100%);
   }
 }
 
