@@ -2,7 +2,7 @@
 
 .c-btn {
   display: inline-block;
-  padding: rem(15) rem(20);
+  padding: rem(10);
   border: 1px solid $black;
   border-radius: rem(14);
   font-size: rem(14);
@@ -10,9 +10,10 @@
   line-height: 1;
   letter-spacing: 0;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
+  
   @include mq(md) {
     font-size: rem(16);
+    padding: rem(15) rem(20);
   }
 }
 
@@ -23,13 +24,22 @@
 
 .c-btn--previous span {
   position: relative;
-  padding-left: rem(60);
+  padding-left: rem(40);
+
+  @include mq(md) {
+    padding-left: rem(60);
+  }
 }
 
 .c-btn--next span {
   position: relative;
-  padding-left: rem(30);
-  padding-right: rem(30);
+  padding-left: rem(20);
+  padding-right: rem(20);
+
+  @include mq(md) {
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
 }
 
 .c-btn--previous span::before {
@@ -37,13 +47,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: rem(30);
-  width: rem(24);
+  left: rem(20);
+  width: rem(20);
   aspect-ratio: 1 / 1;
   background-image: url(../img/common/icon-storage.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  
+  @include mq(md) {
+    left: rem(30);
+    width: rem(24);
+  }
 }
 
 .c-btn--previous--storage span::before {
@@ -96,13 +111,17 @@
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  width: rem(24);
+  width: rem(20);
   aspect-ratio: 1 / 1;
   background-image: url(../img/common/arrow-left.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   transition: transform 0.3s ease;
+
+  @include mq(md) {
+    width: rem(24);
+  }
 }
 
 
@@ -112,12 +131,16 @@
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  width: rem(24);
+  width: rem(20);
   aspect-ratio: 1 / 1;
   background-image: url(../img/common/icon-measurement.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include mq(md) {
+    width: rem(24);
+  }
 }
 
 .c-btn--next--storage span::before {
