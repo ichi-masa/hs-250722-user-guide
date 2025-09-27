@@ -178,6 +178,7 @@ function errorHandler(err, stats) {
 const plugins = (done) => {
   src([
     './node_modules/swiper/swiper.min.css',
+    './node_modules/scroll-hint/css/scroll-hint.css',
   ])
     .pipe(rename((path) => {
       path.dirname += '/app'
@@ -199,6 +200,7 @@ const plugins = (done) => {
     './node_modules/gsap/dist/gsap.min.js',
     './node_modules/swiper/swiper-bundle.min.js',
     './node_modules/svgxuse/svgxuse.min.js',
+    './node_modules/scroll-hint/js/scroll-hint.min.js',
   ])
     .pipe(rename((path) => {
       path.dirname += '/app'

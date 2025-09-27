@@ -61,6 +61,9 @@
   },
   "calibration": {
     "title": "Calibration",
+    "performingInitialSettingsOnTheUnit": {
+      "title": "Performing Initial Settings on the Unit"
+    },
     "selectingThePersonalNumberManuallyBeforeMeasurement": {
       "title": "Selecting the Personal Number Manually Before Measurement"
     },
