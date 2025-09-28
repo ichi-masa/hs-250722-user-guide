@@ -7,6 +7,21 @@
 }
 
 .p-product__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(8);
+}
+
+.p-product__sub-title {
+  font-size: rem(16);
+  font-family: var(--font-din);
+  line-height: lh(20, 16);
+  letter-spacing: 0;
+}
+
+.p-product__main-title {
+  display: block;
   font-size: rem(24);
   font-family: var(--font-din-light);
   line-height: lh(28, 24);
