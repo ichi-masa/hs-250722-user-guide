@@ -59,8 +59,8 @@
       "title": "Disposal"
     }
   },
-  "calibration": {
-    "title": "Calibration",
+  "otherSettings": {
+    "title": "Other Settings",
     "performingInitialSettingsOnTheUnit": {
       "title": "Performing Initial Settings on the Unit"
     },
@@ -111,7 +111,7 @@
     "howToUse": "How to Use",
     "errorMessagesAndTroubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",
-    "calibration": "Calibration",
+    "otherSettings": "Other Settings",
     "specifications": "Specifications",
     "bodyComposition": "Information on Body Composition"
   }

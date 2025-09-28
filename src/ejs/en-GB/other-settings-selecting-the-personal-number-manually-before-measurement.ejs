@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'calibration' }) %>
+<%- include('./common/_head', { pageKey: 'other-settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'calibration' }) %>
+  <%- include('./common/_header', { pageKey: 'other-settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'calibration-selecting-the-personal-number-manually-before-measurement' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-selecting-the-personal-number-manually-before-measurement' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.calibration.selectingThePersonalNumberManuallyBeforeMeasurement.title %>
+            <%= json.otherSettings.selectingThePersonalNumberManuallyBeforeMeasurement.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
@@ -133,9 +133,9 @@
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./calibration-transferring-the-readings-later.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+          <a href="./other-settings-measuring-without-recording.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
             <span class="c-btn__text">
-              <%= json.calibration.transferringTheReadingsLater.title %>
+              <%= json.otherSettings.measuringWithoutRecording.title %>
             </span>
           </a>
         </div>

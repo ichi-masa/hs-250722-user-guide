@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'calibration' }) %>
+<%- include('./common/_head', { pageKey: 'other-settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'calibration' }) %>
+  <%- include('./common/_header', { pageKey: 'other-settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'calibration-registering-personal-data-on-the-unit' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-registering-personal-data-on-the-unit' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.calibration.registeringPersonalDataOnTheUnit.title %>
+            <%= json.otherSettings.registeringPersonalDataOnTheUnit.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
@@ -196,7 +196,7 @@ The number of personal data entries that can be registered is 4.
                 To register other personal data, follow the procedure from step 1.
               </li>
               <li class="p-manual__instruction">
-                To change or delete your personal data, refer to <a href="./calibration-changing-or-deleting-your-personal-data.html" class="p-manual__link">“Changing or Deleting Your Personal Data”</a>.
+                To change or delete your personal data, refer to <a href="./other-settings-changing-or-deleting-your-personal-data.html" class="p-manual__link">“Changing or Deleting Your Personal Data”</a>.
               </li>
             </ul>
           </div>
@@ -204,9 +204,9 @@ The number of personal data entries that can be registered is 4.
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./calibration-restoring-the-unit-to-factory-settings.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+          <a href="./other-settings-performing-initial-settings-on-the-unit.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
             <span class="c-btn__text">
-              <%= json.calibration.restoringTheUnitToFactorySettings.title %>
+              <%= json.otherSettings.performingInitialSettingsOnTheUnit.title %>
             </span>
           </a>
         </div>

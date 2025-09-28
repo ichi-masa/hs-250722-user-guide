@@ -111,7 +111,7 @@ npx gulp build
     "howToUse": "How to use",
     "troubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",
-    "calibration": "Calibration",
+    "otherSettings": "Other Settings",
     "specifications": "Specifications",
     "bodyComposition": "Information on Body Composition"
   }

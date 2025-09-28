@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'calibration' }) %>
+<%- include('./common/_head', { pageKey: 'other-settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'calibration' }) %>
+  <%- include('./common/_header', { pageKey: 'other-settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'calibration-performing-initial-settings-on-the-unit' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-performing-initial-settings-on-the-unit' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.calibration.performingInitialSettingsOnTheUnit.title %>
+            <%= json.otherSettings.performingInitialSettingsOnTheUnit.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
@@ -28,39 +28,32 @@
             </p>
             <ol class="p-manual__steps">
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Turn on the power.
-                </h3>
-                <ul class="p-manual__step-list">
-                  <li class="p-manual__step-list-item">
+                <h4 class="p-manual__step-title">Turn on the power.</h4>
+                <ul class="p-manual__instructions">
+                  <li class="p-manual__instruction">
                     Pairing will be performed if the device is registered using the app.
                   </li>
                 </ul>
                 <figure class="p-manual__image p-manual__image--weight-display">
-                  <img src="./assets/img/common/screen38-pairing-settings.webp" alt="initial settings">
+                  <img src="./assets/img/common/error-message10.webp" alt="initial weight screen">
                 </figure>
               </li>
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit.
-                </h3>
+                <h4 class="p-manual__step-title">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> on the unit.</h4>
               </li>
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Set the date and time.
-                </h3>
+                <h4 class="p-manual__step-title">Set the date and time.</h4>
                 <ul class="p-manual__personal-data-items">
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen40-measurement-unit.webp" alt="measurement unit">
+                      <img src="./assets/img/common/setting-screen1.webp" alt="setting screen1">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the measurement unit
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select “kg” or “lb” or “st”. <br>
-                        This will also automatically change “cm” and “in”. 
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span>  to select “kg” or “lb” or “st”.<br>This will also automatically change “cm” and “in”.
                       </p>
                       <p class="p-birth-date-card__text">
                         Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the measurement unit.
@@ -69,86 +62,82 @@
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen41-setting-year.webp" alt="setting year">
+                      <img src="./assets/img/common/setting-screen2.webp" alt="setting screen2">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the year
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Year”.<br>
-                        Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Year”.
+                        <br>Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span>  to set the “Year”.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Year”.
                       </p>
                     </div>
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen42-setting-month.webp" alt="setting month">
+                      <img src="./assets/img/common/setting-screen3.webp" alt="setting screen3">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the month
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Month”. <br>
-                        Each time you touch the button, the value will change in increments of one month, and if you continue to touch the button, the value will change in increments of one month (fast forward).
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Month”.<br>Each time you touch the button, the value will change in increments of one month, and if you continue to touch the button, the value will change in increments of one month (fast forward).
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span>  to set the “Month”.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Month”.
                       </p>
                     </div>
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen43-setting-day.webp" alt="setting day">
+                      <img src="./assets/img/common/setting-screen4.webp" alt="setting screen4">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the day
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Day”. <br>
-                        Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Day”.<br>Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span>  to set the “Day”.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Day”.
                       </p>
                     </div>
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen44-setting-hour.webp" alt="setting month">
+                      <img src="./assets/img/common/setting-screen5.webp" alt="setting screen5">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the hour
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Hour”. <br>
-                        Each time you touch the button, the value will change in increments of one hour, and if you continue to touch the button, the value will change in increments of 10 hours.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Hour”.<br>Each time you touch the button, the value will change in increments of one hour, and if you continue to touch the button, the value will change in increments of 10 hours.
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span>  to set the “Hour”.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Hour”.
                       </p>
                     </div>
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen45-setting-minute.webp" alt="setting minute">
+                      <img src="./assets/img/common/setting-screen6.webp" alt="setting screen6">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the minute
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Minute”. <br>
-                        Each time you touch the button, the value will change in increments of one minute, and if you continue to touch the button, the value will change in increments of 10 minutes.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the “Minute”.<br>Each time you touch the button, the value will change in increments of one minute, and if you continue to touch the button, the value will change in increments of 10 minutes.
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span>  to set the “Minute”.
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the “Minute”.
                       </p>
                     </div>
                   </li>
@@ -156,26 +145,28 @@
                 <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
                     When you set the “minute”, the configured “measurement unit”, “year, month, day” and “hour, minute” will be displayed, then the power will automatically turn off.
-                    <figure class="p-manual__image p-manual__image--weight-display">
-                      <img src="./assets/img/common/screen46-confirm-settings.webp" alt="confirm settings">
-                    </figure>
                   </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen46-confirm-settings.webp" alt="confirm settings">
+                </figure>
+                <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
                     If you make a mistake while setting the numbers, turn off the power, then start over from step 1.
                   </li>
                   <li class="p-manual__step-list-item">
                     To change the values after setting the date and time, follow the steps below.
-                    <ul class="p-manual__circle-steps">
-                      <li class="p-manual__circle-step">
+                    <ol class="p-manual__procedures">
+                      <li class="p-manual__procedure">
                         Remove the batteries
                       </li>
-                      <li class="p-manual__circle-step">
+                      <li class="p-manual__procedure">
                         Wait for more than 20 seconds, then insert the batteries again
                       </li>
-                      <li class="p-manual__circle-step">
+                      <li class="p-manual__procedure">
                         Repeat from step 1
                       </li>
-                    </ul>
+                    </ol>
                   </li>
                   <li class="p-manual__step-list-item">
                     If you do not perform any operation for more than 3 minutes during the setup, the unit will automatically turn off. Start over from step 1.
@@ -188,14 +179,14 @@
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./calibration-restoring-the-unit-to-factory-settings.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+          <a href="./other-settings-restoring-the-unit-to-factory-settings.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
             <span class="c-btn__text">
-              <%= json.calibration.restoringTheUnitToFactorySettings.title %>
+              <%= json.otherSettings.restoringTheUnitToFactorySettings.title %>
             </span>
           </a>
-          <a href="./calibration-registering-personal-data-on-the-unit.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+          <a href="./other-settings-registering-personal-data-on-the-unit.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
             <span class="c-btn__text">
-              <%= json.calibration.registeringPersonalDataOnTheUnit.title %>
+              <%= json.otherSettings.registeringPersonalDataOnTheUnit.title %>
             </span>
           </a>
         </div>

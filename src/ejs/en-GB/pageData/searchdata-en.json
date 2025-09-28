@@ -114,38 +114,38 @@
     "content": "disposal proper disposing device batteries recycling environment"
   },
   {
-    "title": "Calibration",
-    "url": "./calibration.html",
+    "title": "Other Settings",
+    "url": "./other-settings.html",
     "description": "Device calibration instructions and personal data management",
     "content": "calibration personal data management user settings profile"
   },
   {
     "title": "Replacing the Batteries",
-    "url": "./calibration-replacing-the-batteries.html",
+    "url": "./other-settings-replacing-the-batteries.html",
     "description": "How to replace the batteries",
     "content": "replacing batteries battery replacement AA alkaline power"
   },
   {
     "title": "Measuring Without Recording",
-    "url": "./calibration-measuring-without-recording.html",
+    "url": "./other-settings-measuring-without-recording.html",
     "description": "How to measure without recording data",
     "content": "measuring without recording guest mode temporary measurement"
   },
   {
     "title": "Selecting the Personal Number Manually Before Measurement",
-    "url": "./calibration-selecting-the-personal-number-manually-before-measurement.html",
+    "url": "./other-settings-selecting-the-personal-number-manually-before-measurement.html",
     "description": "How to manually select personal number",
     "content": "personal number manual selection user profile before measurement"
   },
   {
     "title": "Changing or Deleting Your Personal Data",
-    "url": "./calibration-changing-or-deleting-your-personal-data.html",
+    "url": "./other-settings-changing-or-deleting-your-personal-data.html",
     "description": "How to change or delete personal data",
     "content": "changing deleting personal data user profile settings management"
   },
   {
     "title": "Transferring the Readings Later",
-    "url": "./calibration-transferring-the-readings-later.html",
+    "url": "./other-settings-transferring-the-readings-later.html",
     "description": "How to transfer readings to your smartphone later",
     "content": "transferring readings later smartphone sync delayed transfer"
   },

@@ -206,7 +206,8 @@
   width: 100%;
 
   @include mq(md) {
-    width: calc(646 / 767 * 100%);
+    width: calc(500 / 767 * 100%);
+    margin-inline: auto;
   }
 }
 
