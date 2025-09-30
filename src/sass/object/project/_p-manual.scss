@@ -184,6 +184,7 @@
 
 .p-manual__image--package-contents-main-unit {
   width: 100%;
+  aspect-ratio: 383 / 240;
 
   @include mq(md) {
     width: calc(383 / 767 * 100%);
@@ -192,6 +193,7 @@
 
 .p-manual__image--package-contents-batteries {
   width: calc(130 / 299 * 100%);
+  aspect-ratio: 65 / 41;
 
   @include mq(md) {
     width: calc(130 / 767 * 100%);
@@ -200,10 +202,16 @@
 
 .p-manual__image--know-your-device-main-unit {
   width: 100%;
+  aspect-ratio: 577 / 489;
+
+  @include mq(md) {
+      aspect-ratio: 769 / 489;
+  }
 }
 
 .p-manual__image--know-your-device-display {
   width: 100%;
+  aspect-ratio: 265 / 182;
 
   @include mq(md) {
     width: calc(500 / 767 * 100%);
@@ -213,6 +221,7 @@
 
 .p-manual__image--installing-batteries-step1 {
   width: 100%;
+  aspect-ratio: 322 / 269;
 
   @include mq(md) {
     width: calc(400 / 767 * 100%);
@@ -221,31 +230,34 @@
 
 .p-manual__image--installing-batteries-step2 {
   width: 100%;
+  aspect-ratio: 344 / 225;
 
   @include mq(md) {
     width: calc(400 / 767 * 100%);
   }
 }
 
-.p-manual__image--qr-code {
-  width: calc(223 / 299 * 100%);
-
-  @include mq(md) {
-    width: calc(223 / 767 * 100%);
-  }
-}
-
-.p-manual__image--search-display {
-  width: calc(180 / 299 * 100%);
+.p-manual__image--foot {
+  width: calc(290 / 299 * 100%);
+  aspect-ratio: 221 / 149;
 
   @include mq(md) {
     width: calc(300 / 767 * 100%);
   }
 }
 
-.p-manual__image--weight-display,
-.p-manual__image--app-display {
+.p-manual__image--takeout {
   width: calc(290 / 299 * 100%);
+  aspect-ratio: 245 / 198;
+
+  @include mq(md) {
+    width: calc(300 / 767 * 100%);
+  }
+}
+
+.p-manual__image--weight-display {
+  width: calc(290 / 299 * 100%);
+  aspect-ratio: 223 / 172;
 
   @include mq(md) {
     width: calc(300 / 767 * 100%);
@@ -254,6 +266,7 @@
 
 .p-manual__image--body-fat-scale {
   width: calc(250 / 299 * 100%);
+  aspect-ratio: 92 / 127;
 
   @include mq(md) {
     width: calc(250 / 767 * 100%);
@@ -262,6 +275,7 @@
 
 .p-manual__image--body-angle {
   width: 100%;
+  aspect-ratio: 487 / 267;
 
   @include mq(md) {
     width: calc(650 / 767 * 100%);
@@ -270,22 +284,16 @@
 
 .p-manual__image--display-example {
   width: calc(260 / 299 * 100%);
+  aspect-ratio: 271 / 779;
 
   @include mq(md) {
     width: calc(350 / 767 * 100%);
   }
 }
 
-.p-manual__image--app-logo {
-  width: calc(100 / 299 * 100%);
-
-  @include mq(md) {
-    width: calc(100 / 767 * 100%);
-  }
-}
-
 .p-manual__image--personal-number {
   width: 100%;
+  aspect-ratio: 274 / 89;
 
   @include mq(md) {
     width: calc(750 / 767 * 100%);
@@ -294,6 +302,7 @@
 
 .p-manual__image--check-the-measurement-results {
   width: 100%;
+  aspect-ratio: 4008 / 8243;
 
   @include mq(md) {
     width: calc(500 / 767 * 100%);
@@ -303,14 +312,17 @@
 .p-manual__item-image--posture {
   width: 100%;
   margin-top: rem(10);
-
+  aspect-ratio: 1409 / 3083;
+  
   @include mq(md) {
     width: calc(773 / 788 * 100%);
+    aspect-ratio: 2337 / 1418;
   }
 }
 
 .p-manual__item-image--step-on {
   width: 100%;
+  aspect-ratio: 265 / 298;
 
   @include mq(md) {
     width: calc(350 / 788 * 100%);
@@ -319,6 +331,7 @@
 
 .p-manual__image--unit {
   width: 100%;
+  aspect-ratio: 438 / 283;
 
   @include mq(md) {
     width: calc(400 / 788 * 100%);
@@ -327,6 +340,7 @@
 
 .p-manual__image--auto-transfer-1 {
   width: 100%;
+  aspect-ratio: 327 / 74;
 
   @include mq(md) {
     width: calc(700 / 788 * 100%);
@@ -335,6 +349,16 @@
 
 .p-manual__image--auto-transfer-2 {
   width: 100%;
+  aspect-ratio: 70 / 67;
+
+  @include mq(md) {
+    width: calc(500 / 788 * 100%);
+  }
+}
+
+.p-manual__image--auto-transfer-3 {
+  width: 100%;
+  aspect-ratio: 350 / 337;
 
   @include mq(md) {
     width: calc(500 / 788 * 100%);
@@ -351,6 +375,7 @@
 
 .p-manual__image--maintenance {
   width: calc(150 / 299 * 100%);
+  aspect-ratio: 38 / 31;
 
   @include mq(md) {
     width: calc(190 / 777 * 100%);
@@ -359,6 +384,7 @@
 
 .p-manual__image--storage {
   width: 100%;
+  aspect-ratio: 80 / 49;
 
   @include mq(md) {
     width: calc(413 / 777 * 100%);
@@ -367,14 +393,44 @@
 
 .p-manual__image--unit-placed {
   width: 100%;
+  aspect-ratio: 3 / 2;
 
   @include mq(md) {
     width: calc(300 / 777 * 100%);
   }
 }
 
-.p-manual__image--measurement-results {
+.p-manual__image--weight-display-vertical {
+  width: calc(290 / 299 * 100%);
+  aspect-ratio: 239 / 429;
+
+  @include mq(md) {
+    width: calc(300 / 767 * 100%);
+  }
+}
+
+
+.p-manual__image--measurement-results1 {
   width: 100%;
+  aspect-ratio: 207 / 661;
+
+  @include mq(md) {
+    width: calc(750 / 767 * 100%);
+  }
+}
+
+.p-manual__image--measurement-results2 {
+  width: 100%;
+  aspect-ratio: 1084 / 847;
+
+  @include mq(md) {
+    width: calc(750 / 767 * 100%);
+  }
+}
+
+.p-manual__image--measurement-results3 {
+  width: 100%;
+  aspect-ratio: 207 / 661;
 
   @include mq(md) {
     width: calc(750 / 767 * 100%);
@@ -391,6 +447,7 @@
 
 .p-manual__image--correct-disposal {
   width: calc(153 / 299 * 100%);
+  aspect-ratio: 153 / 161;
 
   @include mq(md) {
     width: calc(153 / 792 * 100%);
@@ -399,14 +456,25 @@
 
 .p-manual__image--daily-activity {
   width: 100%;
+  aspect-ratio: 263 / 222;
 
   @include mq(md) {
     width: calc(526 / 767 * 100%);
   }
 }
 
-.p-manual__image--visceral-fat {
+.p-manual__image--visceral-fat1 {
   width: calc(180 / 299 * 100%);
+  aspect-ratio: 128 / 159;
+
+  @include mq(md) {
+    width: calc(186 / 708 * 100%);
+  }
+}
+
+.p-manual__image--visceral-fat2 {
+  width: calc(180 / 299 * 100%);
+  aspect-ratio: 119 / 156;
 
   @include mq(md) {
     width: calc(186 / 708 * 100%);
@@ -428,6 +496,7 @@
 .p-manual__app-store-badge {
   height: rem(80);
   display: block;
+  aspect-ratio: 47 / 16;
 
   @include mq(md) {
     width: calc(235 / 767 * 100%);
@@ -438,6 +507,7 @@
 .p-manual__google-play-badge {
   height: rem(80);
   display: block;
+  aspect-ratio: 27 / 8;
 
   @include mq(md) {
     width: calc(270 / 767 * 100%);
@@ -973,6 +1043,7 @@
 
 .p-manual__figure-image {
   width: calc(250 / 299 * 100%);
+  aspect-ratio: 204 / 163;
 
   @include mq(md) {
     width: rem(207);
@@ -980,8 +1051,13 @@
   }
 }
 
+.p-manual__figure-image--height {
+  aspect-ratio: 408 / 408;
+}
+
 .p-manual__figure-image--unit-placed {
   width: 100%;
+  aspect-ratio: 528 / 352;
 
   @include mq(md) {
     width: rem(300);

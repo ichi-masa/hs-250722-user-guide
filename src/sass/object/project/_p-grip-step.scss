@@ -35,6 +35,7 @@
 .p-grip-step__image {
   width: calc(200 / 299 * 100%);
   margin-inline: auto;
+  aspect-ratio: 376 / 267;
 
   @include mq(md) {
     width: calc(300 / 788 * 100%);

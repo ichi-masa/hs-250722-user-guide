@@ -1,0 +1,18 @@
+<div class="p-lower-list">
+  <ul class="p-lower-list__items">
+    <li class="p-lower-list__item">
+      <p class="p-lower-list__lead"><%= json.bodyComposition.title %></p>
+      <ul class="p-lower-list__sub-items">
+        <% const specificationsItems = [
+          { href: './information-on-body-composition-information-on-body-composition.html', text: 'Information on Body Composition', class: 'information' },
+          { href: './information-on-body-composition-measurement-results-interpretation-diagrams.html', text: 'Measurement Results Interpretation Diagrams', class: 'information' }
+        ]; %>
+        <% specificationsItems.forEach(item => { %>
+        <li class="p-lower-list__sub-item">
+          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--<%= item.class %>"><span><%= item.text %></span></a>
+        </li>
+        <% }); %>
+      </ul>
+    </li>
+  </ul>
+</div>

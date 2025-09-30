@@ -99,7 +99,13 @@
     }
   },
   "bodyComposition": {
-    "title": "Information on Body Composition"
+    "title": "Information on Body Composition",
+    "informationOnBodyComposition": {
+      "title": "Information on Body Composition"
+    },
+    "measurementResultsInterpretationDiagrams": {
+      "title": "Measurement Results Interpretation Diagrams"
+    }
   },
   "search": {
     "title": "Search Results",
