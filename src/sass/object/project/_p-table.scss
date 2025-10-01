@@ -7,8 +7,16 @@
   letter-spacing: 0.0025em;
 }
 
+.p-table__head--bold {
+  font-family: var(--font-din-bold);
+}
+
 .p-table__row {
   // height: rem(50);
+}
+
+.p-table__body--text-center {
+  text-align: center;
 }
 
 .p-table__cell {
@@ -67,6 +75,14 @@
 
 .p-table__cell--formula-name {
   text-align: center;
+}
+
+.p-table__cell--color {
+  background-color: $gray;
+}
+
+.p-table__cell--50 {
+  width: 50%;
 }
 
 .p-table__cell-title {

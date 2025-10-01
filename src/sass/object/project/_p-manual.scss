@@ -155,6 +155,17 @@
   }
 }
 
+.p-manual__table--interpreting {
+  width: rem(420);
+  min-width: rem(420);
+
+  @include mq(md) {
+    width: 100%;
+    max-width: rem(420);
+    min-width: auto;
+  }
+}
+
 .p-manual__note {
   margin-top: rem(7);
 }
@@ -990,10 +1001,10 @@
 }
 
 .p-manual__figure-items {
-  margin-top: rem(10);
+  margin-top: rem(20);
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: rem(12);
+  gap: rem(35);
 
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
