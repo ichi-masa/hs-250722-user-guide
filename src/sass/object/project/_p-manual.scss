@@ -213,10 +213,10 @@
 
 .p-manual__image--know-your-device-main-unit {
   width: 100%;
-  aspect-ratio: 577 / 489;
+  aspect-ratio: 539 / 538;
 
   @include mq(md) {
-      aspect-ratio: 769 / 489;
+      aspect-ratio: 369 / 269;
   }
 }
 
@@ -1127,4 +1127,28 @@
   margin-top: rem(20);
   padding: rem(10);
   border: 1px solid $black;
+}
+
+.p-manual__list {
+  margin-top: rem(20);
+}
+
+.p-manual__list-title {
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: lh(30, 16);
+  position: relative;
+  padding-left: rem(10);
+}
+
+.p-manual__list-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5lh;
+  transform: translateY(-50%);
+  width: rem(3);
+  aspect-ratio: 1 / 1;
+  background: $black;
+  border-radius: 50%;
 }
