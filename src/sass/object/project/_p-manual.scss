@@ -113,6 +113,11 @@
   }
 }
 
+.p-manual__table-wrap-simple {
+  margin-top: rem(40);
+  width: 100%;
+}
+
 .p-manual__table-wrap--mt10 {
   margin-top: rem(10);
 }
@@ -156,8 +161,9 @@
 }
 
 .p-manual__table--interpreting {
-  width: rem(420);
-  min-width: rem(420);
+  width: 100%;
+  max-width: rem(420);
+  min-width: 100%;
 
   @include mq(md) {
     width: 100%;

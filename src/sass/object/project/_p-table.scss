@@ -82,7 +82,9 @@
 }
 
 .p-table__cell--50 {
-  width: 50%;
+  @include mq(md) {
+    width: 50%;
+  }
 }
 
 .p-table__cell-title {
