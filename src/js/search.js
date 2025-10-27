@@ -38,7 +38,15 @@ class SearchManager {
    */
   async loadSearchData() {
     try {
-      const response = await fetch('./assets/data/searchdata-en.json');
+      // URLパスから言語コードを取得
+      // 例: /en-GB/index.html → en-GB
+      // 例: file:///path/to/dist/en-GB/index.html → en-GB
+      const pathParts = window.location.pathname.split('/').filter(p => p);
+
+      // 言語コードっぽいもの（xx-XX形式）を探す
+      const lang = pathParts.find(part => /^[a-z]{2}-[A-Z]{2}$/.test(part)) || 'en-GB';
+
+      const response = await fetch(`./assets/data/searchdata-${lang}.json`);
       this.searchData = await response.json();
     } catch (error) {
       console.error('検索データの読み込みに失敗しました:', error);
