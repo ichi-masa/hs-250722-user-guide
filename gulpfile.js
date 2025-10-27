@@ -106,7 +106,7 @@ const isJsMap = (isDevelopment ? true : false);
 const themesDir = "theme_dir";  // テーマディレクトリ名
 const localURI = `${themesDir}.local`;  // local by flywheel で表示されるドメイン（基本はテーマ名と同じ）
 const addDir = "/";  // WPのインストール先がデフォルトから変わっている場合設定
-const staticBase = "./dist/en-GB";
+const staticBase = "./dist";
 const wpBase = "../app/public/";
 const wpThemesBase = `${wpBase}${addDir}/wp-content/themes/${themesDir}`;
 /********************* 設定ここまで **********************/
@@ -115,7 +115,7 @@ const wpThemesBase = `${wpBase}${addDir}/wp-content/themes/${themesDir}`;
 const PATHS = {
   copy: {
     src: "./src/copy/**/!(.gitkeep)*",
-    dest: staticBase,
+    dest: `${staticBase}/en-GB`,
     destwp: wpThemesBase,
   },
   html: {
@@ -126,7 +126,7 @@ const PATHS = {
   ejs: {
     src: "./src/ejs/en-GB/**/!(_)*.ejs",
     watch: "./src/ejs/en-GB/**/*.ejs",
-    dest: staticBase
+    dest: `${staticBase}/en-GB`
   },
   php: {
     src: "./src/php/**/!(_){*.{php,png,jpg,jpeg,ico},style.css}",
@@ -136,28 +136,28 @@ const PATHS = {
   styles: {
     src: "./src/sass/**/*.{scss,css}",
     cssSrc: "./src/sass/**/*.css",
-    dest: `${staticBase}/assets/css/`,
-    map: `${staticBase}/assets/css/map/`,
+    dest: `${staticBase}/en-GB/assets/css/`,
+    map: `${staticBase}/en-GB/assets/css/map/`,
     destwp: `${wpThemesBase}/assets/css/`,
     mapwp: `${wpThemesBase}/assets/css/map/`,
   },
   js: {
     src: "./src/js/*.js",
     core_app: "./src/js/!(*.js)**/*.js",
-    dest: `${staticBase}/assets/js/`,
-    map: `${staticBase}/assets/js/map/`,
+    dest: `${staticBase}/en-GB/assets/js/`,
+    map: `${staticBase}/en-GB/assets/js/map/`,
     destwp: `${wpThemesBase}/assets/js/`,
     mapwp: `${wpThemesBase}/assets/js/map/`,
   },
   image: {
     src: ["./src/img/**/!(_)*.{jpg,jpeg,png,gif,svg,ico,webp}"],
     webpSrc: ["./src/img/**/!(_)*.{jpg,jpeg,png,gif,ico}"],
-    dest: `${staticBase}/assets/img/`,
+    dest: `${staticBase}/en-GB/assets/img/`,
     destwp: `${wpThemesBase}/assets/img/`,
   },
   sprite: {
     src: "./src/img/sprite/*.svg",
-    dest: `${staticBase}/assets/img/`,
+    dest: `${staticBase}/en-GB/assets/img/`,
     destwp: `${wpThemesBase}/assets/img/`,
   },
 };
@@ -481,10 +481,10 @@ const browserSyncOptionStatic = {
     port: 3001
   },
   server: {
-    baseDir: PATHS.html.dest, // output directory,
+    baseDir: staticBase, // output directory,
     // routes: { "/recruit": "./dist" }
   },
-  // startPath: '/recruit' // 下層ディレクトリ以下のページを作成する場合
+  startPath: '/en-GB/index.html', // 最初に開くページ
   // proxy: "localhost:3000",  // phpファイルのとき
 }
 const browserSyncOptionDynamic = {

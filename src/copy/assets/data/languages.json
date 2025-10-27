@@ -1,0 +1,17 @@
+{
+  "languages": [
+    {
+      "code": "en-GB",
+      "name": "English",
+      "default": true
+    },
+    {
+      "code": "ja-JP",
+      "name": "日本語"
+    },
+    {
+      "code": "de-DE",
+      "name": "Deutsch"
+    }
+  ]
+}
