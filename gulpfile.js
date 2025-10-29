@@ -523,10 +523,28 @@ const watchFiles = (done) => {
   done();
 }
 
+/**
+ * 検索データを自動生成
+ */
+const generateSearchData = (done) => {
+  if (isStatic) {
+    const { execSync } = require('child_process');
+    try {
+      console.log('[generateSearchData] 検索データを生成中...');
+      execSync('node generate-search-data.js', { stdio: 'inherit' });
+      console.log('[generateSearchData] ✓ 検索データの生成が完了しました');
+    } catch (error) {
+      console.error('[generateSearchData] ✗ 検索データの生成に失敗しました:', error.message);
+    }
+  }
+  done();
+};
+
 const buildFunc = series(
   distClean,
   copyFunc,
-  parallel(sassFunc, markUpFunc, phpFunc, jsFunc, imageminFunc, sprite, plugins)
+  parallel(sassFunc, markUpFunc, phpFunc, jsFunc, imageminFunc, sprite, plugins),
+  generateSearchData
 );
 
 // commands =========================================
