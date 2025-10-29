@@ -82,6 +82,10 @@
   margin-top: 0;
 }
 
+.p-manual__text--bold {
+  font-family: var(--font-din-bold);
+}
+
 .p-manual__url-link {
   margin-top: rem(10);
   display: block;
