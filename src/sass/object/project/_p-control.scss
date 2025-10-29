@@ -68,18 +68,13 @@
   }
 }
 
-.p-control__search::after {
-  content: '';
+.p-control__search-btn {
   position: absolute;
-  width: rem(24);
-  aspect-ratio: 1 / 1;
-  background-image: url(../img/common/search.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
   top: 50%;
   right: rem(16);
   transform: translateY(-50%);
-  pointer-events: none;
+  width: rem(24);
+  aspect-ratio: 1 / 1;
 }
 
 .p-control__language {
