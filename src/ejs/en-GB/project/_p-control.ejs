@@ -7,23 +7,13 @@
       </button>
     </div>
     <div class="p-control__language">
-      <% 
-        const languageItems = [
-          { link: './index.html', text: 'English' },
-        ];
-      %>
-      <button class="p-control__language-button js-dropdown" aria-controls="languageDropdown" aria-expanded="false">
+      <button class="p-control__language-button js-dropdown js-language-dropdown" aria-controls="languageDropdown" aria-expanded="false">
         <span class="p-control__language-button-text">
-          <span class="p-control__language-button-text-span">choose language</span>
+          <span class="p-control__language-button-text-span js-current-language">English</span>
         </span>
         <span class="p-control__language-button-icon"></span>
       </button>
       <ul class="p-control__language-items" id="languageDropdown">
-        <% languageItems.forEach(function(item) { %>
-          <li class="p-control__language-item">
-            <a href="<%= item.link %>" class="p-control__language-link"><%= item.text %></a>
-          </li>
-        <% }); %>
       </ul>
     </div>
   </div>
