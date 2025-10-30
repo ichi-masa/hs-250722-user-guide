@@ -467,9 +467,18 @@ const cleanMap = () => {
 
 /**
  * dist をクリーンアップ
+ * search-*.jsonファイルのみを保持し、他のファイルは削除
  */
 const distClean = () => {
-  return del([PATHS.html.dest, PATHS.php.destwp], { force: true });
+  return del([
+    `${staticBase}/**/*`, // 全ファイルを削除対象に
+    `!${staticBase}/**/data/search*.json`, // search*.jsonファイルは保持
+    `!${staticBase}/**/data/searchdata-*.json`, // searchdata-*.jsonファイルも保持
+    `!${staticBase}/**/data`, // dataディレクトリ自体も保持
+    `!${staticBase}`, // distディレクトリ自体は保持
+    `!${staticBase}/*/`, // 言語ディレクトリも保持
+    PATHS.php.destwp
+  ], { force: true });
 }
 
 // server =========================================
