@@ -1,7 +1,7 @@
 {
   "lang": "en",
   "top": {
-    "title": "VIVA 360+ (HBF-H132T1-EBK) - English Version",
+    "title": "VIVA 360+ (HBF-H132T1-EBK)",
     "description": "User guide for VIVA 360+ Body Composition Monitor",
     "url": ""
   },
@@ -94,8 +94,8 @@
     "correctDisposalOfThisProduct": {
       "title": "Correct Disposal of This Product (Waste Electrical & Electronic Equipment)"
     },
-    "importantInformationRegardingElectromagneticCompatibility": {
-      "title": "Important information regarding Electromagnetic Compatibility (EMC)"
+    "guidanceAndManufacturersDeclaration": {
+      "title": "Guidance and Manufacturer's Declaration"
     }
   },
   "bodyComposition": {

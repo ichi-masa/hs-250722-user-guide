@@ -73,6 +73,14 @@ class SearchManager {
         }, 300));
       }
     }
+
+    // 検索ボタンのクリックイベント
+    const searchButton = document.querySelector('.js-search');
+    if (searchButton) {
+      searchButton.addEventListener('click', () => {
+        this.performSearch();
+      });
+    }
   }
 
   /**

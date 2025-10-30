@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'specifications-important-information-regarding-electromagnetic-compatibility' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'specifications-guidance-and-manufacturers-declaration' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,22 +20,19 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title p-page-title--information">
-            <%= json.specifications.importantInformationRegardingElectromagneticCompatibility.title %>
+            <%= json.specifications.guidanceAndManufacturersDeclaration.title %>
           </h2>
-          <div class="p-manual__wrap">
-            <p class="p-manual__text p-manual__text--mt0">
-              This device conforms to EN 60601-1-2:2015+A1:2021 Electromagnetic Compatibility (EMC) standard.
-            </p>
-            <p class="p-manual__text">
-              Further documentation in accordance with this EMC standard is available at:
-            </p>
-            <a href="https://healthcare.omron.com/electro-magnetic-compatibility" class="p-manual__url-link p-manual__url-link--mt8" target="_blank" rel="noopener noreferrer">
-              https://healthcare.omron.com/electro-magnetic-compatibility
-            </a>
-            <p class="p-manual__text">
-              Refer to the EMC information for this device on the website.
-            </p>
-          </div>
+          <ul class="p-manual__items">
+            <li class="p-manual__item">
+              Hereby, OMRON HEALTHCARE Co., Ltd., declares that this device is in compliance with Directive 2014/53/EU.
+            </li>
+            <li class="p-manual__item">
+              The full text of the EU declaration of conformity is available at the following internet address:<br>
+              <a href="https://healthcare.omron.com/declaration-of-conformity" class="p-manual__url-link" target="_blank" rel="noopener noreferrer">
+                https://healthcare.omron.com/declaration-of-conformity
+              </a>
+            </li>
+          </ul>
         </section>
       </div>
       <div class="p-main__pagination">
