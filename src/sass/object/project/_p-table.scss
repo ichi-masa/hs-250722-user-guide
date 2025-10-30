@@ -156,3 +156,16 @@
   aspect-ratio: 349 / 258;
 }
 
+.p-table__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(20);
+  height: rem(20);
+  background-color: $black;
+  border-radius: 50%;
+  color: $white;
+  font-size: rem(16);
+  font-family: var(--font-din-bold);
+  line-height: 1;
+}
