@@ -232,10 +232,10 @@
 
 .p-manual__image--know-your-device-display {
   width: 100%;
-  aspect-ratio: 265 / 182;
+  aspect-ratio: 559 / 279;
 
   @include mq(md) {
-    width: calc(500 / 767 * 100%);
+    width: calc(600 / 767 * 100%);
     margin-inline: auto;
   }
 }
@@ -507,7 +507,6 @@
   margin-top: rem(10);
   flex-direction: column;
   align-items: flex-start;
-  gap: rem(10);
 
   @include mq(md) {
     flex-direction: row;
@@ -515,24 +514,22 @@
 }
 
 .p-manual__app-store-badge {
-  height: rem(80);
+  height: rem(60);
   display: block;
-  aspect-ratio: 47 / 16;
+  aspect-ratio: 212 / 90;
 
   @include mq(md) {
-    width: calc(235 / 767 * 100%);
-    height: auto;
+    height: rem(90);
   }
 }
 
 .p-manual__google-play-badge {
-  height: rem(80);
+  height: rem(60);
   display: block;
-  aspect-ratio: 27 / 8;
+  aspect-ratio: 233 / 90;
 
   @include mq(md) {
-    width: calc(270 / 767 * 100%);
-    height: auto;
+    height: rem(90);
   }
 }
 
