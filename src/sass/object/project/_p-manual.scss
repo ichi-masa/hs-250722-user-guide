@@ -297,9 +297,10 @@
 .p-manual__image--body-angle {
   width: 100%;
   aspect-ratio: 487 / 267;
+  flex: 1;
 
   @include mq(md) {
-    width: calc(650 / 767 * 100%);
+    width: calc(550 / 767 * 100%);
   }
 }
 
@@ -333,11 +334,11 @@
 .p-manual__item-image--posture {
   width: 100%;
   margin-top: rem(10);
-  aspect-ratio: 1409 / 3083;
+  aspect-ratio: 399 / 517;
   
   @include mq(md) {
-    width: calc(773 / 788 * 100%);
-    aspect-ratio: 2337 / 1418;
+    width: calc(708 / 788 * 100%);
+    aspect-ratio: 708 / 445;
   }
 }
 
@@ -499,6 +500,15 @@
 
   @include mq(md) {
     width: calc(186 / 708 * 100%);
+  }
+}
+
+.p-manual__image--power-button {
+  width: 100%;
+  aspect-ratio: 477 / 160;
+
+  @include mq(md) {
+    width: calc(600 / 767 * 100%);
   }
 }
 
@@ -792,6 +802,10 @@
 
 .p-manual__step-list {
   margin-top: rem(8);
+}
+
+.p-manual__step-list--mt1em {
+  margin-top: 1em;
 }
 
 .p-manual__step-list--gap30 {
@@ -1158,4 +1172,80 @@
   aspect-ratio: 1 / 1;
   background: $black;
   border-radius: 50%;
+}
+
+.p-manual__image-flex {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-top: rem(10);
+  
+  @include mq(md) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.p-manual__bubble {
+  position: relative;
+  // position: absolute;
+  display: inline-block;
+  // top: rem(40);
+  // right: rem(20);
+  width: rem(200);
+  background: $white;
+  border: 1px solid $black;
+  border-radius: rem(10);
+  padding: rem(5);
+  font-size: rem(14);
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.p-manual__bubble::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-style: solid;
+  border-width: 20px 12px 0 0;
+  border-color: #000000 transparent transparent;
+  translate: -50% 100%;
+  transform: skew(30deg);
+  transform-origin: top;
+  
+  @include mq(md) {    
+    bottom: 0;
+    left: 30%;
+    border-style: solid;
+    border-width: rem(20) rem(12) 0 0;
+    border-color: #000000 transparent transparent;
+    translate: -50% 100%;
+    transform: skew(-20deg);
+    transform-origin: top;
+  }
+}
+
+.p-manual__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-style: solid;
+  border-width: 16.4px 9.8px 0 0;
+  border-color: #ffffff transparent transparent;
+  translate: calc(-50% - 0.1px) 100%;
+  transform: skew(30deg);
+  transform-origin: top;
+  
+  @include mq(md) {
+    bottom: 0;
+    left: 30%;
+    border-style: solid;
+    border-width: rem(16.4) rem(9.8) 0 0;
+    border-color: #ffffff transparent transparent;
+    translate: calc(-50% - 0.1px) 100%;
+    transform: skew(-20deg);
+    transform-origin: top;
+  }
 }
