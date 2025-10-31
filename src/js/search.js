@@ -40,16 +40,32 @@ class SearchManager {
     try {
       // URLパスから言語コードを取得
       // 例: /en-GB/index.html → en-GB
+      // 例: /ja-JP/index.html → ja-JP
       // 例: file:///path/to/dist/en-GB/index.html → en-GB
-      const pathParts = window.location.pathname.split('/').filter(p => p);
+      const fullPath = window.location.pathname;
+      const pathParts = fullPath.split('/').filter(p => p);
+
+      console.log('[SearchManager] フルパス:', fullPath);
+      console.log('[SearchManager] パス分割:', pathParts);
 
       // 言語コードっぽいもの（xx-XX形式）を探す
       const lang = pathParts.find(part => /^[a-z]{2}-[A-Z]{2}$/.test(part)) || 'en-GB';
 
-      const response = await fetch(`./assets/data/searchdata-${lang}.json`);
+      console.log('[SearchManager] 検出された言語:', lang);
+
+      const jsonPath = `./assets/data/searchdata-${lang}.json`;
+      console.log('[SearchManager] JSONパス:', jsonPath);
+
+      const response = await fetch(jsonPath);
+
+      if (!response.ok) {
+        throw new Error(`JSONファイルの読み込みに失敗: ${response.status} ${response.statusText}`);
+      }
+
       this.searchData = await response.json();
+      console.log('[SearchManager] 検索データ読み込み成功:', this.searchData.length, '件');
     } catch (error) {
-      console.error('検索データの読み込みに失敗しました:', error);
+      console.error('[SearchManager] 検索データの読み込みに失敗しました:', error);
       this.searchData = [];
     }
   }

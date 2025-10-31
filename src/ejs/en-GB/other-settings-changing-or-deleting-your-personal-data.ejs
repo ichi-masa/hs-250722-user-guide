@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-user-settings-display-settings-deleting-data' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-changing-or-deleting-your-personal-data' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.otherSettings.userSettingsDisplaySettingsDeletingData.title %>
+            <%= json.otherSettings.changingOrDeletingYourPersonalData.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
@@ -29,7 +29,7 @@ You can also change your personal data using the “OMRON connect” app. For de
             </p>
             <ol class="p-manual__steps">
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">Press the power button to turn on the power.</h3>
+                <h3 class="p-manual__step-title">Turn on the power.</h3>
                 <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
                     The weight measurement display will appear.
@@ -68,6 +68,11 @@ You can also change your personal data using the “OMRON connect” app. For de
                 <h3 class="p-manual__step-title">
                   Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> on the unit again.
                 </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The option to delete or change will appear.
+                  </li>
+                </ul>
                 <figure class="p-manual__image p-manual__image--weight-display">
                   <img src="./assets/img/common/screen21-user-setting.webp" alt="user settings">
                 </figure>
@@ -78,10 +83,19 @@ You can also change your personal data using the “OMRON connect” app. For de
                 </h3>
                 <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
-                    Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select “User settings”, “Display settings”, “Delete data”, then touch (OK button icon) to confirm.
+                    Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select “User settings”, “Display settings”, “Delete data”.
                   </li>
                 </ul>
-                <ul class="p-manual__step-list p-manual__step-list--mt1em">
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen22-user-setting.webp" alt="user settings">
+                </figure>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen23-user-setting.webp" alt="user setting">
+                </figure>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen24-user-setting.webp" alt="user setting">
+                </figure>
+                <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
                     Even if you change the personal data, the readings will not be deleted. When using a personal number that has been used by another person, delete the personal data and then register your personal data again.<br>
     (If you use the “OMRON connect” app, refer to <a href="./how-to-use-initial-setting.html#register-your-personal-data" class="p-manual__link">“Register Your Personal Data (Current Weight and Body Fat Percentage)
@@ -101,14 +115,14 @@ You can also change your personal data using the “OMRON connect” app. For de
                 The readings will not be deleted.
               </p>
               <ol class="p-manual__steps p-manual__steps--mt10">
-                <!-- <li class="p-manual__step">
+                <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> on the unit.
                   </h4>
                   <figure class="p-manual__image p-manual__image--weight-display">
                     <img src="./assets/img/common/screen21-user-setting.webp" alt="user setting">
                   </figure>
-                </li> -->
+                </li>
                 <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Set up your personal data.
@@ -120,10 +134,10 @@ You can also change your personal data using the “OMRON connect” app. For de
                       </figure>
                       <div class="p-birth-date-card__text-block">
                         <p class="p-birth-date-card__title">
-                          Set the year of your date of birth
+                          Set the “Year” of your date of birth
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the year.<br> 
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the “Year”.<br> 
                           Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
                         </p>
                         <p class="p-birth-date-card__text">
@@ -137,14 +151,14 @@ You can also change your personal data using the “OMRON connect” app. For de
                       </figure>
                       <div class="p-birth-date-card__text-block">
                         <p class="p-birth-date-card__title">
-                          Set the month of your date of birth
+                          Set the “Month” of your date of birth
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the month.<br>
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the  “Month”.<br>
                           Each time you touch the button, the value will change in increments of one month, and if you continue to touch the button, the value will change in increments of one month (fast forward).
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the month.
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the “Month”.
                         </p>
                       </div>
                     </li>
@@ -154,14 +168,14 @@ You can also change your personal data using the “OMRON connect” app. For de
                       </figure>
                       <div class="p-birth-date-card__text-block">
                         <p class="p-birth-date-card__title">
-                          Set the day of your date of birth
+                          Set the “Day” of your date of birth
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the day. 
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to change the  “Day”. 
                           Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the day.
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the “Day”.
                         </p>
                       </div>
                     </li>
@@ -174,7 +188,7 @@ You can also change your personal data using the “OMRON connect” app. For de
                           Set your gender
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select male or female.
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select “Male” or “Female”.
                         </p>
                         <p class="p-birth-date-card__text">
                           Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the gender.
@@ -208,7 +222,7 @@ You can also change your personal data using the “OMRON connect” app. For de
                           Set the mode
                         </p>
                         <p class="p-birth-date-card__text">
-                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select normal or athlete.
+                          Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> on the unit to select “Normal” or “Athlete”.
                         </p>
                         <p class="p-birth-date-card__text">
                           Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit to set the mode.
@@ -218,7 +232,7 @@ You can also change your personal data using the “OMRON connect” app. For de
                   </ul>
                   <ul class="p-manual__step-list">
                     <li class="p-manual__step-list-item">
-                      Once the settings are complete, the configured information will be displayed, followed by "0.0 lb" (weight measurement).
+                      Once you have set your “Mode”, your set “Date of Birth”, “Gender”, “Height”, and “Mode” will be displayed, followed by “0.0 kg” (weight measurement).
                     </li>
                   </ul>
                   <figure class="p-manual__image p-manual__image--weight-display-vertical">
@@ -240,14 +254,14 @@ You can also change your personal data using the “OMRON connect” app. For de
             <article class="p-manual__article" id="display-settings">
               <h3 class="p-manual__sub-title">Display settings</h3>
               <ol class="p-manual__steps">
-                <!-- <li class="p-manual__step">
+                <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit.
                   </h4>
                   <figure class="p-manual__image p-manual__image--weight-display">
                     <img src="./assets/img/common/screen32-display-settings.webp" alt="display settings">
                   </figure>
-                </li> -->
+                </li>
                 <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Set display indicators.
@@ -269,7 +283,7 @@ You can also change your personal data using the “OMRON connect” app. For de
                 </li>
               </ol>
             </article>
-            <!-- <article class="p-manual__article">
+            <article class="p-manual__article">
               <h3 class="p-manual__sub-title">Display example:</h3>
               <ul class="p-manual__step-list p-manual__step-list--gap30">
                 <li class="p-manual__step-list-item">
@@ -285,19 +299,19 @@ You can also change your personal data using the “OMRON connect” app. For de
                   </figure>
                 </li>
               </ul>
-            </article> -->
+            </article>
             <article class="p-manual__article">
               <h3 class="p-manual__sub-title">Delete data</h3>
               <p class="p-manual__sub-title-text">The readings will also be deleted.</p>
               <ol class="p-manual__steps">
-                <!-- <li class="p-manual__step">
+                <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> on the unit.
                   </h4>
                   <figure class="p-manual__image p-manual__image--weight-display">
                     <img src="./assets/img/common/screen34-delete-data.webp" alt="delete data">
                   </figure>
-                </li> -->
+                </li>
                 <li class="p-manual__step">
                   <h4 class="p-manual__step-title">
                     Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> on the unit again.
