@@ -301,6 +301,7 @@
 
   @include mq(md) {
     width: calc(550 / 767 * 100%);
+    margin-top: rem(20);
   }
 }
 
@@ -324,10 +325,19 @@
 
 .p-manual__image--check-the-measurement-results {
   width: 100%;
-  aspect-ratio: 4008 / 8243;
+  aspect-ratio: 357 / 638;
 
   @include mq(md) {
     width: calc(500 / 767 * 100%);
+  }
+}
+
+.p-manual__image--check-the-measurement-results2 {
+  width: 100%;
+  aspect-ratio: 621 / 1983;
+
+  @include mq(md) {
+    width: calc(621 / 767 * 100%);
   }
 }
 
@@ -1200,6 +1210,10 @@
   font-size: rem(14);
   line-height: 1.4;
   flex-shrink: 0;
+
+  @include mq(md) {
+      margin-left: rem(15);
+  }
 }
 
 .p-manual__bubble::before {
@@ -1208,21 +1222,24 @@
   bottom: 0;
   left: 50%;
   border-style: solid;
-  border-width: 20px 12px 0 0;
+  border-width: rem(20) rem(12) 0 0;
   border-color: #000000 transparent transparent;
   translate: -50% 100%;
   transform: skew(30deg);
   transform-origin: top;
   
   @include mq(md) {    
-    bottom: 0;
-    left: 30%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 0;
     border-style: solid;
-    border-width: rem(20) rem(12) 0 0;
-    border-color: #000000 transparent transparent;
-    translate: -50% 100%;
-    transform: skew(-20deg);
-    transform-origin: top;
+    border-width: rem(20) rem(30) 0 0;
+    border-color: transparent #000000 transparent transparent;
+    translate: -100% -50%;
+    transform: skew(0, -20deg);
+    transform-origin: right;
   }
 }
 
@@ -1232,20 +1249,23 @@
   bottom: 0;
   left: 50%;
   border-style: solid;
-  border-width: 16.4px 9.8px 0 0;
-  border-color: #ffffff transparent transparent;
+  border-width: rem(16.4) rem(9.8) 0 0;
+  border-color: $white transparent transparent;
   translate: calc(-50% - 0.1px) 100%;
   transform: skew(30deg);
   transform-origin: top;
   
   @include mq(md) {
-    bottom: 0;
-    left: 30%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 0;
     border-style: solid;
-    border-width: rem(16.4) rem(9.8) 0 0;
-    border-color: #ffffff transparent transparent;
-    translate: calc(-50% - 0.1px) 100%;
-    transform: skew(-20deg);
-    transform-origin: top;
+    border-width: rem(17.8) rem(26.7) 0 0;
+    border-color: transparent #ffffff transparent transparent;
+    translate: -100% calc(-50% + 0.1px);
+    transform: skew(0, -20deg);
+    transform-origin: right;
   }
 }
