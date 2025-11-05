@@ -515,10 +515,11 @@
 
 .p-manual__image--power-button {
   width: 100%;
-  aspect-ratio: 477 / 160;
+  aspect-ratio: 220 / 110;
+  width: rem(220);
 
   @include mq(md) {
-    width: calc(600 / 767 * 100%);
+    width: calc(300 / 767 * 100%);
   }
 }
 
