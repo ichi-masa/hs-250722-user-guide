@@ -523,6 +523,15 @@
   }
 }
 
+.p-manual__image--power-button2 {
+  width: 100%;
+  aspect-ratio: 477 / 160;
+
+  @include mq(md) {
+    width: calc(600 / 767 * 100%);
+  }
+}
+
 .p-manual__store-badges {
   display: flex;
   margin-top: rem(10);
