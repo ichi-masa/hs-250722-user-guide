@@ -27,7 +27,7 @@
   font-size: rem(14);
   line-height: ln(20, 14);
   letter-spacing: 0.0025em;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   @include mq(md) {

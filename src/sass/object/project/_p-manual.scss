@@ -861,6 +861,20 @@
   border-radius: 50%;
 }
 
+.p-manual__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(22);
+  height: rem(22);
+  background: $black;
+  border-radius: 50%;
+  color: $white;
+  font-size: rem(18);
+  line-height: 1;
+  text-align: center;
+}
+
 .p-manual__circle-steps {
   counter-reset: circle-step;
 }
