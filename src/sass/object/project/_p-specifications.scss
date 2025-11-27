@@ -72,6 +72,8 @@
 }
 
 .p-specifications__note-text {
+  display: flex;
+  gap: rem(2);
   font-size: rem(14);
   line-height: 1.4;
   letter-spacing: 0;
