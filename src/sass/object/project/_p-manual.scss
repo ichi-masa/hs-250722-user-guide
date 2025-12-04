@@ -53,6 +53,10 @@
   margin-top: rem(16);
 }
 
+.p-manual__sub-title--mt32 {
+  margin-top: rem(32);
+}
+
 .p-manual__sub-text {
   font-size: rem(14);
   line-height: lh(20, 14);
@@ -300,6 +304,19 @@
   flex: 1;
 
   @include mq(md) {
+    width: calc(550 / 767 * 100%);
+    margin-top: rem(20);
+  }
+}
+
+.p-manual__image--body-angle-sp {
+  width: 60%;
+  aspect-ratio: 554 / 1290;
+  flex: 1;
+  margin-top: rem(30);
+  
+  @include mq(md) {
+    aspect-ratio: 487 / 267;
     width: calc(550 / 767 * 100%);
     margin-top: rem(20);
   }
@@ -1215,13 +1232,18 @@
 .p-manual__image-flex {
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-end;
+  align-items: center;
   margin-top: rem(10);
   
   @include mq(md) {
     align-items: flex-start;
     flex-direction: row;
   }
+}
+
+.p-manual__image-flex-wrap {
+  display: flex;
+  align-items: center;
 }
 
 .p-manual__bubble {
