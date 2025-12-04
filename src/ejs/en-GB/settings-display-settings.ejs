@@ -1,0 +1,133 @@
+<%- include('./common/_head', { pageKey: 'settings' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
+
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'settings-display-settings' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.settings.displaySettings.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              Use this operation when you want to change your date of birth (year, month, day), gender, height, and mode in your personal data, or delete personal data on the unit.<br>
+You can also change your personal data using the “OMRON connect” app. For details, refer to “Help” section in the “OMRON connect” app.
+            </p>
+            <h3 class="p-manual__sub-title p-manual__sub-title--mt32">
+              Display settings
+            </h3>
+            <p class="p-manual__sub-title-text">
+              You can select either the 4 indicators or the 18 indicators.
+            </p>
+            <p class="p-manual__lead">
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Press the power button to turn on the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span>  to select your personal number.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Select the personal number you want to change or delete.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen09-personal-number.webp" alt="personal number">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to confirm.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display appears.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen48-confirm-personal-number.webp" alt="confirm personal number">
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> again.
+                </h3>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select “Display settings”, then touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> to confirm.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen25-user-setting.webp" alt="user settings">
+                </figure>
+                <ul class="p-manual__step-list p-manual__step-list--mt1em">
+                  <li class="p-manual__step-list-item">
+                    Changes made on the main unit or the “OMRON connect” app will be reflected during communication.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Set display indicators.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change indicators.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to confirm.
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    After 3 seconds, the "0.0 kg" is displayed.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--measurement-results2">
+                  <img src="./assets/img/common/screen33-display-settings.webp" alt="display settings">
+                </figure>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./settings-user-settings.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+            <span class="c-btn__text">
+              <%= json.settings.userSettings.title %>
+            </span>
+          </a>
+          <a href="./settings-deleting-data.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+            <span class="c-btn__text">
+              <%= json.settings.deletingData.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <%- include('./common/_footer') %>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<%- include('./common/_head', { pageKey: 'settings' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
+  
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'settings-user-settings' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.settings.userSettings.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              Use this operation when you want to change your date of birth (year, month, day), gender, height, and mode in your personal data, or delete personal data on the unit.<br>
+You can also change your personal data using the “OMRON connect” app. For details, refer to “Help” section in the “OMRON connect” app.
+            </p>
+            <h3 class="p-manual__sub-title p-manual__sub-title--mt32">
+              User settings
+            </h3>
+            <p class="p-manual__sub-title-text">
+              The readings will not be deleted.
+            </p>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Press the power button to turn on the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span>  to select your personal number.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Select the personal number you want to change or delete.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen09-personal-number.webp" alt="personal number">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to confirm.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display appears.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen48-confirm-personal-number.webp" alt="confirm personal number">
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> again.
+                </h3>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select “User settings”, then touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> to confirm.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen21-user-setting.webp" alt="user settings">
+                </figure>
+                <ul class="p-manual__step-list p-manual__step-list--mt1em">
+                  <li class="p-manual__step-list-item">
+                    Even if you change the personal data, the readings will not be deleted. When using a personal number that has been used by another person, delete the personal data and then register your personal data again.<br>
+    (If you use the “OMRON connect” app, refer to <a href="./how-to-use-initial-setting.html#register-your-personal-data" class="p-manual__link">“Register Your Personal Data (Current Weight and Body Fat Percentage)
+      ”</a>. If you do not use the “OMRON connect” app, refer to <a href="./settings-registering-personal-data-on-the-unit.html" class="p-manual__link">“Registering Personal Data on the Unit”</a>.)
+                  </li>
+                  <li class="p-manual__step-list-item">
+                    Changes made on the main unit or the “OMRON connect” app will be reflected during communication.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h4 class="p-manual__step-title">
+                  Set up your personal data.
+                </h4>
+                <ul class="p-manual__personal-data-items">
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen25-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set the year of your date of birth
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the year.<br> 
+                        Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the year.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen26-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set the month of your date of birth
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the month.<br>
+                        Each time you touch the button, the value will change in increments of one month, and if you continue to touch the button, the value will change in increments of one month (fast forward).
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the month.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen27-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set the day of your date of birth
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the day.<br> 
+                        Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the day.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen28-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set your gender
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select male or female.
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the gender.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen29-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set your height
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the height. <br>
+                        The setting range is 100.0 to 199.5 cm. (In 0.5 cm increments) <br>
+                        Each time you touch the button, the value will change in 0.5 cm increments, and if you continue to touch the button, the value will change in 10 cm increments.
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set your height.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-manual__personal-data-item p-birth-date-card">
+                    <figure class="p-birth-date-card__image">
+                      <img src="./assets/img/common/screen30-birth-date.webp" alt="birth date">
+                    </figure>
+                    <div class="p-birth-date-card__text-block">
+                      <p class="p-birth-date-card__title">
+                        Set the mode
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select normal or athlete.
+                      </p>
+                      <p class="p-birth-date-card__text">
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set the mode.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Once the settings are complete, the configured information will be displayed, followed by "0.0 kg" (weight measurement).
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display-vertical">
+                  <img src="./assets/img/common/screen31-birth-date.webp" alt="birth date">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h4 class="p-manual__step-title">
+                  Taking a measurement.
+                </h4>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Refer to <a href="./how-to-use-taking-a-measurement.html" class="p-manual__link">“Taking a Measurement”</a>.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./settings-display-settings.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+            <span class="c-btn__text">
+              <%= json.settings.displaySettings.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+  
+  <%- include('./common/_footer') %>
+</body>
+</html>

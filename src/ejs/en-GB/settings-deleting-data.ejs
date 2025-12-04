@@ -1,0 +1,135 @@
+<%- include('./common/_head', { pageKey: 'settings' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
+
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'settings-deleting-data' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title">
+            <%= json.settings.deletingData.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <p class="p-manual__lead">
+              Use this operation when you want to change your date of birth (year, month, day), gender, height, and mode in your personal data, or delete personal data on the unit.<br>
+You can also change your personal data using the “OMRON connect” app. For details, refer to “Help” section in the “OMRON connect” app.
+            </p>
+            <h3 class="p-manual__sub-title p-manual__sub-title--mt32">
+              Deleting data
+            </h3>
+            <ol class="p-manual__steps">
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">Press the power button to turn on the power.</h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display will appear.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span>  to select your personal number.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    Select the personal number you want to change or delete.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen09-personal-number.webp" alt="personal number">
+                </figure>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to confirm.
+                </h3>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    The weight measurement display appears.
+                  </li>
+                </ul>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen48-confirm-personal-number.webp" alt="confirm personal number">
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> again.
+                </h3>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select “Delete data”, then touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span> to confirm.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen26-user-setting.webp" alt="user settings">
+                </figure>
+                <ul class="p-manual__step-list p-manual__step-list--mt1em">
+                  <li class="p-manual__step-list-item">
+                    Changes made on the main unit or the “OMRON connect” app will be reflected during communication.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="confirm icon"></span>.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen35-delete-data.webp" alt="delete data">
+                </figure>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    To cancel the setting, touch <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div>.
+                  </li>
+                </ul>
+              </li>
+              <li class="p-manual__step">
+                <h3 class="p-manual__step-title">
+                  Touch and hold the <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> for more than 3 seconds.
+                </h3>
+                <figure class="p-manual__image p-manual__image--weight-display">
+                  <img src="./assets/img/common/screen36-delete-data.webp" alt="delete data">
+                </figure>
+                <ul class="p-manual__step-list">
+                  <li class="p-manual__step-list-item">
+                    After 10 seconds, the unit will automatically turn off.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./settings-display-settings.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+            <span class="c-btn__text">
+              <%= json.settings.displaySettings.title %>
+            </span>
+          </a>
+          <a href="./settings-replacing-the-batteries.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+            <span class="c-btn__text">
+              <%= json.settings.replacingTheBatteries.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <%- include('./common/_footer') %>
+</body>
+</html>

@@ -76,8 +76,14 @@
     "changingOrDeletingYourPersonalData": {
       "title": "Changing or Deleting Your Personal Data"
     },
-    "userSettingsDisplaySettingsDeletingData": {
-      "title": "User Settings / Display Settings / Deleting Data"
+    "userSettings": {
+      "title": "User Settings"
+    },
+    "displaySettings": {
+      "title": "Display Settings"
+    },
+    "deletingData": {
+      "title": "Deleting Data"
     },
     "replacingTheBatteries": {
       "title": "Replacing the Batteries"
