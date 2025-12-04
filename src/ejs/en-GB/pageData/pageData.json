@@ -36,6 +36,12 @@
     },
     "measuringWeightOnly": {
       "title": "Measuring Weight Only"
+    },
+    "selectingThePersonalNumberManuallyBeforeMeasurement": {
+      "title": "Selecting the Personal Number Manually Before Measurement"
+    },
+    "measuringWithoutRecording": {
+      "title": "Measuring without Recording (Guest mode)"
     }
   },
   "errorMessagesAndTroubleshooting": {
@@ -64,14 +70,8 @@
     "performingInitialSettingsOnTheUnit": {
       "title": "Performing Initial Settings on the Unit"
     },
-    "selectingThePersonalNumberManuallyBeforeMeasurement": {
-      "title": "Selecting the Personal Number Manually Before Measurement"
-    },
     "transferringTheReadingsLater": {
       "title": "Transferring the Readings Later"
-    },
-    "measuringWithoutRecording": {
-      "title": "Measuring without Recording (Guest mode)"
     },
     "changingOrDeletingYourPersonalData": {
       "title": "Changing or Deleting Your Personal Data"
