@@ -59,8 +59,8 @@
       "title": "Disposal"
     }
   },
-  "otherSettings": {
-    "title": "Other Settings",
+  "settings": {
+    "title": "Settings",
     "performingInitialSettingsOnTheUnit": {
       "title": "Performing Initial Settings on the Unit"
     },
@@ -72,6 +72,9 @@
     },
     "measuringWithoutRecording": {
       "title": "Measuring without Recording (Guest mode)"
+    },
+    "changingOrDeletingYourPersonalData": {
+      "title": "Changing or Deleting Your Personal Data"
     },
     "userSettingsDisplaySettingsDeletingData": {
       "title": "User Settings / Display Settings / Deleting Data"
@@ -117,7 +120,7 @@
     "howToUse": "How to Use",
     "errorMessagesAndTroubleshooting": "Error Messages and Troubleshooting",
     "maintenance": "Maintenance",
-    "otherSettings": "Other Settings",
+    "settings": "Settings",
     "specifications": "Specifications",
     "bodyComposition": "Information on Body Composition"
   }

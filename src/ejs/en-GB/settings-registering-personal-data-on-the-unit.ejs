@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'otherSettings' }) %>
+<%- include('./common/_head', { pageKey: 'settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'otherSettings' }) %>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-measuring-without-recording' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'settings-registering-personal-data-on-the-unit' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,53 +20,54 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.otherSettings.measuringWithoutRecording.title %>
+            <%= json.settings.registeringPersonalDataOnTheUnit.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
-              When measuring without recording the readings, select “Guest” for the personal number and set the personal data (date of birth, gender, height, mode) before measuring.<br>
-The readings will not be transferred to your smartphone. It will also not be saved in the unit’s memory.
+              You can also register your personal data (personal number, date of birth, gender, height, mode) on the unit itself.<br>
+The number of personal data entries that can be registered is 4.
             </p>
             <ol class="p-manual__steps">
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">Press the power button to turn on the power.</h3>
+                <h3 class="p-manual__step-title">
+                  Press the power button to turn on the power.
+                </h3>
                 <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
                     The weight measurement display will appear.
                   </li>
                 </ul>
                 <!-- <figure class="p-manual__image p-manual__image--weight-display">
-                  <img src="./assets/img/common/screen01-initial-weight.webp" alt="">
+                  <img src="./assets/img/common/screen01-initial-weight.webp" alt="initial settings">
                 </figure> -->
               </li>
               <li class="p-manual__step">
                 <h3 class="p-manual__step-title">
-                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select "Guest".
+                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to select the personal number you want to register.
                 </h3>
+                <p class="p-manual__sub-title p-manual__sub-title--mt16">
+                  Example:
+                </p>
+                <p class="p-manual__sub-text">
+                  If you select personal number “3”
+                </p>
                 <figure class="p-manual__image p-manual__image--weight-display">
-                  <img src="./assets/img/common/screen12-guest-mode.webp" alt="guest mode">
+                  <img src="./assets/img/common/screen47-select-personal-number.webp" alt="select personal number">
                 </figure>
               </li>
               <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to confirm.
-                </h3>
-              </li>
-              <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Set up your personal data.
-                </h3>
+                <h3 class="p-manual__step-title">Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-confirm.webp" class="p-manual__icon" alt="ok symbol"></span> to set.</h3>
                 <ul class="p-manual__personal-data-items">
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen13-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen25-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the year of your date of birth
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the year.<br> 
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the year. <br>
                         Each time you touch the button, the value will change in increments of one year, and if you continue to touch the button, the value will change in increments of 10 years.
                       </p>
                       <p class="p-birth-date-card__text">
@@ -76,7 +77,7 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen14-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen26-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
@@ -93,14 +94,14 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen15-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen27-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
                         Set the day of your date of birth
                       </p>
                       <p class="p-birth-date-card__text">
-                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the day.<br> 
+                        Touch <span class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></span> to change the day. <br>
                         Each time you touch the button, the value will change in increments of one day, and if you continue to touch the button, the value will change in increments of 10 days.
                       </p>
                       <p class="p-birth-date-card__text">
@@ -110,7 +111,7 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen16-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen28-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
@@ -126,7 +127,7 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen17-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen29-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
@@ -144,7 +145,7 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                   <li class="p-manual__personal-data-item p-birth-date-card">
                     <figure class="p-birth-date-card__image">
-                      <img src="./assets/img/common/screen18-birth-date.webp" alt="birth date">
+                      <img src="./assets/img/common/screen30-birth-date.webp" alt="birth date">
                     </figure>
                     <div class="p-birth-date-card__text-block">
                       <p class="p-birth-date-card__title">
@@ -165,85 +166,28 @@ The readings will not be transferred to your smartphone. It will also not be sav
                   </li>
                 </ul>
                 <figure class="p-manual__image p-manual__image--weight-display-vertical">
-                  <img src="./assets/img/common/screen19-birth-date.webp" alt="birth date">
+                  <img src="./assets/img/common/screen31-birth-date.webp" alt="birth date">
                 </figure>
               </li>
               <li class="p-manual__step">
                 <h3 class="p-manual__step-title">
-                  Taking a measurement.
+                  Resister your body composition.
                 </h3>
                 <ul class="p-manual__step-list">
                   <li class="p-manual__step-list-item">
-                    Refer to <a href="./how-to-use-taking-a-measurement.html" class="p-manual__link">“Taking a Measurement”</a>.
+                    Refer to <a href="./how-to-use-initial-setting.html#register-your-personal-data" class="p-manual__link">“Resister Your Personal Data (Current Body Composition)”</a>.
                   </li>
                 </ul>
-                <p class="p-manual__note">
-                  Note
-                </p>
-                <ul class="p-manual__step-list">
-                  <li class="p-manual__step-list-item">
-                    The measurement results are shown as 18 indicators on the display.
-                  </li>
-                </ul>
-                <!-- <figure class="p-manual__image p-manual__image--takeout">
-                  <img src="./assets/img/common/initialsettings-illust2.webp" alt="Body fat scale with handles being held">
-                </figure> -->
               </li>
-              <!-- <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Place your feet on the foot electrodes with your weight evenly distributed.
-                </h3>
-                <ul class="p-manual__step-list">
-                  <li class="p-manual__step-list-item">
-                    After the unit makes a “beeping” sound, the display will show your weight.
-                  </li>
-                </ul>
-                <figure class="p-manual__image p-manual__image--body-fat-scale">
-                  <img src="./assets/img/common/initialsettings-illust6.webp" alt="Person using a scale with hand grips">
-                </figure>
-                <figure class="p-manual__image p-manual__image--weight-display">
-                  <img src="./assets/img/common/screen20-guest-mode-weight.webp" alt="">
-                </figure>
-              </li> -->
-              <!-- <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Extend your arms straight at a 90° angle to your body.
-                </h3>
-                <figure class="p-manual__image p-manual__image--body-angle p-manual__image--bubble">
-                  <img src="./assets/img/common/initialsettings-illust4.webp" alt="measurement pose">
-                </figure>
-              </li>
-              <li class="p-manual__step">
-                <h3 class="p-manual__step-title">
-                  Check the measurement results.
-                </h3>
-                <ul class="p-manual__step-list">
-                  <li class="p-manual__step-list-item">
-                    After the unit makes a “beeping” sound, the display on the unit will repeatedly show the measurement results in sequence.  (The display will change automatically.)
-                  </li>
-                </ul>
-                <figure class="p-manual__image p-manual__image--measurement-results1">
-                  <img src="./assets/img/common/measurement_results.webp" alt="">
-                </figure>
-                <ul class="p-manual__step-list">
-                  <li class="p-manual__step-list-item">The unit will automatically turn off if no button is touched: after 16 seconds for 4 indicators, and after 72 seconds for 18 indicators. </li>
-                  <li class="p-manual__step-list-item">Once the <div class="p-manual__icon-wrap"><img src="./assets/img/common/icon-navigation.webp" class="p-manual__icon" alt="navigation icon"></div> button is touched, the display will change, and the unit will automatically turn off after approximately 3 minutes.</li>
-                </ul>
-              </li> -->
             </ol>
           </div>
         </section>
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./other-settings-selecting-the-personal-number-manually-before-measurement.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+          <a href="./settings-performing-initial-settings-on-the-unit.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
             <span class="c-btn__text">
-              <%= json.otherSettings.selectingThePersonalNumberManuallyBeforeMeasurement.title %>
-            </span>
-          </a>
-          <a href="./other-settings-user-settings-display-settings-deleting-data.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
-            <span class="c-btn__text">
-              <%= json.otherSettings.userSettingsDisplaySettingsDeletingData.title %>
+              <%= json.settings.performingInitialSettingsOnTheUnit.title %>
             </span>
           </a>
         </div>

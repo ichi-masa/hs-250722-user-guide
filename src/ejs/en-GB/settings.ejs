@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'otherSettings' }) %>
+<%- include('./common/_head', { pageKey: 'settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'otherSettings' }) %>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'other-settings' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'settings' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -18,7 +18,7 @@
         <%- include('./project/_p-control') %>
       </div>
       <div class="p-main__list">
-        <%- include('./project/_p-other-settings-list') %>
+        <%- include('./project/_p-settings-list') %>
       </div>
     </main>
   </div>

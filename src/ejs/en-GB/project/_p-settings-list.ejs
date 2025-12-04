@@ -1,0 +1,23 @@
+<div class="p-lower-list">
+  <ul class="p-lower-list__items">
+    <li class="p-lower-list__item">
+      <p class="p-lower-list__lead"><%= json.settings.title %></p>
+      <ul class="p-lower-list__sub-items">
+        <% const settingsItems = [
+          { href: './settings-selecting-the-personal-number-manually-before-measurement.html', text: 'Selecting the Personal Number Manually Before Measurement' },
+          { href: './settings-measuring-without-recording.html', text: 'Measuring without Recording (Guest mode)' },
+          { href: './settings-user-settings-display-settings-deleting-data.html', text: 'User Settings / Display Settings / Deleting Data' },
+          { href: './settings-replacing-the-batteries.html', text: 'Replacing the Batteries' },
+          { href: './settings-restoring-the-unit-to-factory-settings.html', text: 'Restoring the Unit to Factory Settings' },
+          { href: './settings-performing-initial-settings-on-the-unit.html', text: 'Performing Initial Settings on the Unit' },
+          { href: './settings-registering-personal-data-on-the-unit.html', text: 'Registering Personal Data on the Unit' }
+        ]; %>
+        <% settingsItems.forEach(item => { %>
+        <li class="p-lower-list__sub-item">
+          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--storage"><span><%= item.text %></span></a>
+        </li>
+        <% }); %>
+      </ul>
+    </li>
+  </ul>
+</div>

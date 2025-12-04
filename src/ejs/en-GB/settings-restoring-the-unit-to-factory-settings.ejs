@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'otherSettings' }) %>
+<%- include('./common/_head', { pageKey: 'settings' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'otherSettings' }) %>
+  <%- include('./common/_header', { pageKey: 'settings' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'other-settings-restoring-the-unit-to-factory-settings' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'settings-restoring-the-unit-to-factory-settings' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title">
-            <%= json.otherSettings.restoringTheUnitToFactorySettings.title %>
+            <%= json.settings.restoringTheUnitToFactorySettings.title %>
           </h2>
           <div class="p-manual__wrap">
             <p class="p-manual__lead">
@@ -55,14 +55,14 @@ This will delete all registration information (date and time settings, personal 
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./other-settings-replacing-the-batteries.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
+          <a href="./settings-replacing-the-batteries.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--storage">
             <span class="c-btn__text">
-              <%= json.otherSettings.replacingTheBatteries.title %>
+              <%= json.settings.replacingTheBatteries.title %>
             </span>
           </a>
-          <a href="./other-settings-performing-initial-settings-on-the-unit.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
+          <a href="./settings-performing-initial-settings-on-the-unit.html" class="p-pagination__link c-btn c-btn--next c-btn--next--storage">
             <span class="c-btn__text">
-              <%= json.otherSettings.performingInitialSettingsOnTheUnit.title %>
+              <%= json.settings.performingInitialSettingsOnTheUnit.title %>
             </span>
           </a>
         </div>
