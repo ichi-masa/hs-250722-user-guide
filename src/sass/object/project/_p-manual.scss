@@ -310,14 +310,12 @@
 }
 
 .p-manual__image--body-angle-sp {
-  width: 60%;
+  max-width: rem(200);
   aspect-ratio: 554 / 1290;
-  flex: 1;
   margin-top: rem(30);
   
   @include mq(md) {
-    aspect-ratio: 487 / 267;
-    width: calc(550 / 767 * 100%);
+    width: calc(200 / 767 * 100%);
     margin-top: rem(20);
   }
 }
