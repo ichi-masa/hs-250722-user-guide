@@ -220,6 +220,15 @@
   }
 }
 
+.p-manual__image--package-contents-IM {
+  width: calc(150 / 299 * 100%);
+  aspect-ratio: 192 / 293;
+
+  @include mq(md) {
+    width: calc(150 / 767 * 100%);
+  }
+}
+
 .p-manual__image--package-contents-batteries {
   width: calc(130 / 299 * 100%);
   aspect-ratio: 65 / 41;
@@ -360,6 +369,10 @@
   }
 }
 
+.p-manual__item-image {
+  margin-top: rem(10);
+}
+
 .p-manual__item-image--posture {
   width: 100%;
   margin-top: rem(10);
@@ -372,11 +385,11 @@
 }
 
 .p-manual__item-image--step-on {
-  width: 100%;
-  aspect-ratio: 265 / 298;
+  width: calc(200 / 299 * 100%);
+  aspect-ratio: 445 / 866;
 
   @include mq(md) {
-    width: calc(350 / 788 * 100%);
+    width: calc(265 / 788 * 100%);
   }
 }
 
@@ -400,7 +413,7 @@
 
 .p-manual__image--auto-transfer-2 {
   width: 100%;
-  aspect-ratio: 70 / 67;
+  aspect-ratio: 1459 / 1480;
 
   @include mq(md) {
     width: calc(500 / 788 * 100%);
