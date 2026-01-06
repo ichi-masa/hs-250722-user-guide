@@ -31,8 +31,8 @@
     "automaticTransferOfReadings": {
       "title": "Automatic Transfer of Readings"
     },
-    "checkYourReadingsUsingTheOMRONConnectApp": {
-      "title": "Check Your Readings Using the “OMRON Connect” App"
+    "checkingYourReadingsUsingTheOMRONConnectApp": {
+      "title": "Checking Your Readings Using the \"OMRON Connect\" App"
     },
     "measuringWeightOnly": {
       "title": "Measuring Weight Only"
@@ -41,7 +41,7 @@
       "title": "Selecting the Personal Number Manually Before Measurement"
     },
     "measuringWithoutRecording": {
-      "title": "Measuring without Recording (Guest mode)"
+      "title": "Measuring without Recording (Guest Mode)"
     }
   },
   "errorMessagesAndTroubleshooting": {
