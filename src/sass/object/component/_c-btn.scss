@@ -105,6 +105,10 @@
   background-image: url(../img/common/icon-setting.svg);
 }
 
+.c-btn--previous--maintenance span::before {
+  background-image: url(../img/common/icon-maintenance.svg);
+}
+
 .c-btn--previous span::after {
   content: '';
   position: absolute;

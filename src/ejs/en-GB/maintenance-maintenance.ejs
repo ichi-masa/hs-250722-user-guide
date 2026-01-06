@@ -1,0 +1,149 @@
+<%- include('./common/_head', { pageKey: 'maintenance' }) %>
+<body>
+  <%- include('./common/_header', { pageKey: 'maintenance' }) %>
+
+<!-- User Guide Section -->
+<%- include('./project/_p-user-guide-header') %>
+
+<!-- Main Content Area -->
+<div class="p-content-area">
+  <div class="p-content-area__inner l-container">
+    <!-- Side Navigation -->
+    <div class="p-content-area__side-nav">
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance-maintenance' }) %>
+    </div>
+    <!-- Main Content -->
+    <main class="p-main">
+      <div class="p-main__control">
+        <%- include('./project/_p-control') %>
+      </div>
+      <div class="p-main__content">
+        <section class="p-manual">
+          <h2 class="p-manual__title p-page-title p-page-title--maintenance">
+            <%= json.maintenance.maintenance.title %>
+          </h2>
+          <div class="p-manual__wrap">
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Maintenance
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Always keep the unit clean.
+                </li>
+                <li class="p-manual__instruction">
+                  If the device is visibly soiled or has been used by a person with a skin disease or foot infection, clean the device using a soft, cloth moistened with water or a neutral detergent. Ensure that the cloth is well-wrung. Wipe thoroughly, ensuring no excess moisture enters the device, and then dry it completely with a clean cloth.<br>(Otherwise, a bacterial infection can be caused.)
+                </li>
+                <li class="p-manual__instruction">
+                  Do not use benzine, thinner, or other volatile solvents to wipe the unit.<br>(It may cause discoloration or damage.)
+                  <figure class="p-manual__image p-manual__image--maintenance">
+                    <img src="./assets/img/common/maintenance01.webp" alt="Do not use benzine or thinner">
+                  </figure>
+                </li>
+                <li class="p-manual__instruction">
+                  Do not wash the unit with water.<br>(It may cause the unit to malfunction.)
+                </li>
+                <li class="p-manual__instruction">
+                  You can use cleaning alcohol to clean the electrodes, but do not use it on other parts of the unit.
+                </li>
+              </ul>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Storage
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Store the display unit in the main unit as shown.
+                </li>
+                <li class="p-manual__instruction">
+                  When storing the display unit, be careful not to crease the cord.
+                  <figure class="p-manual__image p-manual__image--storage">
+                    <img src="./assets/img/common/storage01.webp" alt="Display unit storage">
+                  </figure>
+                </li>
+              </ul>
+              <h3 class="p-manual__sub-title p-manual__sub-title--mt16">
+                Do not store the unit in the following locations. It may cause the unit to malfunction.
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Places where water may get into the unit.
+                </li>
+                <li class="p-manual__instruction">
+                  Places with high temperatures, high humidity, direct sunlight, dust, or places with high salinity.
+                </li>
+                <li class="p-manual__instruction">
+                  Places with sloping surfaces, vibrations, or shocks.
+                </li>
+                <li class="p-manual__instruction">
+                  Places where chemicals are stored or where corrosive gas is present.
+                </li>
+              </ul>
+              <h3 class="p-manual__sub-title p-manual__sub-title--mt16">
+                Do not store the unit in the following conditions.
+              </h3>
+              <div class="p-manual__items-wrap">
+                <p class="p-manual__sub-text p-manual__sub-text--mt0">
+                  The readings displayed may differ from the actual results. Implement the "0 kg calibration" before taking a measurement. <br>Refer to <a href="./how-to-use-for-accurate-measurement.html#implement-the-0-kg-calibration" class="p-manual__link">"Implement the '0 kg Calibration'"</a>.
+                </p>
+                <ul class="p-manual__items p-manual__items--storage">
+                  <li class="p-manual__item p-manual__item--line">
+                    The unit is leaning against a wall or other objects
+                    <figure class="p-manual__image p-manual__image--unit-placed">
+                      <img src="./assets/img/common/unit-placed-in-conditions01.webp" alt="">
+                    </figure>
+                  </li>
+                  <li class="p-manual__item p-manual__item--line">
+                    The unit is placed upside down
+                    <figure class="p-manual__image p-manual__image--unit-placed">
+                      <img src="./assets/img/common/unit-placed-in-conditions02.webp" alt="">
+                    </figure>
+                  </li>
+                  <li class="p-manual__item p-manual__item--line">
+                    The unit is placed on an object
+                    <figure class="p-manual__image p-manual__image--unit-placed">
+                      <img src="./assets/img/common/unit-placed-in-conditions03.webp" alt="">
+                    </figure>
+                  </li>
+                  <li class="p-manual__item p-manual__item--line">
+                    An object is placed on the unit
+                    <figure class="p-manual__image p-manual__image--unit-placed">
+                      <img src="./assets/img/common/unit-placed-in-conditions04.webp" alt="">
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="p-manual__article">
+              <h3 class="p-manual__sub-title">
+                Disposal
+              </h3>
+              <ul class="p-manual__instructions">
+                <li class="p-manual__instruction">
+                  Remove the batteries from the unit and dispose of the unit.
+                </li>
+                <li class="p-manual__instruction">
+                  Dispose of the unit and batteries according to applicable local regulations. Unlawful disposal may cause environmental pollution.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="p-main__pagination">
+        <div class="p-pagination">
+          <a href="./maintenance-correct-disposal-of-this-product.html" class="p-pagination__link c-btn c-btn--next c-btn--next--information">
+            <span class="c-btn__text">
+              <%= json.maintenance.correctDisposalOfThisProduct.title %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <%- include('./common/_footer') %>
+</body>
+</html>

@@ -58,23 +58,14 @@
     "maintenance": {
       "title": "Maintenance"
     },
-    "storage": {
-      "title": "Storage"
-    },
-    "disposal": {
-      "title": "Disposal"
+    "correctDisposalOfThisProduct": {
+      "title": "Correct Disposal of This Product (Waste Electrical & Electronic Equipment)"
     }
   },
   "settings": {
     "title": "Settings",
     "performingInitialSettingsOnTheUnit": {
       "title": "Performing Initial Settings on the Unit"
-    },
-    "transferringTheReadingsLater": {
-      "title": "Transferring the Readings Later"
-    },
-    "changingOrDeletingYourPersonalData": {
-      "title": "Changing or Deleting Your Personal Data"
     },
     "userSettings": {
       "title": "User Settings"
@@ -99,12 +90,6 @@
     "title": "Specifications",
     "specifications": {
       "title": "Specifications"
-    },
-    "correctDisposalOfThisProduct": {
-      "title": "Correct Disposal of This Product (Waste Electrical & Electronic Equipment)"
-    },
-    "guidanceAndManufacturersDeclaration": {
-      "title": "Guidance and Manufacturer's Declaration"
     }
   },
   "bodyComposition": {

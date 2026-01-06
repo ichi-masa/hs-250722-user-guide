@@ -1,6 +1,6 @@
-<%- include('./common/_head', { pageKey: 'specifications' }) %>
+<%- include('./common/_head', { pageKey: 'maintenance' }) %>
 <body>
-  <%- include('./common/_header', { pageKey: 'specifications' }) %>
+  <%- include('./common/_header', { pageKey: 'maintenance' }) %>
   
 <!-- User Guide Section -->
 <%- include('./project/_p-user-guide-header') %>
@@ -10,7 +10,7 @@
   <div class="p-content-area__inner l-container">
     <!-- Side Navigation -->
     <div class="p-content-area__side-nav">
-      <%- include('./project/_p-side-nav', { currentPage: 'specifications-correct-disposal-of-this-product' }) %>
+      <%- include('./project/_p-side-nav', { currentPage: 'maintenance-correct-disposal-of-this-product' }) %>
     </div>
     <!-- Main Content -->
     <main class="p-main">
@@ -20,7 +20,7 @@
       <div class="p-main__content">
         <section class="p-manual">
           <h2 class="p-manual__title p-page-title p-page-title--information">
-            <%= json.specifications.correctDisposalOfThisProduct.title %>
+            <%= json.maintenance.correctDisposalOfThisProduct.title %>
           </h2>
           <div class="p-manual__wrap">
             <figure class="p-manual__image p-manual__image--correct-disposal">
@@ -44,9 +44,9 @@
       </div>
       <div class="p-main__pagination">
         <div class="p-pagination">
-          <a href="./specifications-specifications.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--information">
+          <a href="./maintenance-maintenance.html" class="p-pagination__link c-btn c-btn--previous c-btn--previous--maintenance">
             <span class="c-btn__text">
-              <%= json.specifications.specifications.title %>
+              <%= json.maintenance.maintenance.title %>
             </span>
           </a>
         </div>
