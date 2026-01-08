@@ -87,16 +87,50 @@
   }
 }
 
+.p-product__bottom {
+  margin-top: rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  width: 100%;
+  
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(40);
+    justify-content: space-between;
+  }
+}
+
+.p-product__security-vulnerability-reporting-link {
+  display: grid;
+  place-content: center;
+  border: 1px solid $blue;
+  color: $blue;
+  padding: rem(5);
+  width: fit-content;
+  transition: all 0.3s ease;
+  
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .p-product__security-vulnerability-reporting-link:hover {
+    color: #59c2e6;
+    border-color: #59c2e6;
+  }
+}
+
+.p-product__security-vulnerability-reporting-link span {
+  font-size: rem(14);
+  line-height: 1;
+}
+
 .p-product__serial-number {
   font-size: rem(12);
   font-family: var(--font-din-light);
   line-height: lh(15, 12);
-  margin-top: rem(40);
-  width: 100%;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .p-product__serial-number-span {

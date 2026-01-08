@@ -1,0 +1,18 @@
+<div class="p-lower-list">
+  <ul class="p-lower-list__items">
+    <li class="p-lower-list__item">
+      <p class="p-lower-list__lead"><%= json.specifications.title %></p>
+      <ul class="p-lower-list__sub-items">
+        <% const specificationsItems = [
+          { href: './specifications-specifications.html', text: 'Specifications' },
+          { href: './specifications-product-security-vulnerability-reporting.html', text: 'Product Security Vulnerability Reporting' }
+        ]; %>
+        <% specificationsItems.forEach(item => { %>
+        <li class="p-lower-list__sub-item">
+          <a href="<%= item.href %>" class="p-lower-list__sub-link p-lower-list__sub-link--information"><span><%= item.text %></span></a>
+        </li>
+        <% }); %>
+      </ul>
+    </li>
+  </ul>
+</div>

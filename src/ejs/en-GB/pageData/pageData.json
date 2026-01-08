@@ -90,6 +90,9 @@
     "title": "Specifications",
     "specifications": {
       "title": "Specifications"
+    },
+    "productSecurityVulnerabilityReporting": {
+      "title": "Product Security Vulnerability Reporting"
     }
   },
   "bodyComposition": {
