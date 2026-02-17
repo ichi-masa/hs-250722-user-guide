@@ -109,6 +109,7 @@
 .p-manual__table-wrap {
   margin-top: rem(40);
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   width: 100%;
   border: 1px solid #ddd;

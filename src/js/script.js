@@ -71,4 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollable: 'scrollable'
     }
   });
+
+  // ScrollHintがinline styleでoverflow:autoを設定するため、overflow-yをhiddenに戻す
+  document.querySelectorAll('.p-manual__table-wrap').forEach(function(el) {
+    el.style.overflowY = 'hidden';
+  });
 });

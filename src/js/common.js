@@ -3,6 +3,13 @@
 --------------------------------------------------------------------*/
 let headerHeight;
 
+// Firefox/Edge: スクロール位置復元を無効化（2回目以降のハッシュ遷移でスクロールしない問題の対策）
+if (navigator.userAgent.indexOf('Firefox') !== -1 || navigator.userAgent.indexOf('Edg/') !== -1) {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+}
+
 /*-------------------------------------------------------------------
 関数定義
 --------------------------------------------------------------------*/
