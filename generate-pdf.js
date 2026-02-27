@@ -313,14 +313,14 @@ async function generateCombinedPDF(browser, langDir, lang) {
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/app/scroll-hint.css" />
   <style>
-    body { margin: 0; padding: 0; }
+    body { margin: 0; padding: 10px 40px 13px 40px; }
     .pdf-section { page-break-before: always; }
     .pdf-section:first-of-type { page-break-before: auto; }
-    .pdf-layout { display: flex; gap: 30px; align-items: flex-start; }
+    .pdf-layout { display: flex; gap: 30px; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
     .pdf-layout__nav { width: 185px; min-width: 185px; flex-shrink: 0; padding-top: 5px; }
-    .pdf-layout__content { flex: 1; min-width: 0; }
+    .pdf-layout__content { flex: 1; min-width: 0; max-width: 850px; }
     .p-side-nav { display: block !important; }
-    .p-side-nav__link { font-size: 11px !important; padding-top: 8px !important; padding-bottom: 8px !important; line-height: 1.4 !important; color: #333; }
+    .p-side-nav__link { font-size: 15px !important; padding-top: 8px !important; padding-bottom: 8px !important; line-height: 1.4 !important; color: #333; }
     .p-side-nav__link--current { font-weight: 700; color: #005EB8 !important; }
     .p-side-nav__items { padding-left: 16px !important; }
     .p-side-nav__item--current::before, .p-side-nav__item--parent::before { left: -16px !important; }
@@ -333,6 +333,17 @@ async function generateCombinedPDF(browser, langDir, lang) {
     .p-manual__table-wrap { overflow: visible !important; }
     .p-main__content { border: none !important; box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; padding: 15px 0 !important; }
     a[href^="#"] { color: #005c97; }
+    /* 画像グリッドの崩れ防止: subgrid+aspect-ratioの組み合わせが壊れるのを修正 */
+    .p-manual__figure-item { grid-row: auto !important; display: block !important; }
+    .p-manual__figure-items { grid-template-rows: auto !important; }
+    .p-manual__figure-image, .p-manual__item-image { aspect-ratio: auto !important; }
+    .p-manual__figure-image img, .p-manual__item-image img { height: auto !important; width: 100%; }
+    .p-manual__figure-image--unit-placed { width: 250px !important; max-width: 250px !important; overflow: hidden !important; }
+    .p-manual__figure-image--unit-placed img { width: 250px !important; max-width: 250px !important; height: auto !important; }
+    .p-manual__figure-item { margin-top: 10px; }
+    .p-manual__figure-text { margin-bottom: 8px !important; }
+    .p-birth-date-card::after { position: static !important; display: block !important; margin: 10px auto !important; }
+    .p-birth-date-card__text-block { height: auto !important; }
     .p-manual__step { page-break-inside: avoid; }
     h2, h3, h4 { page-break-after: avoid; }
     img { max-width: 100% !important; page-break-inside: avoid; }
@@ -364,16 +375,17 @@ async function generateCombinedPDF(browser, langDir, lang) {
 
   await page.pdf({
     path: outputPath,
-    format: 'A4',
+    width: '1280px',
+    height: '900px',
     printBackground: true,
-    margin: { top: '12mm', right: '12mm', bottom: '15mm', left: '12mm' },
+    margin: { top: '0', right: '0', bottom: '12mm', left: '0' },
     displayHeaderFooter: true,
     headerTemplate: '<div></div>',
-    footerTemplate: '<div style="width:100%;text-align:center;font-size:8pt;color:#999;padding:0 15mm;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+    footerTemplate: '<div style="width:100%;text-align:center;font-size:8pt;color:#999;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
   });
 
   await page.close();
-  fs.unlinkSync(tempPath);
+  // fs.unlinkSync(tempPath); // デバッグ用に保持
 
   const fileSize = (fs.statSync(outputPath).size / 1024 / 1024).toFixed(1);
   console.log(`    ✅ ${outputPath}`);
