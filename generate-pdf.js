@@ -318,7 +318,7 @@ async function generateCombinedPDF(browser, langDir, lang) {
     .pdf-section:first-of-type { page-break-before: auto; }
     .pdf-layout { display: flex; gap: 30px; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
     .pdf-layout__nav { width: 185px; min-width: 185px; flex-shrink: 0; padding-top: 5px; }
-    .pdf-layout__content { flex: 1; min-width: 0; max-width: 850px; }
+    .pdf-layout__content { flex: 1; min-width: 0; max-width: 750px; }
     .p-side-nav { display: block !important; }
     .p-side-nav__link { font-size: 15px !important; padding-top: 8px !important; padding-bottom: 8px !important; line-height: 1.4 !important; color: #333; }
     .p-side-nav__link--current { font-weight: 700; color: #005EB8 !important; }
@@ -327,22 +327,46 @@ async function generateCombinedPDF(browser, langDir, lang) {
     .p-content-area__side-nav { display: none !important; }
     .p-control, .p-main__control { display: none !important; }
     .p-pagination { display: none !important; }
+    .p-navigation { display: none !important; }
     .l-header, .p-header, .l-footer, .p-footer { display: none !important; }
     .p-user-guide-header { display: none !important; }
     .scroll-hint-icon, .scroll-hint-icon-wrap { display: none !important; }
     .p-manual__table-wrap { overflow: visible !important; }
     .p-main__content { border: none !important; box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; padding: 15px 0 !important; }
     a[href^="#"] { color: #005c97; }
-    /* 画像グリッドの崩れ防止: subgrid+aspect-ratioの組み合わせが壊れるのを修正 */
-    .p-manual__figure-item { grid-row: auto !important; display: block !important; }
+    /* 画像グリッド: subgridはPDF改ページと相性が悪いためblockに変更し、サイズは元CSSのPC値を明示 */
+    .p-manual__figure-item { grid-row: auto !important; display: block !important; margin-top: 10px; }
     .p-manual__figure-items { grid-template-rows: auto !important; }
-    .p-manual__figure-image, .p-manual__item-image { aspect-ratio: auto !important; }
-    .p-manual__figure-image img, .p-manual__item-image img { height: auto !important; width: 100%; }
-    .p-manual__figure-image--unit-placed { width: 250px !important; max-width: 250px !important; overflow: hidden !important; }
-    .p-manual__figure-image--unit-placed img { width: 250px !important; max-width: 250px !important; height: auto !important; }
-    .p-manual__figure-item { margin-top: 10px; }
+    .p-manual__figure-image { width: 300px !important; height: auto !important; }
+    .p-manual__figure-image--height { width: 300px !important; }
+    .p-manual__figure-image--unit-placed { width: 300px !important; }
+    .p-manual__figure-image img, .p-manual__item-image img { height: auto !important; width: 100% !important; object-fit: contain !important; }
+    .p-product__image { width: 400px !important; height: auto !important; }
+    .p-manual__image--package-contents-main-unit { width: 420px !important; height: auto !important; }
+    .p-manual__image--package-contents-batteries { width: 150px !important; height: auto !important; }
+    .p-manual__image--package-contents-manual { width: 220px !important; height: auto !important; }
+    .p-manual__image--installing-batteries-step1, .p-manual__image--installing-batteries-step2 { width: 450px !important; height: auto !important; }
+    .p-manual__image--weight-display { width: 320px !important; height: auto !important; }
+    .p-manual__image--weight-display-vertical { width: 430px !important; height: auto !important; }
+    .p-manual__image--body-angle-sp { width: 200px !important; height: auto !important; }
+    .p-manual__image-flex { align-items: flex-start !important; }
+    .p-grip-step__image { width: 320px !important; height: auto !important; margin-inline: 0 !important; }
+    .p-manual__item-image--step-on { width: 280px !important; height: auto !important; }
+    .p-manual__image--unit { width: 420px !important; height: auto !important; }
+    .p-manual__image--check-the-measurement-results { width: 320px !important; height: auto !important; }
+    .p-manual__image--check-the-measurement-results2 { width: 700px !important; height: auto !important; }
+    .p-manual__image--auto-transfer-2, .p-manual__image--auto-transfer-3 { width: 460px !important; height: auto !important; }
+    .p-manual__image--maintenance { width: 200px !important; height: auto !important; }
+    .p-manual__image--storage { width: 440px !important; height: auto !important; }
+    .p-manual__image--unit-placed { width: 320px !important; height: auto !important; }
+    .p-manual__image--correct-disposal { width: 165px !important; height: auto !important; }
+    .p-manual__image--daily-activity { width: 580px !important; height: auto !important; }
+    .p-manual__image--visceral-fat1, .p-manual__image--visceral-fat2 { width: 200px !important; height: auto !important; }
+    .p-birth-date-card { flex-direction: row !important; }
+    .p-birth-date-card__image { width: 47.3% !important; height: auto !important; padding: 23px 40px !important; border-bottom: none !important; border-right: 1px solid #000 !important; }
+    .p-birth-date-card__text-block { width: 52.7% !important; padding: 23px 20px !important; }
     .p-manual__figure-text { margin-bottom: 8px !important; }
-    .p-birth-date-card::after { position: static !important; display: block !important; margin: 10px auto !important; }
+    .p-birth-date-card::after { position: absolute !important; bottom: -60px !important; left: 47.5% !important; transform: translateX(-50%) !important; }
     .p-birth-date-card__text-block { height: auto !important; }
     .p-manual__step { page-break-inside: avoid; }
     h2, h3, h4 { page-break-after: avoid; }
@@ -375,8 +399,8 @@ async function generateCombinedPDF(browser, langDir, lang) {
 
   await page.pdf({
     path: outputPath,
-    width: '1280px',
-    height: '900px',
+    width: '1050px',
+    height: '1200px',
     printBackground: true,
     margin: { top: '0', right: '0', bottom: '12mm', left: '0' },
     displayHeaderFooter: true,
