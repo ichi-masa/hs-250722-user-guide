@@ -143,6 +143,14 @@ async function generateIndividualPDFs(browser, langDir, lang) {
     await page.goto(`file://${filePath}`, { waitUntil: 'networkidle0', timeout: 30000 });
     await page.addStyleTag({ content: COMMON_CSS });
 
+    // 個別PDF: gridのgapを縮小（PDF表示の最適化）
+    await page.evaluate(() => {
+      const gridInner = document.querySelector('.p-content-area__inner');
+      if (gridInner) gridInner.style.setProperty('gap', '30px', 'important');
+      const header = document.querySelector('.p-user-guide-header');
+      if (header) header.style.setProperty('padding', '20px 0', 'important');
+    });
+
     // リンクを .html → .pdf に書き換え
     await page.evaluate((pages) => {
       document.querySelectorAll('a[href]').forEach(a => {
@@ -168,10 +176,24 @@ async function generateIndividualPDFs(browser, langDir, lang) {
     await page.pdf({
       path: outputPath,
       width: `${VIEWPORT_WIDTH / 96}in`,
-      height: `${(bodyHeight + 20) / 96}in`,
+      height: '100in',
       printBackground: true,
       margin: { top: '0', right: '0', bottom: '0', left: '0' },
     });
+
+    // pdf-libでページをコンテンツ高さにトリミング（100in固定の余白を除去）
+    const pdfBytes = fs.readFileSync(outputPath);
+    const pdfDoc = await PDFDocument.load(pdfBytes);
+    const pages = pdfDoc.getPages();
+    const contentHeightPt = (bodyHeight + 20) / 96 * 72;
+    for (const p of pages) {
+      const { width } = p.getSize();
+      p.setSize(width, contentHeightPt);
+      p.setMediaBox(0, 7200 - contentHeightPt, width, contentHeightPt);
+      p.setCropBox(0, 7200 - contentHeightPt, width, contentHeightPt);
+    }
+    const trimmedBytes = await pdfDoc.save();
+    fs.writeFileSync(outputPath, trimmedBytes);
 
     const fileSize = (fs.statSync(outputPath).size / 1024).toFixed(0);
     console.log(`OK (${fileSize}KB)`);
