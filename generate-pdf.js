@@ -5,18 +5,24 @@
  * 使い方:
  *   node generate-pdf.js             → 個別PDF（1HTML = 1PDFファイル）
  *   node generate-pdf.js --combined  → 結合PDF（全ページ1つのPDFファイル、リンク付き）
+ *   node generate-pdf.js --base-url=https://example.com/pdf/  → リンクを絶対URLに変換
  *
  * 必要なパッケージ: puppeteer, cheerio, pdf-lib（devDependenciesに含まれています）
  */
 
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
-const { PDFDocument } = require('pdf-lib');
+const { PDFDocument, PDFName, PDFString } = require('pdf-lib');
 const path = require('path');
 const fs = require('fs');
 
 const DIST_DIR = path.resolve(__dirname, 'dist');
 const VIEWPORT_WIDTH = 1280;
+
+// PDFリンクのベースURL（サーバーデプロイ時に使用）
+// --base-url オプションで指定可能。例: node generate-pdf.js --base-url https://example.com/pdf/
+const BASE_URL_ARG = process.argv.find(a => a.startsWith('--base-url='));
+const PDF_BASE_URL = BASE_URL_ARG ? BASE_URL_ARG.split('=')[1].replace(/\/?$/, '/') : null;
 
 // ページ順序（目次順）
 const PAGES = [
@@ -152,16 +158,17 @@ async function generateIndividualPDFs(browser, langDir, lang) {
     });
 
     // リンクを .html → .pdf に書き換え
-    await page.evaluate((pages) => {
+    await page.evaluate((pages, baseUrl) => {
       document.querySelectorAll('a[href]').forEach(a => {
         const href = a.getAttribute('href');
         if (!href) return;
         const match = href.match(/^(?:\.\/)?([a-zA-Z0-9_-]+)\.html(#.*)?$/);
         if (match && pages.includes(match[1] + '.html')) {
-          a.setAttribute('href', `./${match[1]}.pdf${match[2] || ''}`);
+          const pdfName = match[1] + '.pdf' + (match[2] || '');
+          a.setAttribute('href', baseUrl ? baseUrl + pdfName : pdfName);
         }
       });
-    }, PAGES);
+    }, PAGES, PDF_BASE_URL);
 
     await new Promise(r => setTimeout(r, 300));
 
@@ -181,16 +188,35 @@ async function generateIndividualPDFs(browser, langDir, lang) {
       margin: { top: '0', right: '0', bottom: '0', left: '0' },
     });
 
-    // pdf-libでページをコンテンツ高さにトリミング（100in固定の余白を除去）
+    // pdf-libでページをコンテンツ高さにトリミング + リンクを相対パスに書き換え
     const pdfBytes = fs.readFileSync(outputPath);
     const pdfDoc = await PDFDocument.load(pdfBytes);
-    const pages = pdfDoc.getPages();
+    const pdfPages = pdfDoc.getPages();
     const contentHeightPt = (bodyHeight + 20) / 96 * 72;
-    for (const p of pages) {
+    for (const p of pdfPages) {
       const { width } = p.getSize();
       p.setSize(width, contentHeightPt);
       p.setMediaBox(0, 7200 - contentHeightPt, width, contentHeightPt);
       p.setCropBox(0, 7200 - contentHeightPt, width, contentHeightPt);
+
+      // リンクURLを書き換え（file:// → 絶対URLまたはファイル名のみ）
+      const annots = p.node.lookup(PDFName.of('Annots'));
+      if (annots) {
+        for (let i = 0; i < annots.size(); i++) {
+          const annot = annots.lookup(i);
+          if (!annot) continue;
+          const action = annot.lookup(PDFName.of('A'));
+          if (!action) continue;
+          const uri = action.lookup(PDFName.of('URI'));
+          if (!uri) continue;
+          const uriStr = uri.toString().replace(/^\(|\)$/g, '');
+          const match = uriStr.match(/([^/]+\.pdf(?:#.*)?)$/);
+          if (match) {
+            const newUri = PDF_BASE_URL ? PDF_BASE_URL + match[1] : match[1];
+            action.set(PDFName.of('URI'), PDFString.of(newUri));
+          }
+        }
+      }
     }
     const trimmedBytes = await pdfDoc.save();
     fs.writeFileSync(outputPath, trimmedBytes);
